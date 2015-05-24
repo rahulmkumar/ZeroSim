@@ -1,0 +1,11 @@
+python -m cProfile ZSMarketData_v0.1.py AMEX > ./profiler/pMarketDataAMEX_01222014.txt &
+python -m cProfile ZSMarketData_v0.1.py NYSE > ./profiler/pMarketDataNYSE_01222014.txt &
+python -m cProfile ZSMarketData_v0.1.py NASDAQ > ./profiler/pMarketDataNASDAQ_01222014.txt &
+
+python -m cProfile database1.py AMEX > ./profiler/pDBUpdateAMEX_01212014.txt &
+python -m cProfile database1.py NYSE > ./profiler/pDBUpdateNYSE_01212014.txt &
+python -m cProfile database1.py NASDAQ > ./profiler/pDBUpdateNASDAQ_01212014.txt &
+
+python -m cProfile ZSMarketScan_v0.1.py AMEX 01/01/2013 01/21/2014 SPY > ./profiler/pMarketScanAMEX_01212014.txt &
+python -m cProfile ZSMarketScan_v0.1.py NYSE 01/01/2013 01/21/2014 SPY > ./profiler/pMarketScanNYSE_01212014.txt &
+python -m cProfile ZSMarketScan_v0.1.py NASDAQ 01/01/2013 01/21/2014 SPY > ./profiler/pMarketScanNASDAQ_01212014.txt &
