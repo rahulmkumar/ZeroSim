@@ -533,7 +533,11 @@ def ichimoku(df_close, df_high, df_low):
         
     return df_ichimoku_tenkan, df_ichimoku_kijun
     
-
+'''
+This function creates the TTM squeeze indicators:
+Bollinger Bands: 20,2
+Keltner Channels: 20,1.5
+'''
 def TTM_squeeze(df_price,df_high, df_low,N,K,e,a,m):
     sym_list = df_price.columns
     timestamps = df_price.index
