@@ -4,10 +4,10 @@ class SymbolDb:
     def __init__(self):
         self.l_symlist = []
 
-    def refreshSymbols(self,path):
-        self.get_quandl_codes(path)
+    def refreshSymbolFiles(self,path):
+        self.get_quandl_codes_us(path)
 
-    def get_quandl_codes(self,file_path):
+    def get_quandl_codes_us(self,file_path):
         sp500 = 'https://s3.amazonaws.com/quandl-static-content/Ticker+CSV%27s/Indicies/SP500.csv'
         sp500_file = 'SP500.csv'
 
@@ -52,5 +52,5 @@ class SymbolDb:
 
 if __name__ == '__main__':
     sym = SymbolDb()
-    sym.get_quandl_codes('../symbols/')
+    sym.refreshSymbolFiles('../symbols/')
 
