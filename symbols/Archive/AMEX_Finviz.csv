@@ -1,0 +1,383 @@
+"No.","Ticker","Company","Sector","Industry","Country","Market Cap","P/E","Price","Change","Volume"
+1,"AAMC","Altisource Asset Management Corporation","Financial","Asset Management","USA",2361.75,,1018.38,1.33%,1136
+2,"AAU","Almaden Minerals Ltd.","Basic Materials","Gold","Canada",63.65,,1.06,0.00%,12220
+3,"ACU","Acme United Corp.","Consumer Goods","Housewares & Accessories","USA",47.01,12.39,14.74,0.00%,0
+4,"ACY","AeroCentury Corp.","Services","Rental & Leasing Services","USA",26.43,3.44,17.10,-0.18%,1002
+5,"ADGE","American DG Energy, Inc.","Utilities","Electric Utilities","USA",78.92,,1.61,0.00%,0
+6,"ADK","AdCare Health Systems Inc.","Healthcare","Long-Term Care Facilities","USA",64.83,,4.45,1.14%,22501
+7,"AE","Adams Resources & Energy Inc.","Basic Materials","Oil & Gas Refining & Marketing","USA",255.99,8.83,60.76,0.12%,3282
+8,"AIRI","Air Industries Group","Industrial Goods","Aerospace/Defense Products & Services","USA",52.26,31.55,9.15,0.00%,0
+9,"AKG","Asanko Gold Inc.","Basic Materials","Gold","Canada",162.45,,1.80,-5.76%,82896
+10,"ALN","American Lorain Corporation","Consumer Goods","Processed & Packaged Goods","China",27.69,1.57,0.80,0.00%,127553
+11,"ALTV","Alteva, Inc.","Technology","Telecom Services - Domestic","USA",47.30,,8.21,0.24%,4063
+12,"AMCO","Armco Metals Holdings, Inc","Services","Basic Materials Wholesale","USA",8.15,11.33,0.34,-0.03%,156975
+13,"AMPE","Ampio Pharmaceuticals, Inc.","Healthcare","Drug Manufacturers - Major","USA",261.97,,7.15,1.27%,61157
+14,"AMS","American Shared Hospital Services","Healthcare","Specialized Health Services","USA",12.35,,2.68,0.00%,0
+15,"AMZG","American Eagle Energy Corporation","Basic Materials","Independent Oil & Gas","USA",108.96,,2.08,0.97%,49374
+16,"ANV","Allied Nevada Gold Corp.","Basic Materials","Gold","USA",344.57,9.43,3.34,1.21%,544303
+17,"API","Advanced Photonix Inc.","Technology","Semiconductor - Integrated Circuits","USA",20.90,,0.66,-0.76%,5184
+18,"APP","American Apparel, Inc.","Consumer Goods","Textile - Apparel Clothing","USA",122.49,,1.09,-1.80%,194695
+19,"APT","Alpha Pro Tech Ltd.","Healthcare","Medical Appliances & Equipment","Canada",38.91,40.40,2.02,0.00%,1640
+20,"APTS","Preferred Apartment Communities, Inc.","Financial","REIT - Residential","USA",64.93,,7.97,0.63%,4335
+21,"AQQ","American Spectrum Realty Inc.","Financial","Property Management","USA",7.06,,2.04,2.98%,1394
+22,"ASM","Avino Silver & Gold Mines Ltd.","Basic Materials","Industrial Metals & Minerals","Canada",32.10,39.00,1.17,0.00%,5215
+23,"ATL","Atlatsa Resources Corporation","Basic Materials","Industrial Metals & Minerals","South Africa",233.64,27.50,0.55,-0.91%,18000
+24,"AUMN","Golden Minerals Company","Basic Materials","Industrial Metals & Minerals","USA",20.14,,0.47,-0.04%,27952
+25,"AVL","Avalon Rare Metals Inc.","Basic Materials","Industrial Metals & Minerals","Canada",57.03,,0.56,1.93%,199827
+26,"AWX","Avalon Holdings Corp.","Industrial Goods","Waste Management","USA",19.78,52.00,5.35,2.88%,804
+27,"AXN","Aoxing Pharmaceutical Company, Inc.","Healthcare","Drug Manufacturers - Major","USA",11.96,,0.26,10.17%,2470
+28,"AXU","Alexco Resource Corporation","Basic Materials","Industrial Metals & Minerals","Canada",74.62,,1.20,-3.23%,150260
+29,"AXX","Alderon Iron Ore Corp.","Basic Materials","Industrial Metals & Minerals","Canada",214.73,,1.72,4.24%,2365
+30,"AZC","Augusta Resource Corp.","Basic Materials","Copper","Canada",222.30,,1.55,0.65%,57577
+31,"BAA","Banro Corporation","Basic Materials","Gold","Canada",131.07,18.33,0.55,-0.60%,70008
+32,"BBH","Market Vectors Biotech ETF","Financial","Exchange Traded Fund","USA",,,84.23,0.86%,18528
+33,"BCV","Bancroft Fund Ltd.","Financial","Closed-End Fund - Debt","USA",97.13,8.77,18.06,-0.06%,3025
+34,"BDL","Flanigan's Enterprises Inc.","Services","Specialty Eateries","USA",23.70,11.38,12.85,0.78%,200
+35,"BDR","Blonder Tongue Laboratories Inc.","Technology","Communication Equipment","USA",5.91,,0.94,-1.05%,602
+36,"BFY","BlackRock New York Municipal Income Trust II","Financial","Closed-End Fund - Debt","USA",,,12.55,0.97%,22540
+37,"BGI","Birks & Mayors Inc.","Services","Jewelry Stores","Canada",18.84,63.50,1.24,-2.36%,4086
+38,"BHB","Bar Harbor Bankshares","Financial","Regional - Northeast Banks","USA",154.29,12.14,39.20,0.00%,1486
+39,"BHV","BlackRock Virginia Municipal Bond Trust","Financial","Asset Management","USA",22.53,9.26,14.39,0.90%,2400
+40,"BKJ","Bancorp Of New Jersey, Inc.","Financial","Savings & Loans","USA",72.87,16.01,13.77,0.00%,0
+41,"BLE","BlackRock Municipal Income Trust II","Financial","Asset Management","USA",300.71,6.76,12.91,0.55%,49319
+42,"BLJ","BlackRock New Jersey Municipal Bond Trust","Financial","Asset Management","USA",30.44,8.25,13.09,-0.23%,6354
+43,"BONE","Bacterin International Holdings, Inc.","Healthcare","Biotechnology","USA",19.61,,0.39,2.13%,86169
+44,"BPS","BlackRock Pennsylvania Strategic Municipal Trust Fund","Financial","Asset Management","USA",23.12,9.19,11.43,0.35%,1546
+45,"BQY","BlackRock S&P Quality Rankings Global Equity Managed Trust","Financial","Closed-End Fund - Equity","USA",,,12.52,-0.32%,17008
+46,"BRD","Brigus Gold Corp","Basic Materials","Gold","Canada",180.63,8.67,0.77,-1.46%,403799
+47,"BRN","Barnwell Industries Inc.","Basic Materials","Independent Oil & Gas","USA",25.00,,3.08,1.99%,602
+48,"BTI","British American Tobacco plc","Consumer Goods","Cigarettes","United Kingdom",98015.94,15.42,104.00,1.54%,95086
+49,"BTN","Ballantyne Strong, Inc","Consumer Goods","Photographic Equipment & Supplies","USA",62.85,20.41,4.59,2.23%,10364
+50,"BTX","BioTime, Inc.","Healthcare","Biotechnology","USA",190.78,,3.41,-0.58%,55350
+51,"BVX","Bovie Medical Corp.","Healthcare","Medical Instruments & Supplies","USA",38.89,,2.23,1.36%,5097
+52,"BWL-A","Bowl America Inc.","Services","Sporting Activities","USA",75.63,50.62,14.68,0.00%,0
+53,"BXE","Bellatrix Exploration Ltd.","Basic Materials","Oil & Gas Drilling & Exploration","Canada",853.88,13.87,7.13,-1.11%,39293
+54,"BZC","Breeze-Eastern Corporation","Industrial Goods","Aerospace/Defense Products & Services","USA",90.65,22.38,9.20,-2.13%,1651
+55,"BZM","BlackRock Maryland Municipal Bond Trust","Financial","Asset Management","USA",25.30,9.78,12.30,0.65%,3268
+56,"CAK","CAMAC Energy Inc.","Basic Materials","Independent Oil & Gas","USA",185.88,,1.12,-5.89%,161698
+57,"CANF","Can-Fite BioPharma Ltd.","Healthcare","Biotechnology","Israel",36.66,,7.00,15.34%,25614
+58,"CAW","CCA Industries Inc.","Consumer Goods","Personal Products","USA",21.23,,3.05,1.33%,1100
+59,"CCA","MFS California Insured Municipal Fund","Financial","Closed-End Fund - Debt","USA",,,9.80,0.31%,3867
+60,"CCF","Chase Corp.","Industrial Goods","Industrial Equipment & Components","USA",277.72,16.74,31.49,0.59%,1615
+61,"CEF","Central Fund of Canada Limited","Financial","Asset Management","Canada",3450.11,,13.62,0.44%,222819
+62,"CEP","Constellation Energy Partners LLC","Basic Materials","Oil & Gas Drilling & Exploration","USA",52.43,,2.18,-0.90%,700
+63,"CET","Central Securities Corp.","Financial","Asset Management","USA",484.84,6.56,21.09,0.72%,10259
+64,"CEV","Eaton Vance California Municipal Income Trust","Financial","Closed-End Fund - Debt","USA",,,10.97,0.09%,21469
+65,"CFP","Cornerstone Progressive Return ","Financial","Closed-End Fund - Equity","USA",128.64,11.57,5.07,-0.32%,73307
+66,"CH","Aberdeen Chile Fund, Inc.","Financial","Closed-End Fund - Foreign","United Kingdom",97.62,,10.46,0.58%,18638
+67,"CHGS","China Gengsheng Minerals, Inc.","Basic Materials","Nonmetallic Mineral Mining","China",5.63,,0.20,-4.71%,12672
+68,"CIK","Credit Suisse Asset Management Income Fund Inc.","Financial","Asset Management","USA",183.29,9.00,3.51,0.00%,68957
+69,"CIX","CompX International Inc.","Services","Security & Protection Services","USA",161.78,46.61,13.05,0.00%,0
+70,"CLM","Cornerstone Strategic Value Fund Inc.","Financial","Closed-End Fund - Equity","USA",,,6.19,-0.45%,120331
+71,"CMFO","China Marine Food Group Limited","Consumer Goods","Processed & Packaged Goods","China",8.03,,0.26,-1.85%,16850
+72,"CMT","Core Molding Technologies Inc.","Consumer Goods","Rubber & Plastics","USA",86.94,12.22,12.11,1.06%,2371
+73,"CNR","China Metro-Rural Holdings Limited","Services","Air Delivery & Freight Services","Hong Kong",68.90,,0.99,3.13%,187
+74,"COVR","Cover-All Technologies Inc.","Technology","Business Software & Services","USA",37.33,,1.43,0.71%,1030
+75,"CPHI","China Pharma Holdings, Inc.","Healthcare","Drug Manufacturers - Major","China",16.12,,0.38,2.65%,10269
+76,"CQP","Cheniere Energy Partners LP.","Basic Materials","Oil & Gas Pipelines","USA",5552.56,,28.78,-0.23%,21698
+77,"CRF","Cornerstone Total Return Fund Inc.","Financial","Closed-End Fund - Equity","USA",,,5.66,-0.01%,55263
+78,"CRMD","CorMedix, Inc.","Healthcare","Biotechnology","USA",10.96,,0.85,1.19%,10100
+79,"CRV","Coast Distribution System Inc.","Services","Auto Parts Wholesale","USA",14.95,,3.18,0.00%,0
+80,"CRVP","Crystal Rock Holdings, Inc.","Services","Food Wholesale","USA",18.59,,0.89,2.24%,157
+81,"CTO","Consolidated Tomoka Land Co.","Financial","Real Estate Development","USA",208.27,134.15,35.91,-0.86%,1530
+82,"CTP","CTPartners","Services","Staffing & Outsourcing Services","USA",43.98,,6.09,-2.56%,3205
+83,"CUO","Continental Materials Corp.","Industrial Goods","Diversified Machinery","USA",30.70,7.12,19.00,1.44%,102
+84,"CUR","Neuralstem, Inc.","Healthcare","Biotechnology","USA",171.17,,2.44,-0.38%,271444
+85,"CVM","CEL-SCI Corp.","Healthcare","Biotechnology","USA",23.20,,0.71,-4.67%,194074
+86,"CVR","Chicago Rivet & Machine Co.","Industrial Goods","Machine Tools & Accessories","USA",36.52,16.16,37.61,-0.53%,821
+87,"CVU","CPI Aerostructures Inc.","Industrial Goods","Aerospace/Defense Products & Services","USA",124.54,14.00,14.99,1.01%,651
+88,"CXM","Cardium Therapeutics Inc.","Healthcare","Biotechnology","USA",5.00,,0.76,-2.18%,17643
+89,"DEJ","Dejour Energy Inc.","Basic Materials","Independent Oil & Gas","Canada",18.61,,0.12,-2.40%,377452
+90,"DGSE","DGSE Companies Inc.","Services","Jewelry Stores","USA",28.74,,2.35,-0.42%,403
+91,"DHY","Credit Suisse High Yield Bond Fund","Financial","Closed-End Fund - Debt","USA",296.32,6.35,3.07,0.66%,191847
+92,"DIT","AMCON Distributing Co.","Services","Food Wholesale","USA",48.66,8.63,78.11,0.00%,0
+93,"DLA","Delta Apparel Inc.","Consumer Goods","Textile - Apparel Clothing","USA",124.86,21.50,16.22,1.95%,2050
+94,"DMF","Dreyfus Municipal Income Inc.","Financial","Closed-End Fund - Debt","USA",169.17,7.93,8.24,0.86%,80200
+95,"DNN","Denison Mines Corp.","Basic Materials","Industrial Metals & Minerals","Canada",505.76,,1.15,-0.86%,133490
+96,"DPW","Digital Power Corp.","Technology","Diversified Electronics","USA",4.25,,0.60,-3.23%,1002
+97,"DSS","Document Security Systems, Inc.","Services","Business Services","USA",83.82,,1.97,-1.50%,394877
+98,"DXR","Daxor Corp.","Healthcare","Medical Instruments & Supplies","USA",28.77,2.23,7.00,0.14%,992
+99,"EAD","Wells Fargo Advantage Income Opportunities Fund","Financial","Closed-End Fund - Debt","USA",,,8.98,-0.32%,86690
+100,"ECF","Ellsworth Fund Ltd.","Financial","Asset Management","USA",107.52,9.95,7.97,0.13%,4422
+101,"EGAS","Gas Natural Inc.","Utilities","Gas Utilities","USA",68.57,12.09,8.03,-0.86%,17372
+102,"EGI","Entree Gold Inc.","Basic Materials","Gold","Canada",41.09,,0.29,5.36%,10100
+103,"EIA","Eaton Vance California Municipal Bond Fund II","Financial","Asset Management","USA",40.74,7.19,10.58,0.76%,7973
+104,"EIM","Eaton Vance Municipal Bond Fund","Financial","Closed-End Fund - Debt","USA",,,11.29,0.36%,134688
+105,"EIO","Eaton Vance Ohio Municipal Bond Fund","Financial","Closed-End Fund - Debt","USA",,,11.09,-0.09%,6275
+106,"EIP","Eaton Vance Pennsylvania Municipal Bond Fund","Financial","Closed-End Fund - Debt","USA",,,11.17,-0.28%,11675
+107,"EIV","Eaton Vance Municipal Bond Fund II","Financial","Closed-End Fund - Debt","USA",,,10.93,2.15%,62066
+108,"ELLO","Ellomay Capital Ltd.","Utilities","Electric Utilities","Israel",97.64,8.64,9.16,0.00%,0
+109,"ELMD","Electromed, Inc.","Healthcare","Home Health Care","USA",8.60,,1.05,-0.94%,1503
+110,"EMAN","eMagin Corp.","Technology","Semiconductor Equipment & Materials","USA",60.85,129.00,2.54,-1.55%,44328
+111,"EMI","Eaton Vance Michigan Municipal Income Trust","Financial","Closed-End Fund - Debt","USA",,,10.94,0.49%,608
+112,"EMJ","Eaton Vance New Jersey Municipal Bond Fund","Financial","Closed-End Fund - Debt","USA",,,11.54,0.00%,6370
+113,"EMXX","Eurasian Minerals Inc.","Basic Materials","Industrial Metals & Minerals","Canada",64.21,,0.87,-1.12%,13200
+114,"ENX","Eaton Vance New York Municipal Bond Fund","Financial","Closed-End Fund - Debt","USA",,,11.29,0.71%,12242
+115,"EOX","Emerald Oil, Inc.","Basic Materials","Independent Oil & Gas","USA",294.81,,6.92,0.29%,61861
+116,"EPM","Evolution Petroleum Corp.","Basic Materials","Independent Oil & Gas","USA",343.00,59.95,12.07,0.67%,5546
+117,"ERB","ERBA Diagnostics, Inc.","Healthcare","Medical Instruments & Supplies","USA",93.43,,2.11,-1.40%,15087
+118,"ERC","Wells Fargo Advantage Multi-Sector Income Fund","Financial","Closed-End Fund - Debt","USA",,,13.90,0.00%,36553
+119,"ERH","Wells Fargo Advantage Utilities and High Income Fund","Financial","Closed-End Fund - Equity","USA",,,11.60,0.17%,1300
+120,"ESP","Espey Manufacturing & Electronics Corp.","Technology","Diversified Electronics","USA",70.52,13.34,31.55,-0.19%,1485
+121,"ESTE","Earthstone Energy, Inc.","Basic Materials","Independent Oil & Gas","USA",31.78,10.79,18.28,-0.38%,1273
+122,"ETAK","Elephant Talk Communications Corp.","Technology","Long Distance Carriers","Netherlands",136.49,,1.11,-3.48%,228378
+123,"ETF","Aberdeen Emerging Markets Telecommunications Fund, Inc.","Financial","Closed-End Fund - Equity","USA",,,13.74,-30.54%,39221
+124,"EVBN","Evans Bancorp Inc.","Financial","Regional - Northeast Banks","USA",87.13,10.92,20.85,0.00%,0
+125,"EVI","EnviroStar, Inc.","Services","Consumer Services","USA",21.10,13.04,2.95,-1.67%,8578
+126,"EVJ","Eaton Vance New Jersey Municipal Income Trust","Financial","Closed-End Fund - Debt","USA",,,11.38,0.26%,17031
+127,"EVK","Ever-Glory International Group, Inc.","Consumer Goods","Textile - Apparel Clothing","USA",87.93,6.20,5.69,-4.37%,5027
+128,"EVM","Eaton Vance California Municipal Bond Fund","Financial","Closed-End Fund - Debt","USA",,,10.12,-0.10%,43867
+129,"EVO","Eaton Vance Ohio Municipal Income Trust","Financial","Closed-End Fund - Debt","USA",,,12.03,0.17%,5203
+130,"EVP","Eaton Vance Pennsylvania Municipal Income Trust","Financial","Closed-End Fund - Debt","USA",,,10.93,-0.15%,14475
+131,"EVV","Eaton Vance Limited Duration Income Fund","Financial","Asset Management","USA",1745.57,13.75,14.84,-0.10%,143177
+132,"EVY","Eaton Vance New York Municipal Income Trust","Financial","Closed-End Fund - Debt","USA",66.19,12.86,12.14,0.41%,5908
+133,"EXE","Crexendo, Inc.","Technology","Application Software","USA",33.11,,3.10,0.00%,7770
+134,"FAX","Aberdeen Asia-Pacific Income Fund Inc.","Financial","Closed-End Fund - Debt","Singapore",1564.34,9.59,5.84,-0.17%,537480
+135,"FCO","Aberdeen Global Income Fund Inc.","Financial","Closed-End Fund - Debt","USA",,,10.36,0.41%,14606
+136,"FCSC","Fibrocell Science, Inc.","Healthcare","Biotechnology","USA",103.61,2.56,3.86,-2.29%,10551
+137,"FEN","Energy Income & Growth Fund","Financial","Closed-End Fund - Equity","USA",,,30.52,-0.69%,27948
+138,"FPP","Fieldpoint Petroleum Corp.","Basic Materials","Independent Oil & Gas","USA",33.64,21.95,4.17,0.00%,3
+139,"FRD","Friedman Industries Inc.","Basic Materials","Steel & Iron","USA",58.88,18.04,8.52,-1.62%,5373
+140,"FRS","Frisch's Restaurants Inc.","Services","Restaurants","USA",122.24,15.45,23.99,-0.46%,1679
+141,"FSI","Flexible Solutions International Inc.","Basic Materials","Specialty Chemicals","Canada",11.59,,0.85,-3.41%,5250
+142,"FSP","Franklin Street Properties Corp.","Financial","REIT - Office","USA",1196.23,56.86,12.03,0.75%,40447
+143,"FTF","Franklin Templeton Limited Duration Income Trust","Financial","Asset Management","USA",,,12.80,-0.08%,46287
+144,"FWV","First West Virginia Bancorp Inc.","Financial","Regional - Mid-Atlantic Banks","USA",27.90,12.68,16.10,-0.80%,505
+145,"GBR","New Concept Energy, Inc.","Basic Materials","Independent Oil & Gas","USA",3.45,1.95,1.77,0.00%,3710
+146,"GGN","The Gabelli Global Gold, Natural Resources & Income Trust","Financial","Closed-End Fund - Equity","USA",,,8.83,0.91%,200348
+147,"GHM","Graham Corp.","Industrial Goods","Metal Fabrication","USA",365.05,27.07,36.24,-0.11%,14416
+148,"GIG","GigOptix, Inc.","Technology","Semiconductor Equipment & Materials","USA",35.52,,1.59,-3.05%,48544
+149,"GLOW","Glowpoint, Inc.","Technology","Diversified Communication Services","USA",42.47,,1.34,0.01%,2591
+150,"GLQ","Clough Global Equity Fund","Financial","Closed-End Fund - Foreign","USA",,,15.10,-0.10%,20327
+151,"GLU","The Gabelli Global Utility & Income Trust","Financial","Closed-End Fund - Equity","USA",78.64,11.40,19.27,1.21%,2123
+152,"GLV","Clough Global Allocation Fund","Financial","Closed-End Fund - Equity","USA",,,14.90,0.25%,16176
+153,"GMO","General Moly, Inc.","Basic Materials","Industrial Metals & Minerals","USA",108.04,,1.16,-1.69%,86788
+154,"GORO","Gold Resource Corp","Basic Materials","Gold","USA",259.14,20.25,4.99,2.67%,94852
+155,"GPL","Great Panther Silver Ltd","Basic Materials","Silver","Canada",99.41,,0.73,1.99%,125307
+156,"GRC","Gorman-Rupp Co.","Industrial Goods","Diversified Machinery","USA",789.72,29.78,30.25,0.57%,9107
+157,"GRF","Eagle Capital Growth Fund, Inc.","Financial","Closed-End Fund - Equity","USA",,,7.44,-1.32%,2256
+158,"GRH","GreenHunter Energy, Inc.","Industrial Goods","Pollution & Treatment Controls","USA",44.32,,1.31,-0.76%,54310
+159,"GSB","GlobalSCAPE, Inc.","Technology","Application Software","USA",44.03,,2.34,-1.68%,656
+160,"GSS","Golden Star Resources, Ltd.","Basic Materials","Gold","USA",116.59,,0.46,1.31%,168693
+161,"GST","Gastar Exploration, Ltd.","Basic Materials","Independent Oil & Gas","USA",312.03,7.56,5.41,-0.55%,114156
+162,"GSV","Gold Standard Ventures Corp","Basic Materials","Gold","Canada",70.66,,0.73,-4.68%,8600
+163,"GTE","Gran Tierra Energy, Inc.","Basic Materials","Independent Oil & Gas","Canada",1978.81,11.10,7.01,0.36%,126750
+164,"GTT","Global Telecom & Technology, Inc.","Technology","Diversified Communication Services","USA",157.47,,7.18,2.57%,18660
+165,"GTU","Central GoldTrust","Basic Materials","Gold","Canada",830.48,,43.03,0.01%,8501
+166,"GV","Goldfield Corp.","Industrial Goods","Heavy Construction","USA",48.87,5.65,1.93,0.52%,14045
+167,"GVP","GSE Systems Inc.","Technology","Business Software & Services","USA",28.73,,1.57,0.00%,0
+168,"HEB","Hemispherx Biopharma, Inc.","Healthcare","Biotechnology","USA",45.14,,0.27,0.37%,166535
+169,"HH","Hooper Holmes Inc.","Healthcare","Specialized Health Services","USA",37.77,,0.53,-1.85%,64741
+170,"HMG","HMG/Courtland Properties Inc.","Financial","REIT - Retail","USA",15.25,,15.64,0.00%,0
+171,"HRT","Arrhythmia Research Technology Inc.","Healthcare","Medical Appliances & Equipment","USA",9.33,,3.43,-0.58%,36
+172,"HTM","US Geothermal Inc.","Utilities","Diversified Utilities","USA",37.77,,0.37,0.14%,4030
+173,"HUSA","Houston American Energy Corp.","Basic Materials","Independent Oil & Gas","USA",14.09,,0.26,-3.22%,34854
+174,"HWG","The Hallwood Group Incorporated","Industrial Goods","Textile Industrial","USA",14.52,,9.52,0.00%,0
+175,"HYHG","ProShares High Yield-Interest Rate Hdgd","Financial","Exchange Traded Fund","USA",,,79.83,0.16%,14355
+176,"IAF","Aberdeen Australia Equity Fund Inc.","Financial","Closed-End Fund - Foreign","USA",,,8.68,-0.03%,51697
+177,"IBIO","iBio, Inc.","Healthcare","Biotechnology","USA",18.44,,0.34,-0.59%,200
+178,"ICH","Investors Capital Holdings, Ltd.","Financial","Diversified Investments","USA",48.25,,7.18,-0.55%,2600
+179,"IDI","SearchMedia Holdings Ltd.","Services","Advertising Agencies","USA",40.94,,1.27,-0.01%,45600
+180,"IDN","Intellicheck Mobilisa, Inc.","Industrial Goods","Industrial Electrical Equipment","USA",16.40,,0.59,-0.25%,2511
+181,"IEC","IEC Electronics Corp.","Technology","Printed Circuit Boards","USA",42.69,62.86,4.33,-1.59%,1671
+182,"IF","Aberdeen Indonesia Fund, Inc.","Financial","Closed-End Fund - Foreign","USA",,,9.14,0.33%,3653
+183,"IFMI","Institutional Financial Markets, Inc.","Financial","Mortgage Investment","USA",24.23,,2.04,0.00%,11998
+184,"IG","IGI, Laboratories, Inc.","Healthcare","Biotechnology","USA",123.68,,2.89,1.40%,8014
+185,"IGC","India Globalization Capital, Inc.","Industrial Goods","Heavy Construction","USA",6.30,,0.86,-4.63%,11646
+186,"IGHG","ProShares Investment Grd-Intr Rt Hdgd","Financial","Exchange Traded Fund","USA",,,81.20,0.19%,397
+187,"IHT","Innsuites Hospitality Trust","Financial","REIT - Hotel/Motel","USA",16.00,,1.94,1.57%,1000
+188,"IMH","Impac Mortgage Holdings Inc.","Financial","Mortgage Investment","USA",57.56,5.11,6.65,0.15%,6074
+189,"IMO","Imperial Oil Ltd.","Basic Materials","Major Integrated Oil & Gas","Canada",36285.76,13.50,42.71,-0.23%,54725
+190,"IMUC","ImmunoCellular Therapeutics, Ltd.","Healthcare","Biotechnology","USA",46.46,,0.67,-20.36%,6679156
+191,"INFU","InfuSystem Holdings, Inc.","Healthcare","Medical Instruments & Supplies","USA",46.13,105.50,2.10,-0.46%,6815
+192,"INO","Inovio Pharmaceuticals, Inc.","Healthcare","Biotechnology","USA",405.03,,2.16,2.37%,2107339
+193,"INS","Intelligent Systems","Technology","Technical & System Software","USA",15.05,14.00,1.68,0.00%,0
+194,"INTT","inTEST Corp.","Technology","Semiconductor - Integrated Circuits","USA",38.69,17.76,3.73,0.00%,0
+195,"INUV","Inuvo, Inc.","Services","Marketing Services","USA",33.54,,1.41,-2.08%,3813
+196,"IOT","Income Opportunity Realty Investors Inc.","Financial","Real Estate Development","USA",20.63,14.56,4.95,0.00%,0
+197,"IRT","Independence Realty Trust, Inc.","Financial","REIT - Residential","USA",2.90,,8.39,0.00%,0
+198,"ISL","Aberdeen Israel Fund Inc.","Financial","Closed-End Fund - Foreign","USA",,,16.76,0.10%,722
+199,"ISR","IsoRay, Inc.","Healthcare","Medical Instruments & Supplies","USA",15.92,,0.45,-1.65%,59689
+200,"ITI","Iteris, Inc.","Technology","Communication Equipment","USA",67.87,69.33,2.08,0.00%,20140
+201,"JOB","General Employment Enterprises Inc.","Services","Staffing & Outsourcing Services","USA",4.99,,0.23,0.00%,19804
+202,"JRS","Nuveen Real Estate Income Fund","Financial","Asset Management","USA",273.51,9.32,9.52,0.11%,95280
+203,"KBX","Kimber Resources Inc.","Basic Materials","Gold","Canada",,,0.13,0.00%,0
+204,"LAQ","Aberdeen Latin America Equity Fund, Inc.","Financial","Asset Management","USA",,,29.87,0.00%,0
+205,"LBMH","Liberator Medical Holdings, Inc.","Healthcare","Medical Instruments & Supplies","USA",203.72,35.73,3.99,1.53%,146022
+206,"LBY","Libbey Inc.","Consumer Goods","Housewares & Accessories","USA",459.74,22.76,21.74,1.64%,6328
+207,"LEI","Lucas Energy, Inc.","Basic Materials","Independent Oil & Gas","USA",25.44,,0.96,4.34%,46834
+208,"LGL","The LGL Group, Inc.","Industrial Goods","Industrial Electrical Equipment","USA",12.79,,4.93,0.00%,602
+209,"LNG","Cheniere Energy, Inc.","Basic Materials","Oil & Gas Pipelines","USA",9118.52,,41.08,-0.56%,357486
+210,"LODE","Comstock Mining, Inc.","Basic Materials","Gold","USA",108.77,,1.67,-1.71%,22372
+211,"LOV","Spark Networks, Inc.","Services","Consumer Services","USA",139.91,,5.86,-0.51%,85315
+212,"LSG","Lake Shore Gold Corp.","Basic Materials","Gold","Canada",212.48,,0.50,-2.73%,150687
+213,"LTS","Ladenburg Thalmann Financial Services Inc.","Financial","Investment Brokerage - National","USA",567.09,,3.08,-1.28%,104148
+214,"MAB","Eaton Vance Massachusetts Municipal Bond Fund","Financial","Closed-End Fund - Debt","USA",,,12.28,0.00%,23403
+215,"MCF","Contango Oil & Gas Co.","Basic Materials","Independent Oil & Gas","USA",656.27,17.49,43.60,0.95%,24825
+216,"MCZ","Mad Catz Interactive Inc.","Technology","Computer Peripherals","USA",33.64,,0.51,-2.83%,57815
+217,"MDM","Mountain Province Diamonds Inc.","Basic Materials","Nonmetallic Mineral Mining","Canada",460.48,,4.89,-0.03%,1062
+218,"MDW","Midway Gold Corp.","Basic Materials","Gold","USA",104.98,,0.80,-1.23%,34258
+219,"MEA","Metalico Inc.","Industrial Goods","Metal Fabrication","USA",78.30,,1.62,-0.61%,12941
+220,"MEET","MeetMe, Inc.","Technology","Internet Information Providers","USA",64.57,,1.70,0.59%,70585
+221,"MGH","Minco Gold Corporation","Basic Materials","Gold","Canada",9.06,,0.17,-5.50%,15900
+222,"MGN","Mines Management, Inc.","Basic Materials","Silver","USA",17.11,,0.60,1.69%,14675
+223,"MGT","MGT Capital Investments, Inc.","Services","Business Services","United Kingdom",13.87,,2.81,-3.44%,16166
+224,"MHE","BlackRock Massachusetts Health and Education Tax-Exempt Trust","Financial","Closed-End Fund - Debt","USA",,,11.64,-0.09%,1952
+225,"MHH","Mastech Holdings, Inc.","Services","Staffing & Outsourcing Services","USA",50.11,19.17,15.19,1.61%,1001
+226,"MIW","Eaton Vance Michigan Municipal Bond Fund","Financial","Closed-End Fund - Debt","USA",,,11.55,2.48%,6046
+227,"MMV","Eaton Vance Massachusetts Municipal Income Trust","Financial","Closed-End Fund - Debt","USA",,,12.29,0.16%,5685
+228,"MOC","Command Security Corp.","Services","Security & Protection Services","USA",19.92,36.17,2.17,0.00%,0
+229,"MSN","Emerson Radio Corp.","Consumer Goods","Electronic Equipment","USA",51.28,27.00,1.89,0.00%,3330
+230,"MSTX","Mast Therapeutics, Inc.","Healthcare","Biotechnology","USA",43.14,,0.42,0.81%,2275234
+231,"MVF","BlackRock MuniVest Fund, Inc.","Financial","Asset Management","USA",563.71,3.36,8.86,0.34%,94492
+232,"MVG","Mag Silver Corp.","Basic Materials","Silver","Canada",306.12,,5.09,0.00%,13239
+233,"MXA","Minnesota Municipal Income Portfolio Inc.","Financial","Closed-End Fund - Debt","USA",,,14.51,1.11%,2373
+234,"MXC","Mexco Energy Corporation","Basic Materials","Independent Oil & Gas","USA",14.56,143.00,7.49,4.76%,3799
+235,"MXN","First American Minnesota Municipal Income Fund II Inc.","Financial","Closed-End Fund - Debt","USA",,,12.91,0.39%,1062
+236,"MZA","BlackRock Muniyield Arizona Fund, Inc.","Financial","Asset Management","USA",59.45,,13.03,0.35%,6373
+237,"NAK","Northern Dynasty Minerals Ltd.","Basic Materials","Industrial Metals & Minerals","Canada",120.66,,1.29,1.57%,92312
+238,"NAVB","Navidea Biopharmaceuticals, Inc","Healthcare","Medical Appliances & Equipment","USA",262.83,,2.18,0.46%,1125858
+239,"NBH","Neuberger Berman Intermediate Municipal Fund Inc.","Financial","Closed-End Fund - Debt","USA",,,14.51,0.14%,39903
+240,"NBO","Neuberger Berman New York Intermediate Municipal Fund Inc.","Financial","Closed-End Fund - Debt","USA",,,12.63,1.36%,26025
+241,"NBW","Neuberger Berman California Intermediate Municipal Fund Inc.","Financial","Closed-End Fund - Debt","USA",,,13.64,0.15%,25282
+242,"NBY","NovaBay Pharmaceuticals, Inc.","Healthcare","Drug Manufacturers - Other","USA",46.08,,1.22,-0.81%,59081
+243,"NCQ","NovaCopper Inc.","Basic Materials","Industrial Metals & Minerals","Canada",76.42,,1.40,-2.78%,54307
+244,"NCU","Nuveen California Premium Income Municipal Fund","Financial","Closed-End Fund - Debt","USA",,,12.89,0.00%,3081
+245,"NEA","Nuveen Insured Tax-Free Advantage Municipal Fund","Financial","Closed-End Fund - Debt","USA",,,11.87,0.17%,223910
+246,"NEAR","iShares Short Maturity Bond","Financial","Exchange Traded Fund","USA",,,50.16,0.00%,45004
+247,"NEN","New England Realty Associates LP","Financial","Property Management","USA",5.89,188.71,45.29,0.00%,0
+248,"NEWN","New Energy Systems Group","Technology","Diversified Electronics","China",0.88,,0.09,50.00%,10000
+249,"NG","NovaGold Resources Inc.","Basic Materials","Gold","Canada",728.26,,2.33,1.30%,305579
+250,"NGD","New Gold, Inc.","Basic Materials","Gold","Canada",2392.30,12.07,4.85,0.41%,887766
+251,"NGX","Nuveen Insured Massachusetts Tax-Free Advantage Municipal Fund","Financial","Closed-End Fund - Debt","USA",,,11.45,-0.43%,176
+252,"NHC","National Healthcare Corp.","Healthcare","Long-Term Care Facilities","USA",713.11,13.83,52.10,0.97%,2119
+253,"NHS","Neuberger Berman High Yield Strategies Fund","Financial","Closed-End Fund - Debt","USA",,,13.15,-0.23%,28427
+254,"NKG","Nuveen Georgia Dividend Advantage Municipal Fund 2","Financial","Asset Management","USA",124.38,22.67,11.82,0.26%,29529
+255,"NKX","Nuveen Insured California Tax Free Advantage Municipal Fund","Financial","Closed-End Fund - Debt","USA",,,12.00,0.25%,57062
+256,"NLP","NTS Realty Holdings LP","Financial","Real Estate Development","USA",73.81,,7.08,-0.40%,2210
+257,"NMB","Nuveen Massachusetts Dividend Advantage Municipal Fund","Financial","Asset Management","USA",23.46,24.43,11.97,0.00%,0
+258,"NMZ","Nuveen Municipal High Income Opportunity Fund","Financial","Asset Management","USA",360.59,6.77,11.58,1.22%,139095
+259,"NNVC","NanoViricides, Inc.","Healthcare","Drug Manufacturers - Major","USA",254.09,,5.49,3.00%,52729
+260,"NOG","Northern Oil and Gas, Inc.","Basic Materials","Oil & Gas Drilling & Exploration","USA",918.91,16.73,14.79,0.48%,146849
+261,"NOM","Nuveen Missouri Premium Income Municipal Fund","Financial","Closed-End Fund - Debt","USA",,,12.50,-0.08%,4427
+262,"NRK","Nuveen Insured New York Tax-Free Advantage Municipal Fund","Financial","Closed-End Fund - Debt","USA",,,12.16,1.16%,259817
+263,"NRO","Neuberger Berman Real Estate Securities Income Fund Inc.","Financial","Closed-End Fund - Equity","USA",,,4.30,0.58%,62243
+264,"NSPR","InspireMD, Inc.","Healthcare","Medical Appliances & Equipment","USA",77.18,,2.60,4.42%,33099
+265,"NSU","Nevsun Resources Ltd.","Basic Materials","Gold","Canada",626.88,7.88,3.14,-0.32%,40051
+266,"NTN","NTN Buzztime Inc.","Services","Broadcasting - TV","USA",49.03,,0.67,-3.62%,30777
+267,"NTS","NTS, Inc","Technology","Diversified Communication Services","USA",80.41,,1.96,0.51%,4647
+268,"NUJ","Nuveen New Jersey Dividend Advantage Municipal Fund 2","Financial","Closed-End Fund - Debt","USA",,,12.08,-0.74%,766
+269,"NVG","Nuveen Insured Dividend Advantage Municipal Fund","Financial","Closed-End Fund - Debt","USA",,,12.43,0.32%,43968
+270,"NVX","Nuveen California Dividend Advantage Municipal Fund 2","Financial","Asset Management","USA",183.17,6.89,12.50,0.73%,21707
+271,"NVY","Nuveen Pennsylvania Dividend Advantage Municipal Fund 2","Financial","Closed-End Fund - Debt","USA",,,11.90,1.12%,5302
+272,"NXJ","Nuveen New Jersey Dividend Advantage Municipal Fund","Financial","Closed-End Fund - Debt","USA",,,12.37,0.08%,24016
+273,"NXK","Nuveen New York Dividend Advantage Municipal Fund 2","Financial","Closed-End Fund - Debt","USA",,,12.22,-0.65%,4400
+274,"NXM","Nuveen Pennsylvania Dividend Advantage Municipal Fund","Financial","Closed-End Fund - Debt","USA",,,12.19,1.36%,8501
+275,"NXZ","Nuveen Dividend Advatage Municipal Fund 2","Financial","Closed-End Fund - Debt","USA",,,12.59,0.96%,65946
+276,"NYH","Eaton Vance New York Municipal Bond Fund II","Financial","Closed-End Fund - Debt","USA",,,10.92,-0.08%,2679
+277,"NZF","Nuveen Dividend Advantage Municipal Fund 3","Financial","Closed-End Fund - Debt","USA",,,12.17,0.16%,186167
+278,"NZH","Nuveen California Dividend Advantage Municipal Fund 3","Financial","Asset Management","USA",271.20,6.85,11.32,0.80%,43164
+279,"OESX","Orion Energy Systems, Inc","Technology","Diversified Electronics","USA",147.27,53.54,6.84,-1.68%,36673
+280,"OGEN","Oragenics Inc.","Healthcare","Biotechnology","USA",77.59,,2.83,0.35%,14312
+281,"OIH","Market Vectors Oil Services ETF","Financial","Exchange Traded Fund","USA",,,46.95,-0.63%,1978072
+282,"ONP","Orient Paper, Inc.","Consumer Goods","Paper & Paper Products","China",46.88,4.54,2.37,-6.69%,48133
+283,"ONVO","Organovo Holdings, Inc.","Healthcare","Medical Laboratories & Research","USA",637.72,,8.65,-1.37%,843442
+284,"ORM","Owens Realty Mortgage, Inc.","Financial","REIT - Office","USA",138.26,632.50,12.55,-0.79%,400
+285,"PAL","North American Palladium Ltd.","Basic Materials","Industrial Metals & Minerals","Canada",75.40,,0.43,2.21%,360669
+286,"PBM","Pacific Booker Minerals Inc.","Basic Materials","Industrial Metals & Minerals","Canada",79.72,,6.48,0.47%,986
+287,"PCC","PMC Commercial Trust","Financial","REIT - Industrial","USA",93.24,97.78,8.76,-0.45%,722
+288,"PDO","Pyramid Oil Company","Basic Materials","Independent Oil & Gas","USA",24.33,64.88,4.97,-4.24%,137
+289,"PED","PEDEVCO Corp.","Basic Materials","Oil & Gas Equipment & Services","USA",33.67,,2.35,-2.89%,2300
+290,"PEX","ProShares Global Listed Private Eq ETF","Financial","Exchange Traded Fund","USA",,,45.37,0.18%,500
+291,"PHF","Pacholder High Yield Fund Inc.","Financial","Closed-End Fund - Debt","USA",,,7.96,0.25%,3803
+292,"PIP","PharmAthene, Inc.","Healthcare","Biotechnology","USA",88.06,,1.71,-3.39%,229228
+293,"PLG","Platinum Group Metals Ltd.","Basic Materials","Industrial Metals & Minerals","Canada",442.99,,1.06,-3.63%,94943
+294,"PLM","Polymet Mining Corp.","Basic Materials","Industrial Metals & Minerals","Canada",201.77,,0.97,1.05%,63351
+295,"PLX","Protalix BioTherapeutics, Inc.","Healthcare","Biotechnology","Israel",367.87,,4.01,0.75%,178568
+296,"PPH","Market Vectors Pharmaceutical ETF","Financial","Exchange Traded Fund","USA",,,51.52,0.43%,16038
+297,"PRK","Park National Corp.","Financial","Regional - Midwest Banks","USA",1258.70,16.53,81.71,0.05%,3819
+298,"PTN","Palatin Technologies Inc.","Healthcare","Diagnostic Substances","USA",82.09,,0.77,0.00%,2537
+299,"PW","Power REIT","Financial","REIT - Diversified","USA",13.89,,8.32,-2.00%,103
+300,"PZG","Paramount Gold and Silver Corp.","Basic Materials","Industrial Metals & Minerals","Canada",147.94,,0.98,2.98%,176697
+301,"QMM","Quaterra Resources Inc.","Basic Materials","Industrial Metals & Minerals","Canada",14.48,,0.08,5.19%,43290
+302,"QRM","Quest Rare Minerals Ltd.","Basic Materials","Industrial Metals & Minerals","Canada",28.91,,0.43,0.28%,13450
+303,"RBY","Rubicon Minerals Corporation","Basic Materials","Gold","Canada",210.59,,0.77,5.14%,392732
+304,"RCG","RENN Global Entrepreneurs Fund, Inc.","Financial","Asset Management","USA",6.12,3.70,1.37,0.00%,0
+305,"REE","Rare Element Resources Ltd.","Basic Materials","Industrial Metals & Minerals","Canada",62.40,,1.29,-1.49%,60996
+306,"REED","REEDS, Inc.","Consumer Goods","Beverages - Soft Drinks","USA",86.38,,6.80,-0.58%,2546
+307,"REI","Ring Energy, Inc.","Basic Materials","Oil & Gas Drilling & Exploration","USA",171.91,,12.44,3.84%,28017
+308,"RIC","Richmont Mines Inc.","Basic Materials","Gold","Canada",38.41,,0.99,1.88%,10506
+309,"RIF","RMR Real Estate Income Fund","Financial","Closed-End Fund - Equity","USA",128.29,5.86,16.82,0.30%,9717
+310,"RKH","Market Vectors Bank and Brokerage ETF","Financial","Exchange Traded Fund","USA",,,53.10,0.00%,0
+311,"RLGT","Radiant Logistics, Inc.","Services","Air Delivery & Freight Services","USA",77.68,19.42,2.32,-0.34%,19301
+312,"RNN","Rexahn Pharmaceuticals, Inc.","Healthcare","Biotechnology","USA",56.10,,0.44,1.28%,312954
+313,"ROX","Castle Brands Inc.","Consumer Goods","Beverages - Wineries & Distillers","USA",88.37,,0.80,-0.25%,130295
+314,"RPI","Roberts Realty Investors Inc.","Financial","REIT - Retail","USA",9.68,,0.94,0.00%,300
+315,"RTH","Market Vectors Retail ETF","Financial","Exchange Traded Fund","USA",,,59.97,0.39%,10089
+316,"RVM","Revett Minerals Inc","Basic Materials","Industrial Metals & Minerals","USA",22.14,,0.64,-0.47%,17300
+317,"RVP","Retractable Technologies Inc.","Healthcare","Medical Instruments & Supplies","USA",77.61,,2.89,0.70%,12074
+318,"RWC","RELM Wireless Corp.","Technology","Communication Equipment","USA",44.55,29.82,3.39,3.35%,694
+319,"SAND","Sandstorm Gold Ltd.","Basic Materials","Gold","Canada",425.49,,4.27,0.23%,71037
+320,"SARA","Saratoga Resources Inc.","Basic Materials","Independent Oil & Gas","USA",38.37,,1.25,0.81%,36054
+321,"SBI","Western Asset Intermediate Muni Fund Inc.","Financial","Closed-End Fund - Debt","USA",,,9.07,0.42%,5260
+322,"SEB","Seaboard Corp.","Consumer Goods","Meat Products","USA",3287.01,16.21,2752.01,-0.20%,99
+323,"SGA","Saga Communications Inc.","Services","Broadcasting - Radio","USA",286.20,18.84,49.35,-0.78%,3444
+324,"SGB","Southwest Georgia Financial Corp.","Financial","Regional - Mid-Atlantic Banks","USA",28.95,13.21,11.36,0.00%,0
+325,"SIF","SIFCO Industries Inc.","Industrial Goods","Metal Fabrication","USA",139.75,14.36,25.25,-2.88%,3935
+326,"SIM","Grupo Simec S.A.B. de C.V.","Basic Materials","Steel & Iron","Mexico",2048.90,24.22,12.42,0.57%,1211
+327,"SKY","Skyline Corp.","Industrial Goods","Manufactured Housing","USA",40.28,,4.70,-2.08%,4905
+328,"SLI","SL Industries Inc.","Technology","Diversified Electronics","USA",104.30,8.55,25.16,-0.28%,1101
+329,"SMH","Market Vectors Semiconductor ETF","Financial","Exchange Traded Fund","USA",,,41.33,-0.27%,506687
+330,"SOQ","Sonde Resources Corp.","Basic Materials","Oil & Gas Drilling & Exploration","Canada",38.63,,0.65,4.84%,26763
+331,"SSN","Samson Oil & Gas Limited","Basic Materials","Oil & Gas Drilling & Exploration","Australia",48.34,,0.41,0.27%,49139
+332,"SSY","SunLink Health Systems Inc.","Healthcare","Hospitals","USA",8.21,,0.87,0.00%,0
+333,"STRP","Straight Path Communications Inc.","Technology","Diversified Communication Services","USA",86.14,,7.50,-0.53%,1300
+334,"STS","Supreme Industries Inc.","Consumer Goods","Trucks & Other Vehicles","USA",89.21,17.81,5.71,3.47%,24613
+335,"SVBL","Silver Bull Resources, Inc.","Basic Materials","Industrial Metals & Minerals","Canada",54.08,,0.35,2.91%,85540
+336,"SVLC","Silvercrest Mines Inc.","Basic Materials","Gold","Canada",172.09,6.58,1.59,0.63%,32570
+337,"SVT","Servotronics Inc.","Industrial Goods","Industrial Electrical Equipment","USA",18.98,14.12,8.25,0.73%,3300
+338,"SWH","Stanley Black & Decker, Inc.","Financial","Exchange Traded Fund","USA",,,101.60,0.00%,0
+339,"SYN","Synthetic Biologics Inc.","Healthcare","Biotechnology","USA",47.78,,1.13,5.42%,509050
+340,"SYRG","Synergy Resources Corporation","Basic Materials","Oil & Gas Equipment & Services","USA",623.40,53.53,8.85,-2.75%,70432
+341,"TAS","Tasman Metals Ltd.","Basic Materials","Industrial Metals & Minerals","Canada",52.33,,0.89,3.13%,72696
+342,"TAT","TransAtlantic Petroleum Ltd.","Basic Materials","Oil & Gas Drilling & Exploration","USA",269.32,,0.76,3.86%,117331
+343,"TCX","Tucows Inc.","Technology","Internet Information Providers","Canada",125.67,36.38,2.84,-2.41%,49299
+344,"TGB","Taseko Mines Ltd.","Basic Materials","Industrial Metals & Minerals","Canada",349.80,,1.84,0.82%,228959
+345,"TGC","Tengasco Inc.","Basic Materials","Independent Oil & Gas","USA",23.73,7.80,0.39,-0.03%,74566
+346,"TGD","Timmins Gold Corp.","Basic Materials","Gold","Canada",154.25,5.10,1.05,-1.87%,86128
+347,"THM","International Tower Hill Mines Ltd.","Basic Materials","Gold","Canada",40.21,,0.39,-4.07%,44225
+348,"TIK","Tel-Instrument Electronics Corp.","Technology","Scientific & Technical Instruments","USA",13.04,,4.03,0.00%,0
+349,"TIS","Orchids Paper Products Company","Consumer Goods","Paper & Paper Products","USA",248.00,20.35,31.15,0.03%,7044
+350,"TLR","Timberline Resources Corp.","Basic Materials","Gold","USA",11.58,,0.17,0.12%,21585
+351,"TMP","Tompkins Financial Corporation.","Financial","Regional - Northeast Banks","USA",712.69,14.97,48.94,-0.33%,4588
+352,"TOF","Tofutti Brands Inc.","Consumer Goods","Food - Major Diversified","USA",17.11,,3.32,0.00%,302
+353,"TPI","Tianyin Pharmaceutical Co., Inc.","Healthcare","Drug Manufacturers - Other","China",24.96,3.70,0.85,-0.59%,1275
+354,"TPLM","Triangle Petroleum Corporation","Basic Materials","Independent Oil & Gas","USA",707.58,74.58,8.69,-2.91%,751862
+355,"TRT","Trio-Tech International","Technology","Semiconductor Equipment & Materials","USA",10.73,,3.26,0.93%,394
+356,"TRX","Tanzanian Royalty Exploration Corp.","Basic Materials","Gold","Canada",195.49,,1.93,-0.52%,39329
+357,"TSH","Teche Holding Company","Financial","Savings & Loans","USA",98.14,11.42,48.20,0.00%,1111
+358,"TXMD","TherapeuticsMD, Inc.","Healthcare","Drug Manufacturers - Major","USA",573.40,,4.39,0.46%,17026
+359,"UAMY","United States Antimony Corp.","Basic Materials","Industrial Metals & Minerals","USA",125.24,,1.99,-0.50%,1422
+360,"UEC","Uranium Energy Corp.","Basic Materials","Industrial Metals & Minerals","USA",154.87,,1.80,-0.55%,89943
+361,"UQM","UQM Technologies Inc.","Industrial Goods","Industrial Electrical Equipment","USA",77.72,,2.11,0.00%,8188
+362,"URG","UR-Energy Inc.","Basic Materials","Industrial Metals & Minerals","USA",141.62,,1.19,2.59%,381514
+363,"URZ","Uranerz Energy Corp.","Basic Materials","Industrial Metals & Minerals","USA",90.58,,1.13,-0.79%,96428
+364,"UTG","Reaves Utility Income Fund","Financial","Closed-End Fund - Equity","USA",701.46,4.29,24.20,0.08%,54720
+365,"UUU","Universal Security Instruments Inc.","Services","Security & Protection Services","USA",9.79,,4.29,0.23%,1001
+366,"UWN","Nevada Gold & Casinos Inc.","Services","Resorts & Casinos","USA",16.41,,1.02,0.00%,0
+367,"VCF","Delaware Investments Colorado Municipal Income Fund, Inc.","Financial","Closed-End Fund - Debt","USA",,,12.33,-0.40%,4418
+368,"VFL","Delaware Investments National Municipal Income Fund","Financial","Closed-End Fund - Debt","USA",,,11.51,-0.26%,7395
+369,"VGZ","Vista Gold Corp.","Basic Materials","Gold","USA",30.26,,0.38,2.68%,67236
+370,"VHC","VirnetX Holding Corp","Technology","Internet Software & Services","USA",973.37,,19.20,1.00%,88082
+371,"VII","Vicon Industries Inc.","Technology","Diversified Electronics","USA",12.01,,2.75,3.00%,8824
+372,"VKI","Invesco Van Kampen Advantage Municipal Income Trust II","Financial","Closed-End Fund - Debt","USA",,,10.29,0.29%,171527
+373,"VMM","Delaware Investments Minnesota Municipal Income Fund II","Financial","Closed-End Fund - Debt","USA",,,12.24,0.08%,39466
+374,"VSB","VantageSouth Bancshares, Inc.","Financial","Regional - Mid-Atlantic Banks","USA",236.55,51.40,5.07,-1.37%,1667
+375,"VSR","Versar Inc.","Services","Technical Services","USA",43.71,11.40,4.52,-0.88%,131
+376,"VTG","Vantage Drilling Company","Basic Materials","Oil & Gas Drilling & Exploration","USA",546.73,,1.79,-1.10%,108819
+377,"WGA","Wells-Gardner Electronics Corp.","Technology","Diversified Electronics","USA",20.48,25.00,1.70,-2.84%,9217
+378,"WTT","Wireless Telecom Group Inc.","Technology","Communication Equipment","USA",51.05,16.46,2.13,-0.47%,7816
+379,"WYY","WidePoint Corp.","Services","Technical Services","USA",91.17,71.50,1.43,0.01%,206486
+380,"XPL","Solitario Exploration & Royalty Corp.","Basic Materials","Gold","USA",28.42,,0.82,0.00%,0
+381,"XRA","Exeter Resource Corporation","Basic Materials","Gold","Canada",48.62,,0.55,0.00%,39136
+382,"ZBB","ZBB Energy Corporation","Industrial Goods","Industrial Electrical Equipment","USA",75.94,,0.81,-5.84%,157096

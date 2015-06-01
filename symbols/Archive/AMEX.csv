@@ -1,0 +1,341 @@
+Ticker,No.,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume, Code, Name
+AAU,2,Almaden Minerals Ltd.,Basic Materials,Gold,Canada,63.65,,1.06,0.00%,12220,GOOG/AMEX_AAU,Almaden Minerals Ltd. 
+ACU,3,Acme United Corp.,Consumer Goods,Housewares & Accessories,USA,47.01,12.39,14.74,0.00%,0,GOOG/AMEX_ACU,Acme United Corporation 
+ACY,4,AeroCentury Corp.,Services,Rental & Leasing Services,USA,26.43,3.44,17.1,-0.18%,1002,GOOG/AMEX_ACY,AeroCentury Corp. 
+ADGE,5,"American DG Energy, Inc.",Utilities,Electric Utilities,USA,78.92,,1.61,0.00%,0,GOOG/AMEX_ADGE,American DG Energy Inc 
+ADK,6,AdCare Health Systems Inc.,Healthcare,Long-Term Care Facilities,USA,64.83,,4.45,1.14%,22501,GOOG/AMEX_ADK,AdCare Health Systems
+AE,7,Adams Resources & Energy Inc.,Basic Materials,Oil & Gas Refining & Marketing,USA,255.99,8.83,60.76,0.12%,3282,GOOG/AMEX_AE,Adams Resources &amp; Energy Inc 
+ALN,10,American Lorain Corporation,Consumer Goods,Processed & Packaged Goods,China,27.69,1.57,0.8,0.00%,127553,GOOG/AMEX_ALN,American Lorain Corporation 
+AMS,14,American Shared Hospital Services,Healthcare,Specialized Health Services,USA,12.35,,2.68,0.00%,0,GOOG/AMEX_AMS,American Shared Hospital Services 
+ANV,16,Allied Nevada Gold Corp.,Basic Materials,Gold,USA,344.57,9.43,3.34,1.21%,544303,GOOG/AMEX_ANV,Allied Nevada Gold Corp. 
+API,17,Advanced Photonix Inc.,Technology,Semiconductor - Integrated Circuits,USA,20.9,,0.66,-0.76%,5184,GOOG/AMEX_API,Advanced Photonix
+APP,18,"American Apparel, Inc.",Consumer Goods,Textile - Apparel Clothing,USA,122.49,,1.09,-1.80%,194695,GOOG/AMEX_APP,American Apparel Inc. 
+APT,19,Alpha Pro Tech Ltd.,Healthcare,Medical Appliances & Equipment,Canada,38.91,40.4,2.02,0.00%,1640,GOOG/AMEX_APT,Alpha Pro Tech
+APTS,20,"Preferred Apartment Communities, Inc.",Financial,REIT - Residential,USA,64.93,,7.97,0.63%,4335,GOOG/AMEX_APTS,Preferred Apartment Communities Inc. 
+AQQ,21,American Spectrum Realty Inc.,Financial,Property Management,USA,7.06,,2.04,2.98%,1394,GOOG/AMEX_AQQ,American Spectrum Realty
+ASM,22,Avino Silver & Gold Mines Ltd.,Basic Materials,Industrial Metals & Minerals,Canada,32.1,39.0,1.17,0.00%,5215,GOOG/AMEX_ASM,Avino Silver &amp; Gold Mines Ltd 
+ATL,23,Atlatsa Resources Corporation,Basic Materials,Industrial Metals & Minerals,South Africa,233.64,27.5,0.55,-0.91%,18000,GOOG/AMEX_ATL,Anooraq Resources Corp. 
+AUMN,24,Golden Minerals Company,Basic Materials,Industrial Metals & Minerals,USA,20.14,,0.47,-0.04%,27952,GOOG/AMEX_AUMN,Golden Minerals Co 
+AVL,25,Avalon Rare Metals Inc.,Basic Materials,Industrial Metals & Minerals,Canada,57.03,,0.56,1.93%,199827,GOOG/AMEX_AVL,Avalon Rare Metals Inc 
+AWX,26,Avalon Holdings Corp.,Industrial Goods,Waste Management,USA,19.78,52.0,5.35,2.88%,804,GOOG/AMEX_AWX,Avalon Holdings Corp 
+AXN,27,"Aoxing Pharmaceutical Company, Inc.",Healthcare,Drug Manufacturers - Major,USA,11.96,,0.26,10.17%,2470,GOOG/AMEX_AXN,Aoxing Pharmaceutical Company
+AXU,28,Alexco Resource Corporation,Basic Materials,Industrial Metals & Minerals,Canada,74.62,,1.2,-3.23%,150260,GOOG/AMEX_AXU,Alexco Resource Corp. 
+AXX,29,Alderon Iron Ore Corp.,Basic Materials,Industrial Metals & Minerals,Canada,214.73,,1.72,4.24%,2365,GOOG/AMEX_AXX,Alderon Iron Ore Corp 
+AZC,30,Augusta Resource Corp.,Basic Materials,Copper,Canada,222.3,,1.55,0.65%,57577,GOOG/AMEX_AZC,Augusta Resource Corp. 
+BAA,31,Banro Corporation,Basic Materials,Gold,Canada,131.07,18.33,0.55,-0.60%,70008,GOOG/AMEX_BAA,Banro Corporation 
+BBH,32,Market Vectors Biotech ETF,Financial,Exchange Traded Fund,USA,,,84.23,0.86%,18528,GOOG/AMEX_BBH,Merrill Lynch Biotech HOLDRS ETF 
+BCV,33,Bancroft Fund Ltd.,Financial,Closed-End Fund - Debt,USA,97.13,8.77,18.06,-0.06%,3025,GOOG/AMEX_BCV,Bancroft Fund Ltd. 
+BDL,34,Flanigan's Enterprises Inc.,Services,Specialty Eateries,USA,23.7,11.38,12.85,0.78%,200,GOOG/AMEX_BDL,Flanigan's Enterprises
+BDR,35,Blonder Tongue Laboratories Inc.,Technology,Communication Equipment,USA,5.91,,0.94,-1.05%,602,GOOG/AMEX_BDR,Blonder Tongue Labs
+BFY,36,BlackRock New York Municipal Income Trust II,Financial,Closed-End Fund - Debt,USA,,,12.55,0.97%,22540,GOOG/AMEX_BFY,Blackrock New York Municipal Incme Tr II 
+BHB,38,Bar Harbor Bankshares,Financial,Regional - Northeast Banks,USA,154.29,12.14,39.2,0.00%,1486,GOOG/AMEX_BHB,Bar Harbor Bankshares 
+BHV,39,BlackRock Virginia Municipal Bond Trust,Financial,Asset Management,USA,22.53,9.26,14.39,0.90%,2400,GOOG/AMEX_BHV,BlackRock Virginia Municipal Bond Trust 
+BKJ,40,"Bancorp Of New Jersey, Inc.",Financial,Savings & Loans,USA,72.87,16.01,13.77,0.00%,0,GOOG/AMEX_BKJ,Bancorp of New Jersey Inc 
+BLE,41,BlackRock Municipal Income Trust II,Financial,Asset Management,USA,300.71,6.76,12.91,0.55%,49319,GOOG/AMEX_BLE,BlackRock Municipal Income Trust II 
+BLJ,42,BlackRock New Jersey Municipal Bond Trust,Financial,Asset Management,USA,30.44,8.25,13.09,-0.23%,6354,GOOG/AMEX_BLJ,Blackrock New Jersey Municipal Bond Trst 
+BONE,43,"Bacterin International Holdings, Inc.",Healthcare,Biotechnology,USA,19.61,,0.39,2.13%,86169,GOOG/AMEX_BONE,Bacterin International Holdings Inc 
+BPS,44,BlackRock Pennsylvania Strategic Municipal Trust Fund,Financial,Asset Management,USA,23.12,9.19,11.43,0.35%,1546,GOOG/AMEX_BPS,BlackRock Pennsylvania Strategic Municipal Trust 
+BQY,45,BlackRock S&P Quality Rankings Global Equity Managed Trust,Financial,Closed-End Fund - Equity,USA,,,12.52,-0.32%,17008,GOOG/AMEX_BQY,Blackrock S&amp;P Qlty Rnkngs Glb Eq Mngd Tr 
+BRD,46,Brigus Gold Corp,Basic Materials,Gold,Canada,180.63,8.67,0.77,-1.46%,403799,GOOG/AMEX_BRD,Brigus Gold Corp 
+BRN,47,Barnwell Industries Inc.,Basic Materials,Independent Oil & Gas,USA,25.0,,3.08,1.99%,602,GOOG/AMEX_BRN,Barnwell Industries
+BTI,48,British American Tobacco plc,Consumer Goods,Cigarettes,United Kingdom,98015.94,15.42,104.0,1.54%,95086,GOOG/AMEX_BTI,British American Tobacco PLC 
+BTN,49,"Ballantyne Strong, Inc",Consumer Goods,Photographic Equipment & Supplies,USA,62.85,20.41,4.59,2.23%,10364,GOOG/AMEX_BTN,Ballantyne Strong Inc 
+BTX,50,"BioTime, Inc.",Healthcare,Biotechnology,USA,190.78,,3.41,-0.58%,55350,GOOG/AMEX_BTX,BioTime
+BVX,51,Bovie Medical Corp.,Healthcare,Medical Instruments & Supplies,USA,38.89,,2.23,1.36%,5097,GOOG/AMEX_BVX,Bovie Medical Corporation 
+BZC,54,Breeze-Eastern Corporation,Industrial Goods,Aerospace/Defense Products & Services,USA,90.65,22.38,9.2,-2.13%,1651,GOOG/AMEX_BZC,Breeze-Eastern Corp 
+BZM,55,BlackRock Maryland Municipal Bond Trust,Financial,Asset Management,USA,25.3,9.78,12.3,0.65%,3268,GOOG/AMEX_BZM,Blackrock Maryland Municipal Bond Trust 
+CAK,56,CAMAC Energy Inc.,Basic Materials,Independent Oil & Gas,USA,185.88,,1.12,-5.89%,161698,GOOG/AMEX_CAK,CAMAC Energy Inc 
+CAW,58,CCA Industries Inc.,Consumer Goods,Personal Products,USA,21.23,,3.05,1.33%,1100,GOOG/AMEX_CAW,CCA Industries
+CCA,59,MFS California Insured Municipal Fund,Financial,Closed-End Fund - Debt,USA,,,9.8,0.31%,3867,GOOG/AMEX_CCA,MFS California Municipal Fund Common Shares of Beneficial Interest 
+CCF,60,Chase Corp.,Industrial Goods,Industrial Equipment & Components,USA,277.72,16.74,31.49,0.59%,1615,GOOG/AMEX_CCF,Chase Corp. 
+CEF,61,Central Fund of Canada Limited,Financial,Asset Management,Canada,3450.11,,13.62,0.44%,222819,GOOG/AMEX_CEF,Central Fund of Canada Limited 
+CEP,62,Constellation Energy Partners LLC,Basic Materials,Oil & Gas Drilling & Exploration,USA,52.43,,2.18,-0.90%,700,GOOG/AMEX_CEP,Constellation Energy Partners LLC 
+CET,63,Central Securities Corp.,Financial,Asset Management,USA,484.84,6.56,21.09,0.72%,10259,GOOG/AMEX_CET,Central Securities Corp. 
+CEV,64,Eaton Vance California Municipal Income Trust,Financial,Closed-End Fund - Debt,USA,,,10.97,0.09%,21469,GOOG/AMEX_CEV,Eaton Vance California Mun. Income Trust 
+CFP,65,Cornerstone Progressive Return ,Financial,Closed-End Fund - Equity,USA,128.64,11.57,5.07,-0.32%,73307,GOOG/AMEX_CFP,Cornerstone Progressive Return Fund 
+CH,66,"Aberdeen Chile Fund, Inc.",Financial,Closed-End Fund - Foreign,United Kingdom,97.62,,10.46,0.58%,18638,GOOG/AMEX_CH,Aberdeen Chile Fund
+CHGS,67,"China Gengsheng Minerals, Inc.",Basic Materials,Nonmetallic Mineral Mining,China,5.63,,0.2,-4.71%,12672,GOOG/AMEX_CHGS,China GengSheng Minerals
+CIK,68,Credit Suisse Asset Management Income Fund Inc.,Financial,Asset Management,USA,183.29,9.0,3.51,0.00%,68957,GOOG/AMEX_CIK,Credit Suisse AM Inc Fund Inc. 
+CIX,69,CompX International Inc.,Services,Security & Protection Services,USA,161.78,46.61,13.05,0.00%,0,GOOG/AMEX_CIX,CompX International Inc. 
+CLM,70,Cornerstone Strategic Value Fund Inc.,Financial,Closed-End Fund - Equity,USA,,,6.19,-0.45%,120331,GOOG/AMEX_CLM,Cornerstone Strategic Value Fund Inc. 
+CMFO,71,China Marine Food Group Limited,Consumer Goods,Processed & Packaged Goods,China,8.03,,0.26,-1.85%,16850,GOOG/AMEX_CMFO,China Marine Food Group Ltd 
+CMT,72,Core Molding Technologies Inc.,Consumer Goods,Rubber & Plastics,USA,86.94,12.22,12.11,1.06%,2371,GOOG/AMEX_CMT,Core Molding Technologies
+CNR,73,China Metro-Rural Holdings Limited,Services,Air Delivery & Freight Services,Hong Kong,68.9,,0.99,3.13%,187,GOOG/AMEX_CNR,China Metro Rural Holdings Ltd 
+COVR,74,Cover-All Technologies Inc.,Technology,Business Software & Services,USA,37.33,,1.43,0.71%,1030,GOOG/AMEX_COVR,Cover-All Technologies Inc. 
+CPHI,75,"China Pharma Holdings, Inc.",Healthcare,Drug Manufacturers - Major,China,16.12,,0.38,2.65%,10269,GOOG/AMEX_CPHI,China Pharma Holdings
+CQP,76,Cheniere Energy Partners LP.,Basic Materials,Oil & Gas Pipelines,USA,5552.56,,28.78,-0.23%,21698,GOOG/AMEX_CQP,Cheniere Energy Partners LP 
+CRF,77,Cornerstone Total Return Fund Inc.,Financial,Closed-End Fund - Equity,USA,,,5.66,-0.01%,55263,GOOG/AMEX_CRF,Cornerstone Total Return Fund Inc 
+CRMD,78,"CorMedix, Inc.",Healthcare,Biotechnology,USA,10.96,,0.85,1.19%,10100,GOOG/AMEX_CRMD,CorMedix Inc. 
+CRV,79,Coast Distribution System Inc.,Services,Auto Parts Wholesale,USA,14.95,,3.18,0.00%,0,GOOG/AMEX_CRV,The Coast Distribution System
+CRVP,80,"Crystal Rock Holdings, Inc.",Services,Food Wholesale,USA,18.59,,0.89,2.24%,157,GOOG/AMEX_CRVP,Crystal Rock Holdings Inc 
+CTO,81,Consolidated Tomoka Land Co.,Financial,Real Estate Development,USA,208.27,134.15,35.91,-0.86%,1530,GOOG/AMEX_CTO,Consolidated-Tomoka Land Co. 
+CTP,82,CTPartners,Services,Staffing & Outsourcing Services,USA,43.98,,6.09,-2.56%,3205,GOOG/AMEX_CTP,CTPartners Executive Search Inc 
+CUO,83,Continental Materials Corp.,Industrial Goods,Diversified Machinery,USA,30.7,7.12,19.0,1.44%,102,GOOG/AMEX_CUO,Continental Materials Corporation 
+CUR,84,"Neuralstem, Inc.",Healthcare,Biotechnology,USA,171.17,,2.44,-0.38%,271444,GOOG/AMEX_CUR,Neuralstem
+CVM,85,CEL-SCI Corp.,Healthcare,Biotechnology,USA,23.2,,0.71,-4.67%,194074,GOOG/AMEX_CVM,CEL-SCI Corporation 
+CVR,86,Chicago Rivet & Machine Co.,Industrial Goods,Machine Tools & Accessories,USA,36.52,16.16,37.61,-0.53%,821,GOOG/AMEX_CVR,Chicago Rivet &amp; Machine Co. 
+CVU,87,CPI Aerostructures Inc.,Industrial Goods,Aerospace/Defense Products & Services,USA,124.54,14.0,14.99,1.01%,651,GOOG/AMEX_CVU,CPI Aerostructures
+CXM,88,Cardium Therapeutics Inc.,Healthcare,Biotechnology,USA,5.0,,0.76,-2.18%,17643,GOOG/AMEX_CXM,Cardium Therapeutics Inc 
+DEJ,89,Dejour Energy Inc.,Basic Materials,Independent Oil & Gas,Canada,18.61,,0.12,-2.40%,377452,GOOG/AMEX_DEJ,Dejour Energy Inc 
+DGSE,90,DGSE Companies Inc.,Services,Jewelry Stores,USA,28.74,,2.35,-0.42%,403,GOOG/AMEX_DGSE,DGSE Companies
+DHY,91,Credit Suisse High Yield Bond Fund,Financial,Closed-End Fund - Debt,USA,296.32,6.35,3.07,0.66%,191847,GOOG/AMEX_DHY,Credit Suisse High Yield Bond Fund 
+DIT,92,AMCON Distributing Co.,Services,Food Wholesale,USA,48.66,8.63,78.11,0.00%,0,GOOG/AMEX_DIT,AMCON Distributing Co. 
+DLA,93,Delta Apparel Inc.,Consumer Goods,Textile - Apparel Clothing,USA,124.86,21.5,16.22,1.95%,2050,GOOG/AMEX_DLA,Delta Apparel
+DMF,94,Dreyfus Municipal Income Inc.,Financial,Closed-End Fund - Debt,USA,169.17,7.93,8.24,0.86%,80200,GOOG/AMEX_DMF,Dreyfus Municipal Income
+DNN,95,Denison Mines Corp.,Basic Materials,Industrial Metals & Minerals,Canada,505.76,,1.15,-0.86%,133490,GOOG/AMEX_DNN,Denison Mines Corp 
+DPW,96,Digital Power Corp.,Technology,Diversified Electronics,USA,4.25,,0.6,-3.23%,1002,GOOG/AMEX_DPW,Digital Power Corporation 
+DSS,97,"Document Security Systems, Inc.",Services,Business Services,USA,83.82,,1.97,-1.50%,394877,GOOG/AMEX_DSS,Document Security Systems
+DXR,98,Daxor Corp.,Healthcare,Medical Instruments & Supplies,USA,28.77,2.23,7.0,0.14%,992,GOOG/AMEX_DXR,Daxor Corporation 
+EAD,99,Wells Fargo Advantage Income Opportunities Fund,Financial,Closed-End Fund - Debt,USA,,,8.98,-0.32%,86690,GOOG/AMEX_EAD,Wells Fargo Adv Inc Opport Fund 
+ECF,100,Ellsworth Fund Ltd.,Financial,Asset Management,USA,107.52,9.95,7.97,0.13%,4422,GOOG/AMEX_ECF,Ellsworth Fund Limited 
+EGAS,101,Gas Natural Inc.,Utilities,Gas Utilities,USA,68.57,12.09,8.03,-0.86%,17372,GOOG/AMEX_EGAS,Gas Natural Inc 
+EGI,102,Entree Gold Inc.,Basic Materials,Gold,Canada,41.09,,0.29,5.36%,10100,GOOG/AMEX_EGI,Entree Gold Inc 
+EIA,103,Eaton Vance California Municipal Bond Fund II,Financial,Asset Management,USA,40.74,7.19,10.58,0.76%,7973,GOOG/AMEX_EIA,Eaton Vance California Municpl Bnd Fd II 
+EIM,104,Eaton Vance Municipal Bond Fund,Financial,Closed-End Fund - Debt,USA,,,11.29,0.36%,134688,GOOG/AMEX_EIM,Eaton Vance Municipal Bond Fund 
+EIO,105,Eaton Vance Ohio Municipal Bond Fund,Financial,Closed-End Fund - Debt,USA,,,11.09,-0.09%,6275,GOOG/AMEX_EIO,Eaton Vance Ohio Municipal Bond Fund Common Shared of Befeficial Interest
+EIP,106,Eaton Vance Pennsylvania Municipal Bond Fund,Financial,Closed-End Fund - Debt,USA,,,11.17,-0.28%,11675,GOOG/AMEX_EIP,Eaton Vance Bond Fund 
+EIV,107,Eaton Vance Municipal Bond Fund II,Financial,Closed-End Fund - Debt,USA,,,10.93,2.15%,62066,GOOG/AMEX_EIV,Eaton Vance Municipal Bond Fund II Common Shares of Beneficial Interest
+ELLO,108,Ellomay Capital Ltd.,Utilities,Electric Utilities,Israel,97.64,8.64,9.16,0.00%,0,GOOG/AMEX_ELLO,Ellomay Capital Ltd. 
+ELMD,109,"Electromed, Inc.",Healthcare,Home Health Care,USA,8.6,,1.05,-0.94%,1503,GOOG/AMEX_ELMD,Electromed 
+EMAN,110,eMagin Corp.,Technology,Semiconductor Equipment & Materials,USA,60.85,129.0,2.54,-1.55%,44328,GOOG/AMEX_EMAN,eMagin Corporation 
+EMI,111,Eaton Vance Michigan Municipal Income Trust,Financial,Closed-End Fund - Debt,USA,,,10.94,0.49%,608,GOOG/AMEX_EMI,Eaton Vance Michigan Municipal Income Trust Shares of Beneficial Interest 
+EMJ,112,Eaton Vance New Jersey Municipal Bond Fund,Financial,Closed-End Fund - Debt,USA,,,11.54,0.00%,6370,GOOG/AMEX_EMJ,Eaton Vance New Jersey Municipal Bond Fund Common Shres of Beneficial Interest
+EMXX,113,Eurasian Minerals Inc.,Basic Materials,Industrial Metals & Minerals,Canada,64.21,,0.87,-1.12%,13200,GOOG/AMEX_EMXX,Eurasian Minerals 
+ENX,114,Eaton Vance New York Municipal Bond Fund,Financial,Closed-End Fund - Debt,USA,,,11.29,0.71%,12242,GOOG/AMEX_ENX,Eaton Vance New York Municipal Bond Fund 
+EPM,116,Evolution Petroleum Corp.,Basic Materials,Independent Oil & Gas,USA,343.0,59.95,12.07,0.67%,5546,GOOG/AMEX_EPM,Evolution Petroleum Corporation 
+ERB,117,"ERBA Diagnostics, Inc.",Healthcare,Medical Instruments & Supplies,USA,93.43,,2.11,-1.40%,15087,GOOG/AMEX_ERB,Erba Diagnostics Inc 
+ERC,118,Wells Fargo Advantage Multi-Sector Income Fund,Financial,Closed-End Fund - Debt,USA,,,13.9,0.00%,36553,GOOG/AMEX_ERC,Wells Fargo Adv Multi-Sector Inco Fund 
+ERH,119,Wells Fargo Advantage Utilities and High Income Fund,Financial,Closed-End Fund - Equity,USA,,,11.6,0.17%,1300,GOOG/AMEX_ERH,Wells Fargo Advantage Utilities &amp; High 
+ESP,120,Espey Manufacturing & Electronics Corp.,Technology,Diversified Electronics,USA,70.52,13.34,31.55,-0.19%,1485,GOOG/AMEX_ESP,Espey Manufacturing &amp; Electronics Corp. 
+ETAK,122,Elephant Talk Communications Corp.,Technology,Long Distance Carriers,Netherlands,136.49,,1.11,-3.48%,228378,GOOG/AMEX_ETAK,Elephant Talk Commun 
+ETF,123,"Aberdeen Emerging Markets Telecommunications Fund, Inc.",Financial,Closed-End Fund - Equity,USA,,,13.74,-30.54%,39221,GOOG/AMEX_ETF,Aberdeen Emrg Mkts Smlr Co Oppts Fd Inc 
+EVBN,124,Evans Bancorp Inc.,Financial,Regional - Northeast Banks,USA,87.13,10.92,20.85,0.00%,0,GOOG/AMEX_EVBN,Evans Bancorp Inc. 
+EVI,125,"EnviroStar, Inc.",Services,Consumer Services,USA,21.1,13.04,2.95,-1.67%,8578,GOOG/AMEX_EVI,Envirostar Inc 
+EVJ,126,Eaton Vance New Jersey Municipal Income Trust,Financial,Closed-End Fund - Debt,USA,,,11.38,0.26%,17031,GOOG/AMEX_EVJ,Eaton Vance New Jersey Municipal Incm Tr 
+EVK,127,"Ever-Glory International Group, Inc.",Consumer Goods,Textile - Apparel Clothing,USA,87.93,6.2,5.69,-4.37%,5027,GOOG/AMEX_EVK,Ever-Glory International Group Inc 
+EVM,128,Eaton Vance California Municipal Bond Fund,Financial,Closed-End Fund - Debt,USA,,,10.12,-0.10%,43867,GOOG/AMEX_EVM,Eaton Vance Cali Muni Bnd Fnd 
+EVO,129,Eaton Vance Ohio Municipal Income Trust,Financial,Closed-End Fund - Debt,USA,,,12.03,0.17%,5203,GOOG/AMEX_EVO,Eaton Vance Ohio Municipal Income Trust 
+EVP,130,Eaton Vance Pennsylvania Municipal Income Trust,Financial,Closed-End Fund - Debt,USA,,,10.93,-0.15%,14475,GOOG/AMEX_EVP,Eaton Vance Pennsylvania Municipal 
+EVV,131,Eaton Vance Limited Duration Income Fund,Financial,Asset Management,USA,1745.57,13.75,14.84,-0.10%,143177,GOOG/AMEX_EVV,Eaton Vance Limited Duration Income Fund 
+EVY,132,Eaton Vance New York Municipal Income Trust,Financial,Closed-End Fund - Debt,USA,66.19,12.86,12.14,0.41%,5908,GOOG/AMEX_EVY,Eaton Vance New York Muni. Incm. Trst Fd 
+EXE,133,"Crexendo, Inc.",Technology,Application Software,USA,33.11,,3.1,0.00%,7770,GOOG/AMEX_EXE,Crexendo Inc 
+FAX,134,Aberdeen Asia-Pacific Income Fund Inc.,Financial,Closed-End Fund - Debt,Singapore,1564.34,9.59,5.84,-0.17%,537480,GOOG/AMEX_FAX,Aberdeen Asia-Pacific Income Fund
+FCO,135,Aberdeen Global Income Fund Inc.,Financial,Closed-End Fund - Debt,USA,,,10.36,0.41%,14606,GOOG/AMEX_FCO,Aberdeen Global Income Fund Inc 
+FEN,137,Energy Income & Growth Fund,Financial,Closed-End Fund - Equity,USA,,,30.52,-0.69%,27948,GOOG/AMEX_FEN,First Trust Energy Income &amp; Growth Fund 
+FPP,138,Fieldpoint Petroleum Corp.,Basic Materials,Independent Oil & Gas,USA,33.64,21.95,4.17,0.00%,3,GOOG/AMEX_FPP,Fieldpoint Petroleum Corporation 
+FRD,139,Friedman Industries Inc.,Basic Materials,Steel & Iron,USA,58.88,18.04,8.52,-1.62%,5373,GOOG/AMEX_FRD,Friedman Industries 
+FRS,140,Frisch's Restaurants Inc.,Services,Restaurants,USA,122.24,15.45,23.99,-0.46%,1679,GOOG/AMEX_FRS,Frisch's Restaurants
+FSI,141,Flexible Solutions International Inc.,Basic Materials,Specialty Chemicals,Canada,11.59,,0.85,-3.41%,5250,GOOG/AMEX_FSI,Flexible Solutions International
+FSP,142,Franklin Street Properties Corp.,Financial,REIT - Office,USA,1196.23,56.86,12.03,0.75%,40447,GOOG/AMEX_FSP,Franklin Street Properties Corp. 
+FTF,143,Franklin Templeton Limited Duration Income Trust,Financial,Asset Management,USA,,,12.8,-0.08%,46287,GOOG/AMEX_FTF,Franklin Templeton Limited Duration Income Trust Common Shares of Beneficial Interest 
+FWV,144,First West Virginia Bancorp Inc.,Financial,Regional - Mid-Atlantic Banks,USA,27.9,12.68,16.1,-0.80%,505,GOOG/AMEX_FWV,First West Virginia Bancorp
+GBR,145,"New Concept Energy, Inc.",Basic Materials,Independent Oil & Gas,USA,3.45,1.95,1.77,0.00%,3710,GOOG/AMEX_GBR,New Concept Energy
+GGN,146,"The Gabelli Global Gold, Natural Resources & Income Trust",Financial,Closed-End Fund - Equity,USA,,,8.83,0.91%,200348,GOOG/AMEX_GGN,Gamco Global Gold Ntrl Rsrcs&amp;Incm Tr BY 
+GHM,147,Graham Corp.,Industrial Goods,Metal Fabrication,USA,365.05,27.07,36.24,-0.11%,14416,GOOG/AMEX_GHM,Graham Corporation 
+GIG,148,"GigOptix, Inc.",Technology,Semiconductor Equipment & Materials,USA,35.52,,1.59,-3.05%,48544,GOOG/AMEX_GIG,GigOptix Inc 
+GLOW,149,"Glowpoint, Inc.",Technology,Diversified Communication Services,USA,42.47,,1.34,0.01%,2591,GOOG/AMEX_GLOW,Glowpoint Inc 
+GLQ,150,Clough Global Equity Fund,Financial,Closed-End Fund - Foreign,USA,,,15.1,-0.10%,20327,GOOG/AMEX_GLQ,Clough Global Equity Fund 
+GLU,151,The Gabelli Global Utility & Income Trust,Financial,Closed-End Fund - Equity,USA,78.64,11.4,19.27,1.21%,2123,GOOG/AMEX_GLU,Gabelli Global Utility Common Shares of Beneficial Ownership 
+GLV,152,Clough Global Allocation Fund,Financial,Closed-End Fund - Equity,USA,,,14.9,0.25%,16176,GOOG/AMEX_GLV,Clough Global Allocation Fund 
+GMO,153,"General Moly, Inc.",Basic Materials,Industrial Metals & Minerals,USA,108.04,,1.16,-1.69%,86788,GOOG/AMEX_GMO,General Moly
+GORO,154,Gold Resource Corp,Basic Materials,Gold,USA,259.14,20.25,4.99,2.67%,94852,GOOG/AMEX_GORO,Gold Resource Corporation 
+GPL,155,Great Panther Silver Ltd,Basic Materials,Silver,Canada,99.41,,0.73,1.99%,125307,GOOG/AMEX_GPL,Great Panther Silver Ltd 
+GRC,156,Gorman-Rupp Co.,Industrial Goods,Diversified Machinery,USA,789.72,29.78,30.25,0.57%,9107,GOOG/AMEX_GRC,The Gorman-Rupp Company 
+GRF,157,"Eagle Capital Growth Fund, Inc.",Financial,Closed-End Fund - Equity,USA,,,7.44,-1.32%,2256,GOOG/AMEX_GRF,Eagle Capital Growth Fund
+GRH,158,"GreenHunter Energy, Inc.",Industrial Goods,Pollution & Treatment Controls,USA,44.32,,1.31,-0.76%,54310,GOOG/AMEX_GRH,GreenHunter Energy Inc 
+GSB,159,"GlobalSCAPE, Inc.",Technology,Application Software,USA,44.03,,2.34,-1.68%,656,GOOG/AMEX_GSB,GlobalSCAPE
+GSS,160,"Golden Star Resources, Ltd.",Basic Materials,Gold,USA,116.59,,0.46,1.31%,168693,GOOG/AMEX_GSS,Golden Star Resources Ltd. 
+GST,161,"Gastar Exploration, Ltd.",Basic Materials,Independent Oil & Gas,USA,312.03,7.56,5.41,-0.55%,114156,GOOG/AMEX_GST,Gastar Exploration Limited 
+GSV,162,Gold Standard Ventures Corp,Basic Materials,Gold,Canada,70.66,,0.73,-4.68%,8600,GOOG/AMEX_GSV,Gold Standard Ventures Corp 
+GTE,163,"Gran Tierra Energy, Inc.",Basic Materials,Independent Oil & Gas,Canada,1978.81,11.1,7.01,0.36%,126750,GOOG/AMEX_GTE,World Surveillance Group Inc 
+GTU,165,Central GoldTrust,Basic Materials,Gold,Canada,830.48,,43.03,0.01%,8501,GOOG/AMEX_GTU,Central GoldTrust 
+GV,166,Goldfield Corp.,Industrial Goods,Heavy Construction,USA,48.87,5.65,1.93,0.52%,14045,GOOG/AMEX_GV,Goldfield Corp 
+GVP,167,GSE Systems Inc.,Technology,Business Software & Services,USA,28.73,,1.57,0.00%,0,GOOG/AMEX_GVP,GSE Systems
+HEB,168,"Hemispherx Biopharma, Inc.",Healthcare,Biotechnology,USA,45.14,,0.27,0.37%,166535,GOOG/AMEX_HEB,Hemispherx BioPharma
+HH,169,Hooper Holmes Inc.,Healthcare,Specialized Health Services,USA,37.77,,0.53,-1.85%,64741,GOOG/AMEX_HH,Hooper Holmes
+HMG,170,HMG/Courtland Properties Inc.,Financial,REIT - Retail,USA,15.25,,15.64,0.00%,0,GOOG/AMEX_HMG,HMG/Courtland Properties 
+HRT,171,Arrhythmia Research Technology Inc.,Healthcare,Medical Appliances & Equipment,USA,9.33,,3.43,-0.58%,36,GOOG/AMEX_HRT,Arrhythmia Research Technology
+HTM,172,US Geothermal Inc.,Utilities,Diversified Utilities,USA,37.77,,0.37,0.14%,4030,GOOG/AMEX_HTM,U.S. Geothermal Inc. 
+HUSA,173,Houston American Energy Corp.,Basic Materials,Independent Oil & Gas,USA,14.09,,0.26,-3.22%,34854,GOOG/AMEX_HUSA,Houston American Energy Corporation 
+HWG,174,The Hallwood Group Incorporated,Industrial Goods,Textile Industrial,USA,14.52,,9.52,0.00%,0,GOOG/AMEX_HWG,The Hallwood Group Incorporated 
+IAF,176,Aberdeen Australia Equity Fund Inc.,Financial,Closed-End Fund - Foreign,USA,,,8.68,-0.03%,51697,GOOG/AMEX_IAF,Aberdeen Australia Equity Fund Inc 
+IBIO,177,"iBio, Inc.",Healthcare,Biotechnology,USA,18.44,,0.34,-0.59%,200,GOOG/AMEX_IBIO,Ibio Inc 
+ICH,178,"Investors Capital Holdings, Ltd.",Financial,Diversified Investments,USA,48.25,,7.18,-0.55%,2600,GOOG/AMEX_ICH,Investors Capital Holdings Ltd 
+IDI,179,SearchMedia Holdings Ltd.,Services,Advertising Agencies,USA,40.94,,1.27,-0.01%,45600,GOOG/AMEX_IDI,Tiger Media Inc 
+IDN,180,"Intellicheck Mobilisa, Inc.",Industrial Goods,Industrial Electrical Equipment,USA,16.4,,0.59,-0.25%,2511,GOOG/AMEX_IDN,Intellicheck Mobilisa
+IEC,181,IEC Electronics Corp.,Technology,Printed Circuit Boards,USA,42.69,62.86,4.33,-1.59%,1671,GOOG/AMEX_IEC,IEC Electronics Corp. 
+IF,182,"Aberdeen Indonesia Fund, Inc.",Financial,Closed-End Fund - Foreign,USA,,,9.14,0.33%,3653,GOOG/AMEX_IF,Aberdeen Indonesia Fund Inc 
+IFMI,183,"Institutional Financial Markets, Inc.",Financial,Mortgage Investment,USA,24.23,,2.04,0.00%,11998,GOOG/AMEX_IFMI,Institutional Financial Markets Inc 
+IG,184,"IGI, Laboratories, Inc.",Healthcare,Biotechnology,USA,123.68,,2.89,1.40%,8014,GOOG/AMEX_IG,IGI Laboratories
+IGC,185,"India Globalization Capital, Inc.",Industrial Goods,Heavy Construction,USA,6.3,,0.86,-4.63%,11646,GOOG/AMEX_IGC,India Globalization Capital
+IHT,187,Innsuites Hospitality Trust,Financial,REIT - Hotel/Motel,USA,16.0,,1.94,1.57%,1000,GOOG/AMEX_IHT,InnSuites Hospitality Trust 
+IMH,188,Impac Mortgage Holdings Inc.,Financial,Mortgage Investment,USA,57.56,5.11,6.65,0.15%,6074,GOOG/AMEX_IMH,IMPAC Mortgage Holdings
+IMO,189,Imperial Oil Ltd.,Basic Materials,Major Integrated Oil & Gas,Canada,36285.76,13.5,42.71,-0.23%,54725,GOOG/AMEX_IMO,Imperial Oil Limited 
+INFU,191,"InfuSystem Holdings, Inc.",Healthcare,Medical Instruments & Supplies,USA,46.13,105.5,2.1,-0.46%,6815,GOOG/AMEX_INFU,InfuSystem Holdings
+INO,192,"Inovio Pharmaceuticals, Inc.",Healthcare,Biotechnology,USA,405.03,,2.16,2.37%,2107339,GOOG/AMEX_INO,Inovio Pharmaceuticals Inc 
+INS,193,Intelligent Systems,Technology,Technical & System Software,USA,15.05,14.0,1.68,0.00%,0,GOOG/AMEX_INS,Intelligent Systems Corporation 
+INUV,195,"Inuvo, Inc.",Services,Marketing Services,USA,33.54,,1.41,-2.08%,3813,GOOG/AMEX_INUV,Inuvo
+IOT,196,Income Opportunity Realty Investors Inc.,Financial,Real Estate Development,USA,20.63,14.56,4.95,0.00%,0,GOOG/AMEX_IOT,Income Opportunity Realty Investors
+ISL,198,Aberdeen Israel Fund Inc.,Financial,Closed-End Fund - Foreign,USA,,,16.76,0.10%,722,GOOG/AMEX_ISL,Aberdeen Israel Fund Inc 
+ISR,199,"IsoRay, Inc.",Healthcare,Medical Instruments & Supplies,USA,15.92,,0.45,-1.65%,59689,GOOG/AMEX_ISR,IsoRay
+ITI,200,"Iteris, Inc.",Technology,Communication Equipment,USA,67.87,69.33,2.08,0.00%,20140,GOOG/AMEX_ITI,Iteris Inc 
+JOB,201,General Employment Enterprises Inc.,Services,Staffing & Outsourcing Services,USA,4.99,,0.23,0.00%,19804,GOOG/AMEX_JOB,General Employment Enterprises
+JRS,202,Nuveen Real Estate Income Fund,Financial,Asset Management,USA,273.51,9.32,9.52,0.11%,95280,GOOG/AMEX_JRS,Nuveen Real Estate Income Fund 
+KBX,203,Kimber Resources Inc.,Basic Materials,Gold,Canada,,,0.13,0.00%,0,GOOG/AMEX_KBX,Kimber Resources
+LAQ,204,"Aberdeen Latin America Equity Fund, Inc.",Financial,Asset Management,USA,,,29.87,0.00%,0,GOOG/AMEX_LAQ,Aberdeen Latin America Equity Fund
+LBY,206,Libbey Inc.,Consumer Goods,Housewares & Accessories,USA,459.74,22.76,21.74,1.64%,6328,GOOG/AMEX_LBY,Libbey Inc. 
+LEI,207,"Lucas Energy, Inc.",Basic Materials,Independent Oil & Gas,USA,25.44,,0.96,4.34%,46834,GOOG/AMEX_LEI,Lucas Energy
+LGL,208,"The LGL Group, Inc.",Industrial Goods,Industrial Electrical Equipment,USA,12.79,,4.93,0.00%,602,GOOG/AMEX_LGL,The LGL Group
+LNG,209,"Cheniere Energy, Inc.",Basic Materials,Oil & Gas Pipelines,USA,9118.52,,41.08,-0.56%,357486,GOOG/AMEX_LNG,Cheniere Energy
+LODE,210,"Comstock Mining, Inc.",Basic Materials,Gold,USA,108.77,,1.67,-1.71%,22372,GOOG/AMEX_LODE,Comstock Mining
+LOV,211,"Spark Networks, Inc.",Services,Consumer Services,USA,139.91,,5.86,-0.51%,85315,GOOG/AMEX_LOV,Spark Networks Inc 
+LSG,212,Lake Shore Gold Corp.,Basic Materials,Gold,Canada,212.48,,0.5,-2.73%,150687,GOOG/AMEX_LSG,Lake Shore Gold Corp Ordinary Shares 
+LTS,213,Ladenburg Thalmann Financial Services Inc.,Financial,Investment Brokerage - National,USA,567.09,,3.08,-1.28%,104148,GOOG/AMEX_LTS,Ladenburg Thalmann Financial Services 
+MAB,214,Eaton Vance Massachusetts Municipal Bond Fund,Financial,Closed-End Fund - Debt,USA,,,12.28,0.00%,23403,GOOG/AMEX_MAB,Eaton Vance Massachusetts Municipal Bond Fund Common Shares of Beneficial Interest
+MCF,215,Contango Oil & Gas Co.,Basic Materials,Independent Oil & Gas,USA,656.27,17.49,43.6,0.95%,24825,GOOG/AMEX_MCF,Contango Oil &amp; Gas Company 
+MCZ,216,Mad Catz Interactive Inc.,Technology,Computer Peripherals,USA,33.64,,0.51,-2.83%,57815,GOOG/AMEX_MCZ,Mad Catz Interactive
+MDM,217,Mountain Province Diamonds Inc.,Basic Materials,Nonmetallic Mineral Mining,Canada,460.48,,4.89,-0.03%,1062,GOOG/AMEX_MDM,Mountain Province Diamonds
+MDW,218,Midway Gold Corp.,Basic Materials,Gold,USA,104.98,,0.8,-1.23%,34258,GOOG/AMEX_MDW,Midway Gold Corp 
+MEA,219,Metalico Inc.,Industrial Goods,Metal Fabrication,USA,78.3,,1.62,-0.61%,12941,GOOG/AMEX_MEA,Metalico
+MEET,220,"MeetMe, Inc.",Technology,Internet Information Providers,USA,64.57,,1.7,0.59%,70585,GOOG/AMEX_MEET,Meetme Inc 
+MGH,221,Minco Gold Corporation,Basic Materials,Gold,Canada,9.06,,0.17,-5.50%,15900,GOOG/AMEX_MGH,Minco Gold Corporation 
+MGN,222,"Mines Management, Inc.",Basic Materials,Silver,USA,17.11,,0.6,1.69%,14675,GOOG/AMEX_MGN,Mines Management
+MGT,223,"MGT Capital Investments, Inc.",Services,Business Services,United Kingdom,13.87,,2.81,-3.44%,16166,GOOG/AMEX_MGT,MGT Capital Investments Inc. 
+MHE,224,BlackRock Massachusetts Health and Education Tax-Exempt Trust,Financial,Closed-End Fund - Debt,USA,,,11.64,-0.09%,1952,GOOG/AMEX_MHE,Massachusetts Health and Education Tax-Exempt Trust Mutual Fund 
+MHH,225,"Mastech Holdings, Inc.",Services,Staffing & Outsourcing Services,USA,50.11,19.17,15.19,1.61%,1001,GOOG/AMEX_MHH,Mastech Holdings
+MIW,226,Eaton Vance Michigan Municipal Bond Fund,Financial,Closed-End Fund - Debt,USA,,,11.55,2.48%,6046,GOOG/AMEX_MIW,Eaton Vance Michigan Municipal Bond Fund 
+MMV,227,Eaton Vance Massachusetts Municipal Income Trust,Financial,Closed-End Fund - Debt,USA,,,12.29,0.16%,5685,GOOG/AMEX_MMV,Eaton Vance Massachusetts Municipal Income Trust Shares of Beneficial Interest 
+MOC,228,Command Security Corp.,Services,Security & Protection Services,USA,19.92,36.17,2.17,0.00%,0,GOOG/AMEX_MOC,Command Security Corporation 
+MSN,229,Emerson Radio Corp.,Consumer Goods,Electronic Equipment,USA,51.28,27.0,1.89,0.00%,3330,GOOG/AMEX_MSN,Emerson Radio Corp 
+MVF,231,"BlackRock MuniVest Fund, Inc.",Financial,Asset Management,USA,563.71,3.36,8.86,0.34%,94492,GOOG/AMEX_MVF,Munivest Fund 
+MVG,232,Mag Silver Corp.,Basic Materials,Silver,Canada,306.12,,5.09,0.00%,13239,GOOG/AMEX_MVG,Mag Silver Corp 
+MXA,233,Minnesota Municipal Income Portfolio Inc.,Financial,Closed-End Fund - Debt,USA,,,14.51,1.11%,2373,GOOG/AMEX_MXA,Minnesota Municipal Income Portfolio Inc. 
+MXC,234,Mexco Energy Corporation,Basic Materials,Independent Oil & Gas,USA,14.56,143.0,7.49,4.76%,3799,GOOG/AMEX_MXC,Mexco Energy Corporation 
+MXN,235,First American Minnesota Municipal Income Fund II Inc.,Financial,Closed-End Fund - Debt,USA,,,12.91,0.39%,1062,GOOG/AMEX_MXN,First American Minnesota Municipal Income Fund II
+MZA,236,"BlackRock Muniyield Arizona Fund, Inc.",Financial,Asset Management,USA,59.45,,13.03,0.35%,6373,GOOG/AMEX_MZA,Blackrock MuniYield Arizona Fund
+NAK,237,Northern Dynasty Minerals Ltd.,Basic Materials,Industrial Metals & Minerals,Canada,120.66,,1.29,1.57%,92312,GOOG/AMEX_NAK,Northern Dynasty Minerals Ltd. 
+NBH,239,Neuberger Berman Intermediate Municipal Fund Inc.,Financial,Closed-End Fund - Debt,USA,,,14.51,0.14%,39903,GOOG/AMEX_NBH,Neuberger Ber. Intermediate Muni. Fund 
+NBO,240,Neuberger Berman New York Intermediate Municipal Fund Inc.,Financial,Closed-End Fund - Debt,USA,,,12.63,1.36%,26025,GOOG/AMEX_NBO,Neuberger Berman NY Intrmdt Mncpl Fd Inc 
+NBW,241,Neuberger Berman California Intermediate Municipal Fund Inc.,Financial,Closed-End Fund - Debt,USA,,,13.64,0.15%,25282,GOOG/AMEX_NBW,Neuberger Ber. CA Intermediate Muni Fund 
+NBY,242,"NovaBay Pharmaceuticals, Inc.",Healthcare,Drug Manufacturers - Other,USA,46.08,,1.22,-0.81%,59081,GOOG/AMEX_NBY,NovaBay Pharmaceuticals
+NCQ,243,NovaCopper Inc.,Basic Materials,Industrial Metals & Minerals,Canada,76.42,,1.4,-2.78%,54307,GOOG/AMEX_NCQ,Novacopper Inc. Common Stock 
+NCU,244,Nuveen California Premium Income Municipal Fund,Financial,Closed-End Fund - Debt,USA,,,12.89,0.00%,3081,GOOG/AMEX_NCU,Nuveen California Premium Income Municipal Fund Common Shares of Beneficial Interest 
+NEA,245,Nuveen Insured Tax-Free Advantage Municipal Fund,Financial,Closed-End Fund - Debt,USA,,,11.87,0.17%,223910,GOOG/AMEX_NEA,Nuveen Amt-Free Municipal Income Fund 
+NEN,247,New England Realty Associates LP,Financial,Property Management,USA,5.89,188.71,45.29,0.00%,0,GOOG/AMEX_NEN,New England Realty Associates LP 
+NEWN,248,New Energy Systems Group,Technology,Diversified Electronics,China,0.88,,0.09,50.00%,10000,GOOG/AMEX_NEWN,New Energy Systems Group. 
+NG,249,NovaGold Resources Inc.,Basic Materials,Gold,Canada,728.26,,2.33,1.30%,305579,GOOG/AMEX_NG,NovaGold Resources Inc. 
+NGD,250,"New Gold, Inc.",Basic Materials,Gold,Canada,2392.3,12.07,4.85,0.41%,887766,GOOG/AMEX_NGD,New Gold Inc. 
+NGX,251,Nuveen Insured Massachusetts Tax-Free Advantage Municipal Fund,Financial,Closed-End Fund - Debt,USA,,,11.45,-0.43%,176,GOOG/AMEX_NGX,Nuveen Massachusetts AMT- Free Municipal Income Fund Common Shares of Beneficial Interest 
+NHC,252,National Healthcare Corp.,Healthcare,Long-Term Care Facilities,USA,713.11,13.83,52.1,0.97%,2119,GOOG/AMEX_NHC,National HealthCare Corporation 
+NHS,253,Neuberger Berman High Yield Strategies Fund,Financial,Closed-End Fund - Debt,USA,,,13.15,-0.23%,28427,GOOG/AMEX_NHS,Neuberger Berman High Yield Strateges Fd 
+NKG,254,Nuveen Georgia Dividend Advantage Municipal Fund 2,Financial,Asset Management,USA,124.38,22.67,11.82,0.26%,29529,GOOG/AMEX_NKG,Nuveen Georgia Dividend Advntg Mncpl Fd2 
+NKX,255,Nuveen Insured California Tax Free Advantage Municipal Fund,Financial,Closed-End Fund - Debt,USA,,,12.0,0.25%,57062,GOOG/AMEX_NKX,Nuveen California Amt-Free Munpl Incm Fd 
+NLP,256,NTS Realty Holdings LP,Financial,Real Estate Development,USA,73.81,,7.08,-0.40%,2210,GOOG/AMEX_NLP,NTS Realty Holdings LP 
+NMB,257,Nuveen Massachusetts Dividend Advantage Municipal Fund,Financial,Asset Management,USA,23.46,24.43,11.97,0.00%,0,GOOG/AMEX_NMB,Nuveen Massachusetts Dividend Advantage Municipal Fund Common Shares of Beneficial Interest 
+NMZ,258,Nuveen Municipal High Income Opportunity Fund,Financial,Asset Management,USA,360.59,6.77,11.58,1.22%,139095,GOOG/AMEX_NMZ,Nuveen Municipal High Income Oppty Fund 
+NOG,260,"Northern Oil and Gas, Inc.",Basic Materials,Oil & Gas Drilling & Exploration,USA,918.91,16.73,14.79,0.48%,146849,GOOG/AMEX_NOG,Northern Oil &amp; Gas
+NOM,261,Nuveen Missouri Premium Income Municipal Fund,Financial,Closed-End Fund - Debt,USA,,,12.5,-0.08%,4427,GOOG/AMEX_NOM,Nuveen Missouri Premium Income Municipal Fund Common Shares of Beneficial Interest 
+NRK,262,Nuveen Insured New York Tax-Free Advantage Municipal Fund,Financial,Closed-End Fund - Debt,USA,,,12.16,1.16%,259817,GOOG/AMEX_NRK,Unknown Name
+NRO,263,Neuberger Berman Real Estate Securities Income Fund Inc.,Financial,Closed-End Fund - Equity,USA,,,4.3,0.58%,62243,GOOG/AMEX_NRO,Neuberger Berman Real Estate Sec Inc Fd 
+NSU,265,Nevsun Resources Ltd.,Basic Materials,Gold,Canada,626.88,7.88,3.14,-0.32%,40051,GOOG/AMEX_NSU,Nevsun Resources 
+NTN,266,NTN Buzztime Inc.,Services,Broadcasting - TV,USA,49.03,,0.67,-3.62%,30777,GOOG/AMEX_NTN,NTN Buzztime Inc 
+NTS,267,"NTS, Inc",Technology,Diversified Communication Services,USA,80.41,,1.96,0.51%,4647,GOOG/AMEX_NTS,Nts Inc 
+NUJ,268,Nuveen New Jersey Dividend Advantage Municipal Fund 2,Financial,Closed-End Fund - Debt,USA,,,12.08,-0.74%,766,GOOG/AMEX_NUJ,Nuveen New Jersey Dividend Adv Muni Fd 2 
+NVG,269,Nuveen Insured Dividend Advantage Municipal Fund,Financial,Closed-End Fund - Debt,USA,,,12.43,0.32%,43968,GOOG/AMEX_NVG,Nuveen Dividend Advantage Municipal Income Fund Common Shares of Beneficial Interest 
+NVX,270,Nuveen California Dividend Advantage Municipal Fund 2,Financial,Asset Management,USA,183.17,6.89,12.5,0.73%,21707,GOOG/AMEX_NVX,Nuveen California Dividend Advantage Municipal Fund 2 Share of Beneficial Interest 
+NVY,271,Nuveen Pennsylvania Dividend Advantage Municipal Fund 2,Financial,Closed-End Fund - Debt,USA,,,11.9,1.12%,5302,GOOG/AMEX_NVY,Nuveen Pennsylvania Dividend Advantage 
+NXJ,272,Nuveen New Jersey Dividend Advantage Municipal Fund,Financial,Closed-End Fund - Debt,USA,,,12.37,0.08%,24016,GOOG/AMEX_NXJ,Nuveen New Jersey Dividend Advantg Mncpl 
+NXK,273,Nuveen New York Dividend Advantage Municipal Fund 2,Financial,Closed-End Fund - Debt,USA,,,12.22,-0.65%,4400,GOOG/AMEX_NXK,Nuveen New York Dividnd Advntg Mncpl Fd2 
+NXM,274,Nuveen Pennsylvania Dividend Advantage Municipal Fund,Financial,Closed-End Fund - Debt,USA,,,12.19,1.36%,8501,GOOG/AMEX_NXM,Nuveen Pennsylvania Dividend Advtg Mncpl 
+NXZ,275,Nuveen Dividend Advatage Municipal Fund 2,Financial,Closed-End Fund - Debt,USA,,,12.59,0.96%,65946,GOOG/AMEX_NXZ,Nuveen Dividend Advantage Municipal Fd 2 
+NYH,276,Eaton Vance New York Municipal Bond Fund II,Financial,Closed-End Fund - Debt,USA,,,10.92,-0.08%,2679,GOOG/AMEX_NYH,Eaton Vance New York Municipal Bond Fund II Common Shares of Beneficial Interest
+NZF,277,Nuveen Dividend Advantage Municipal Fund 3,Financial,Closed-End Fund - Debt,USA,,,12.17,0.16%,186167,GOOG/AMEX_NZF,Nuveen Dividend Advantage Municipal Fd 3 
+NZH,278,Nuveen California Dividend Advantage Municipal Fund 3,Financial,Asset Management,USA,271.2,6.85,11.32,0.80%,43164,GOOG/AMEX_NZH,Nuveen California Dvdnd Advntg Munpl Fd3 
+OESX,279,"Orion Energy Systems, Inc",Technology,Diversified Electronics,USA,147.27,53.54,6.84,-1.68%,36673,GOOG/AMEX_OESX,Orion Energy Systems
+OIH,281,Market Vectors Oil Services ETF,Financial,Exchange Traded Fund,USA,,,46.95,-0.63%,1978072,GOOG/AMEX_OIH,Market Vectors Oil Services ETF 
+ONP,282,"Orient Paper, Inc.",Consumer Goods,Paper & Paper Products,China,46.88,4.54,2.37,-6.69%,48133,GOOG/AMEX_ONP,Orient Paper Inc 
+PAL,285,North American Palladium Ltd.,Basic Materials,Industrial Metals & Minerals,Canada,75.4,,0.43,2.21%,360669,GOOG/AMEX_PAL,North American Palladium Ltd 
+PBM,286,Pacific Booker Minerals Inc.,Basic Materials,Industrial Metals & Minerals,Canada,79.72,,6.48,0.47%,986,GOOG/AMEX_PBM,Pacific Booker Minerals Inc Ordinary Shares 
+PCC,287,PMC Commercial Trust,Financial,REIT - Industrial,USA,93.24,97.78,8.76,-0.45%,722,GOOG/AMEX_PCC,PMC Commercial Trust 
+PDO,288,Pyramid Oil Company,Basic Materials,Independent Oil & Gas,USA,24.33,64.88,4.97,-4.24%,137,GOOG/AMEX_PDO,Pyramid Oil Company 
+PHF,291,Pacholder High Yield Fund Inc.,Financial,Closed-End Fund - Debt,USA,,,7.96,0.25%,3803,GOOG/AMEX_PHF,Pacholder High Yield Fund Inc 
+PIP,292,"PharmAthene, Inc.",Healthcare,Biotechnology,USA,88.06,,1.71,-3.39%,229228,GOOG/AMEX_PIP,PharmAthene
+PLG,293,Platinum Group Metals Ltd.,Basic Materials,Industrial Metals & Minerals,Canada,442.99,,1.06,-3.63%,94943,GOOG/AMEX_PLG,Platinum Group Metals Limited 
+PLM,294,Polymet Mining Corp.,Basic Materials,Industrial Metals & Minerals,Canada,201.77,,0.97,1.05%,63351,GOOG/AMEX_PLM,PolyMet Mining Corp. 
+PLX,295,"Protalix BioTherapeutics, Inc.",Healthcare,Biotechnology,Israel,367.87,,4.01,0.75%,178568,GOOG/AMEX_PLX,Protalix BioTherapeutics Inc. 
+PPH,296,Market Vectors Pharmaceutical ETF,Financial,Exchange Traded Fund,USA,,,51.52,0.43%,16038,GOOG/AMEX_PPH,Market Vectors Pharmaceutical ETF 
+PRK,297,Park National Corp.,Financial,Regional - Midwest Banks,USA,1258.7,16.53,81.71,0.05%,3819,GOOG/AMEX_PRK,Park National Corporation 
+PTN,298,Palatin Technologies Inc.,Healthcare,Diagnostic Substances,USA,82.09,,0.77,0.00%,2537,GOOG/AMEX_PTN,Palatin Technologies
+PW,299,Power REIT,Financial,REIT - Diversified,USA,13.89,,8.32,-2.00%,103,GOOG/AMEX_PW,Power REIT 
+PZG,300,Paramount Gold and Silver Corp.,Basic Materials,Industrial Metals & Minerals,Canada,147.94,,0.98,2.98%,176697,GOOG/AMEX_PZG,Paramount Gold and Silver Corp. 
+QMM,301,Quaterra Resources Inc.,Basic Materials,Industrial Metals & Minerals,Canada,14.48,,0.08,5.19%,43290,GOOG/AMEX_QMM,Quaterra Resources Inc Ordinary Shares 
+QRM,302,Quest Rare Minerals Ltd.,Basic Materials,Industrial Metals & Minerals,Canada,28.91,,0.43,0.28%,13450,GOOG/AMEX_QRM,Quest Rare Minerals Ltd Common Shares 
+RBY,303,Rubicon Minerals Corporation,Basic Materials,Gold,Canada,210.59,,0.77,5.14%,392732,GOOG/AMEX_RBY,Rubicon Minerals Corp. 
+RCG,304,"RENN Global Entrepreneurs Fund, Inc.",Financial,Asset Management,USA,6.12,3.7,1.37,0.00%,0,GOOG/AMEX_RCG,RENN Global Entrepreneurs Fund
+REE,305,Rare Element Resources Ltd.,Basic Materials,Industrial Metals & Minerals,Canada,62.4,,1.29,-1.49%,60996,GOOG/AMEX_REE,Rare Element Resources Ltd 
+RIC,308,Richmont Mines Inc.,Basic Materials,Gold,Canada,38.41,,0.99,1.88%,10506,GOOG/AMEX_RIC,Richmont Mines Inc. 
+RKH,310,Market Vectors Bank and Brokerage ETF,Financial,Exchange Traded Fund,USA,,,53.1,0.00%,0,GOOG/AMEX_RKH,Merrill Lynch Regional Bank HOLDRS ETF 
+RLGT,311,"Radiant Logistics, Inc.",Services,Air Delivery & Freight Services,USA,77.68,19.42,2.32,-0.34%,19301,GOOG/AMEX_RLGT,Radiant Logistics 
+RNN,312,"Rexahn Pharmaceuticals, Inc.",Healthcare,Biotechnology,USA,56.1,,0.44,1.28%,312954,GOOG/AMEX_RNN,Rexahn Pharmaceuticals
+ROX,313,Castle Brands Inc.,Consumer Goods,Beverages - Wineries & Distillers,USA,88.37,,0.8,-0.25%,130295,GOOG/AMEX_ROX,Castle Brands Inc 
+RPI,314,Roberts Realty Investors Inc.,Financial,REIT - Retail,USA,9.68,,0.94,0.00%,300,GOOG/AMEX_RPI,Roberts Realty Investors
+RTH,315,Market Vectors Retail ETF,Financial,Exchange Traded Fund,USA,,,59.97,0.39%,10089,GOOG/AMEX_RTH,Merrill Lynch Retail HOLDRS ETF 
+RVM,316,Revett Minerals Inc,Basic Materials,Industrial Metals & Minerals,USA,22.14,,0.64,-0.47%,17300,GOOG/AMEX_RVM,Revett Minerals Inc ADR 
+RVP,317,Retractable Technologies Inc.,Healthcare,Medical Instruments & Supplies,USA,77.61,,2.89,0.70%,12074,GOOG/AMEX_RVP,Retractable Technologies
+RWC,318,RELM Wireless Corp.,Technology,Communication Equipment,USA,44.55,29.82,3.39,3.35%,694,GOOG/AMEX_RWC,RELM Wireless Corporation 
+SARA,320,Saratoga Resources Inc.,Basic Materials,Independent Oil & Gas,USA,38.37,,1.25,0.81%,36054,GOOG/AMEX_SARA,Saratoga Resources
+SBI,321,Western Asset Intermediate Muni Fund Inc.,Financial,Closed-End Fund - Debt,USA,,,9.07,0.42%,5260,GOOG/AMEX_SBI,Western Asset Intermediate Muni Fund Inc 
+SEB,322,Seaboard Corp.,Consumer Goods,Meat Products,USA,3287.01,16.21,2752.01,-0.20%,99,GOOG/AMEX_SEB,Seaboard Corporation 
+SGA,323,Saga Communications Inc.,Services,Broadcasting - Radio,USA,286.2,18.84,49.35,-0.78%,3444,GOOG/AMEX_SGA,Saga Communications
+SGB,324,Southwest Georgia Financial Corp.,Financial,Regional - Mid-Atlantic Banks,USA,28.95,13.21,11.36,0.00%,0,GOOG/AMEX_SGB,Southwest Georgia Financial Corp. 
+SIF,325,SIFCO Industries Inc.,Industrial Goods,Metal Fabrication,USA,139.75,14.36,25.25,-2.88%,3935,GOOG/AMEX_SIF,SIFCO Industries
+SIM,326,Grupo Simec S.A.B. de C.V.,Basic Materials,Steel & Iron,Mexico,2048.9,24.22,12.42,0.57%,1211,GOOG/AMEX_SIM,Grupo Simec S.A.B. de C.V. 
+SLI,328,SL Industries Inc.,Technology,Diversified Electronics,USA,104.3,8.55,25.16,-0.28%,1101,GOOG/AMEX_SLI,SL Industries
+SMH,329,Market Vectors Semiconductor ETF,Financial,Exchange Traded Fund,USA,,,41.33,-0.27%,506687,GOOG/AMEX_SMH,Merrill Lynch Semiconductors HOLDRS ETF 
+SOQ,330,Sonde Resources Corp.,Basic Materials,Oil & Gas Drilling & Exploration,Canada,38.63,,0.65,4.84%,26763,GOOG/AMEX_SOQ,Sonde Resources Corp 
+SSN,331,Samson Oil & Gas Limited,Basic Materials,Oil & Gas Drilling & Exploration,Australia,48.34,,0.41,0.27%,49139,GOOG/AMEX_SSN,Samson Oil &amp; Gas Limited 
+SSY,332,SunLink Health Systems Inc.,Healthcare,Hospitals,USA,8.21,,0.87,0.00%,0,GOOG/AMEX_SSY,SunLink Health Systems
+STS,334,Supreme Industries Inc.,Consumer Goods,Trucks & Other Vehicles,USA,89.21,17.81,5.71,3.47%,24613,GOOG/AMEX_STS,Supreme Industries
+SVBL,335,"Silver Bull Resources, Inc.",Basic Materials,Industrial Metals & Minerals,Canada,54.08,,0.35,2.91%,85540,GOOG/AMEX_SVBL,Silver Bull Resources Inc 
+SVT,337,Servotronics Inc.,Industrial Goods,Industrial Electrical Equipment,USA,18.98,14.12,8.25,0.73%,3300,GOOG/AMEX_SVT,Servotronics
+SYN,339,Synthetic Biologics Inc.,Healthcare,Biotechnology,USA,47.78,,1.13,5.42%,509050,GOOG/AMEX_SYN,Synthetic Biologics Inc 
+SYRG,340,Synergy Resources Corporation,Basic Materials,Oil & Gas Equipment & Services,USA,623.4,53.53,8.85,-2.75%,70432,GOOG/AMEX_SYRG,Synergy Resources Corp 
+TAS,341,Tasman Metals Ltd.,Basic Materials,Industrial Metals & Minerals,Canada,52.33,,0.89,3.13%,72696,GOOG/AMEX_TAS,Tasman Metals 
+TAT,342,TransAtlantic Petroleum Ltd.,Basic Materials,Oil & Gas Drilling & Exploration,USA,269.32,,0.76,3.86%,117331,GOOG/AMEX_TAT,TransAtlantic Petroleum Ltd 
+TCX,343,Tucows Inc.,Technology,Internet Information Providers,Canada,125.67,36.38,2.84,-2.41%,49299,GOOG/AMEX_TCX,Tucows Inc. 
+TGB,344,Taseko Mines Ltd.,Basic Materials,Industrial Metals & Minerals,Canada,349.8,,1.84,0.82%,228959,GOOG/AMEX_TGB,Taseko Mines Limited 
+TGC,345,Tengasco Inc.,Basic Materials,Independent Oil & Gas,USA,23.73,7.8,0.39,-0.03%,74566,GOOG/AMEX_TGC,Tengasco
+TGD,346,Timmins Gold Corp.,Basic Materials,Gold,Canada,154.25,5.1,1.05,-1.87%,86128,GOOG/AMEX_TGD,Timmins Gold Corp 
+THM,347,International Tower Hill Mines Ltd.,Basic Materials,Gold,Canada,40.21,,0.39,-4.07%,44225,GOOG/AMEX_THM,International Tower Hill Mines Ltd
+TIK,348,Tel-Instrument Electronics Corp.,Technology,Scientific & Technical Instruments,USA,13.04,,4.03,0.00%,0,GOOG/AMEX_TIK,Tel-Instrument Electronics Corp. 
+TIS,349,Orchids Paper Products Company,Consumer Goods,Paper & Paper Products,USA,248.0,20.35,31.15,0.03%,7044,GOOG/AMEX_TIS,Orchids Paper Products Company 
+TLR,350,Timberline Resources Corp.,Basic Materials,Gold,USA,11.58,,0.17,0.12%,21585,GOOG/AMEX_TLR,Timberline Resources Corp 
+TMP,351,Tompkins Financial Corporation.,Financial,Regional - Northeast Banks,USA,712.69,14.97,48.94,-0.33%,4588,GOOG/AMEX_TMP,Tompkins Financial Corporation 
+TOF,352,Tofutti Brands Inc.,Consumer Goods,Food - Major Diversified,USA,17.11,,3.32,0.00%,302,GOOG/AMEX_TOF,Tofutti Brands Inc. 
+TPI,353,"Tianyin Pharmaceutical Co., Inc.",Healthcare,Drug Manufacturers - Other,China,24.96,3.7,0.85,-0.59%,1275,GOOG/AMEX_TPI,Tianyin Pharmaceutical Inc Co 
+TPLM,354,Triangle Petroleum Corporation,Basic Materials,Independent Oil & Gas,USA,707.58,74.58,8.69,-2.91%,751862,GOOG/AMEX_TPLM,Triangle Petroleum Corporation 
+TRT,355,Trio-Tech International,Technology,Semiconductor Equipment & Materials,USA,10.73,,3.26,0.93%,394,GOOG/AMEX_TRT,Trio-Tech International 
+TRX,356,Tanzanian Royalty Exploration Corp.,Basic Materials,Gold,Canada,195.49,,1.93,-0.52%,39329,GOOG/AMEX_TRX,Tanzanian Royalty Exploration Corp. 
+TSH,357,Teche Holding Company,Financial,Savings & Loans,USA,98.14,11.42,48.2,0.00%,1111,GOOG/AMEX_TSH,Teche Holding Company 
+UEC,360,Uranium Energy Corp.,Basic Materials,Industrial Metals & Minerals,USA,154.87,,1.8,-0.55%,89943,GOOG/AMEX_UEC,Uranium Energy Corp. 
+UQM,361,UQM Technologies Inc.,Industrial Goods,Industrial Electrical Equipment,USA,77.72,,2.11,0.00%,8188,GOOG/AMEX_UQM,UQM Technologies
+URG,362,UR-Energy Inc.,Basic Materials,Industrial Metals & Minerals,USA,141.62,,1.19,2.59%,381514,GOOG/AMEX_URG,Ur-Energy Inc. 
+URZ,363,Uranerz Energy Corp.,Basic Materials,Industrial Metals & Minerals,USA,90.58,,1.13,-0.79%,96428,GOOG/AMEX_URZ,Uranerz Energy Corp. 
+UTG,364,Reaves Utility Income Fund,Financial,Closed-End Fund - Equity,USA,701.46,4.29,24.2,0.08%,54720,GOOG/AMEX_UTG,Reaves Utility Income Fund 
+UUU,365,Universal Security Instruments Inc.,Services,Security & Protection Services,USA,9.79,,4.29,0.23%,1001,GOOG/AMEX_UUU,Universal Security Instruments
+UWN,366,Nevada Gold & Casinos Inc.,Services,Resorts & Casinos,USA,16.41,,1.02,0.00%,0,GOOG/AMEX_UWN,Nevada Gold &amp; Casinos 
+VCF,367,"Delaware Investments Colorado Municipal Income Fund, Inc.",Financial,Closed-End Fund - Debt,USA,,,12.33,-0.40%,4418,GOOG/AMEX_VCF,Delaware Investments Colorado Municipal Income Fund
+VFL,368,Delaware Investments National Municipal Income Fund,Financial,Closed-End Fund - Debt,USA,,,11.51,-0.26%,7395,GOOG/AMEX_VFL,Delaware Investments Natnl Mncpl Incm Fd 
+VGZ,369,Vista Gold Corp.,Basic Materials,Gold,USA,30.26,,0.38,2.68%,67236,GOOG/AMEX_VGZ,Vista Gold Corp. 
+VHC,370,VirnetX Holding Corp,Technology,Internet Software & Services,USA,973.37,,19.2,1.00%,88082,GOOG/AMEX_VHC,VirnetX Holding Corporation 
+VII,371,Vicon Industries Inc.,Technology,Diversified Electronics,USA,12.01,,2.75,3.00%,8824,GOOG/AMEX_VII,Vicon Industries
+VKI,372,Invesco Van Kampen Advantage Municipal Income Trust II,Financial,Closed-End Fund - Debt,USA,,,10.29,0.29%,171527,GOOG/AMEX_VKI,Van Kampen Advantage Muni Incm Tr II 
+VMM,373,Delaware Investments Minnesota Municipal Income Fund II,Financial,Closed-End Fund - Debt,USA,,,12.24,0.08%,39466,GOOG/AMEX_VMM,Delaware Invstmt Mnst Mnpl Inm Fd II Inc 
+VSR,375,Versar Inc.,Services,Technical Services,USA,43.71,11.4,4.52,-0.88%,131,GOOG/AMEX_VSR,Versar Inc. 
+VTG,376,Vantage Drilling Company,Basic Materials,Oil & Gas Drilling & Exploration,USA,546.73,,1.79,-1.10%,108819,GOOG/AMEX_VTG,Vantage Drilling Company 
+WGA,377,Wells-Gardner Electronics Corp.,Technology,Diversified Electronics,USA,20.48,25.0,1.7,-2.84%,9217,GOOG/AMEX_WGA,Wells-Gardner Electronics Corporation 
+WTT,378,Wireless Telecom Group Inc.,Technology,Communication Equipment,USA,51.05,16.46,2.13,-0.47%,7816,GOOG/AMEX_WTT,Wireless Telecom Group Inc 
+WYY,379,WidePoint Corp.,Services,Technical Services,USA,91.17,71.5,1.43,0.01%,206486,GOOG/AMEX_WYY,WidePoint Corporation 
+XPL,380,Solitario Exploration & Royalty Corp.,Basic Materials,Gold,USA,28.42,,0.82,0.00%,0,GOOG/AMEX_XPL,Solitario Exploration &amp; Royalty Co 
+XRA,381,Exeter Resource Corporation,Basic Materials,Gold,Canada,48.62,,0.55,0.00%,39136,GOOG/AMEX_XRA,Exeter Resource Corp. 
+ZBB,382,ZBB Energy Corporation,Industrial Goods,Industrial Electrical Equipment,USA,75.94,,0.81,-5.84%,157096,GOOG/AMEX_ZBB,ZBB Energy Corporation 

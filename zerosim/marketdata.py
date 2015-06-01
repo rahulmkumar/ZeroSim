@@ -37,7 +37,6 @@ def file_path(item):
     
     return filepath
 
-
 def get_yahoo_data(data_path, ls_symbols):
     '''Read data from Yahoo
     @data_path : string for where to place the output files
