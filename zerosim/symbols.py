@@ -28,7 +28,7 @@ class SymbolDb:
 
         pages = range(url_start,url_end,sym_per_page)
 
-        soup = SymbolDb.scrape_page(header_url)
+        soup = self.scrape_page(header_url)
 
         #header = soup.find_all("tr",{"align" :"center"})
 
@@ -75,7 +75,7 @@ class SymbolDb:
             fetch_url = data_url + str(page)
             print fetch_url
 
-            soup = SymbolDb.scrape_page(fetch_url)
+            soup = self.scrape_page(fetch_url)
 
             snum = 0
 
@@ -162,7 +162,7 @@ class SymbolDb:
 
 if __name__ == '__main__':
     sym = SymbolDb()
-    sym.refresh_symbol_files('../symbols/')
+    #sym.refresh_symbol_files('../symbols/')
     # change total pages to scrape in function above
     sym.scrape_finviz_codes_overview(7141,20)
 
