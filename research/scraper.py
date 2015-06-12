@@ -15,7 +15,7 @@ sym_per_page = 20
 pages = range(url_start,url_end,20)
 
 def scrape_page(url):
-    r = requests.get(header_url)
+    r = requests.get(url)
     soup = BeautifulSoup(r.content)
     return soup
 
@@ -79,13 +79,16 @@ for page in pages[0:3]:
     for i in sym_info_count:
         try:
             info_index = int(soup.find_all("td",{"align":"right","class":"body-table-nw"})[snum].contents[0])-1
-            print info_index
+
+            #print 'num:'+str(snum)
+            #print 'info_index:'+str(info_index)
             df_info[info_columns[0]].ix[info_index] = soup.find_all("td",{"align":"left","class":"body-table-nw"})[i].contents[0].contents[0]
             df_info[info_columns[1]].ix[info_index] = soup.find_all("td",{"align":"left","class":"body-table-nw"})[i+1].contents[0]
             df_info[info_columns[2]].ix[info_index] = soup.find_all("td",{"align":"left","class":"body-table-nw"})[i+2].contents[0]
             df_info[info_columns[3]].ix[info_index] = soup.find_all("td",{"align":"left","class":"body-table-nw"})[i+3].contents[0]
             df_info[info_columns[4]].ix[info_index] = soup.find_all("td",{"align":"left","class":"body-table-nw"})[i+4].contents[0]
         except:
+            print 'Issue with Info count for loop'
             pass
         snum +=6
 
@@ -93,7 +96,9 @@ for page in pages[0:3]:
     for j in sym_data_count:
         try:
             data_index = int(soup.find_all("td",{"align":"right","class":"body-table-nw"})[j].contents[0])-1
-            print data_index
+            #print 'j:'+str(j)
+            #print 'data_index:'+str(data_index)
+            #print data_index
             if str(soup.find_all("td",{"align":"right","class":"body-table-nw"})[j+1].contents[0]).endswith("B"):
                 df_data[data_columns[0]].ix[data_index] = float(str(soup.find_all("td",{"align":"right","class":"body-table-nw"})[j+1].contents[0]).replace('B',''))*1000
             elif soup.find_all("td",{"align":"right","class":"body-table-nw"})[j+1].contents[0] == '-':
