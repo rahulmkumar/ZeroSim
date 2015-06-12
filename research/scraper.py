@@ -12,7 +12,7 @@ url_start = 1
 url_end = 7141
 sym_per_page = 20
 
-pages = range(url_start,url_end,20)
+pages = range(url_start,url_end,sym_per_page)
 
 def scrape_page(url):
     r = requests.get(url)
@@ -112,7 +112,8 @@ for page in pages[0:3]:
         except:
             pass
 
-    wait_seconds = random.randint(5,30)
+    # wait for a random amount of time between 5 and 60 seconds. Overall agerage wait will be 30 seconds per page.
+    wait_seconds = random.randint(5,60)
     time.sleep(wait_seconds)
     print 'waiting for:' + str(wait_seconds)
 
