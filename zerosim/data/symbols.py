@@ -12,6 +12,13 @@ import datetime
 class SymbolDb(object):
 
     SYMBOL_FILES_PATH = '../../symbols/'
+    QUANDL_INDICES = 'https://s3.amazonaws.com/quandl-static-content/Ticker+CSV%27s/Indicies/'
+    QUANDL_FUTURES = 'https://s3.amazonaws.com/quandl-static-content/Ticker+CSV%27s/Futures/'
+    QUANDL_COMMODITIES = 'https://s3.amazonaws.com/quandl-static-content/Ticker+CSV%27s/'
+
+    SYMBOLS_DB = 'symbols.db'
+
+
 
     def __init__(self):
         self.l_symlist = []
@@ -26,8 +33,10 @@ class SymbolDb(object):
 
     def scrape_finviz_codes_overview(self,url_end,sym_per_page):
 
-        header_url = "http://www.finviz.com/screener.ashx?v=111&r=1"
         data_url = "http://www.finviz.com/screener.ashx?v=111&r="
+
+        header_url = data_url + "1"
+
 
         url_start = 1
         #url_end = 7141
@@ -127,28 +136,29 @@ class SymbolDb(object):
 
 # The code files for this function were taken from: https://www.quandl.com/resources/useful-lists
     def get_quandl_codes_us(self):
-        sp500 = 'https://s3.amazonaws.com/quandl-static-content/Ticker+CSV%27s/Indicies/SP500.csv'
+
+        sp500 = self.QUANDL_INDICES + 'SP500.csv'
         sp500_file = 'SP500.csv'
 
-        djia = 'https://s3.amazonaws.com/quandl-static-content/Ticker+CSV%27s/Indicies/dowjonesIA.csv'
+        djia = self.QUANDL_INDICES + 'dowjonesIA.csv'
         djia_file = 'DJIA.csv'
 
-        nasd = 'https://s3.amazonaws.com/quandl-static-content/Ticker+CSV%27s/Indicies/NASDAQComposite.csv'
+        nasd = self.QUANDL_INDICES + 'NASDAQComposite.csv'
         nasd_file = 'NASDAQ.csv'
 
-        nasd100 = 'https://s3.amazonaws.com/quandl-static-content/Ticker+CSV%27s/Indicies/nasdaq100.csv'
+        nasd100 = self.QUANDL_INDICES + 'nasdaq100.csv'
         nasd100_file = 'NASD100.csv'
 
-        nyse = 'https://s3.amazonaws.com/quandl-static-content/Ticker+CSV%27s/Indicies/NYSEComposite.csv'
+        nyse = self.QUANDL_INDICES + 'NYSEComposite.csv'
         nyse_file = 'NYSE.csv'
 
-        nyse100 = 'https://s3.amazonaws.com/quandl-static-content/Ticker+CSV%27s/Indicies/nyse100.csv'
+        nyse100 = self.QUANDL_INDICES + 'nyse100.csv'
         nyse100_file = 'NYSE100.csv'
 
-        futures = 'https://s3.amazonaws.com/quandl-static-content/Ticker+CSV%27s/Futures/meta.csv'
+        futures = self.QUANDL_FUTURES + 'meta.csv'
         futures_file = 'FUTURES.csv'
 
-        commodities = 'https://s3.amazonaws.com/quandl-static-content/Ticker+CSV%27s/commodities.csv'
+        commodities = self.QUANDL_COMMODITIES + 'commodities.csv'
         commodities_file = 'COMMODITIES.csv'
 
         file_names = {}
@@ -181,7 +191,7 @@ class SymbolDb(object):
 
 
         # SQlite database connection
-        engine = create_engine('sqlite:///symbols.db')
+        engine = create_engine('sqlite:///'+self.SYMBOLS_DB)
 
         #Create finviz table in database
         df_merged = pd.merge(df_info,df_data, left_index=True, right_index=True)
@@ -209,8 +219,8 @@ class SymbolDb(object):
         df_nasdaq100.to_sql('nasdaq100',engine,if_exists='replace')
 
         con = sqlite3.connect('symbols.db')
-        drop_table_query = """ DROP TABLE final;"""
-        create_table_query = """ CREATE TABLE final(
+        drop_table_query = """ DROP TABLE US_STOCK_TBL;"""
+        create_table_query = """ CREATE TABLE US_STOCK_TBL(
                                 "Ticker" TEXT,
                                 "Code" TEXT,
                                 "Exchange" TEXT,
@@ -225,7 +235,7 @@ class SymbolDb(object):
                                 "Volume" FLOAT);"""
 
         populate_sql_query = """
-            INSERT INTO final
+            INSERT INTO US_STOCK_TBL
             (Ticker,Code,Exchange,[Index],Company,Sector,Industry,Country,MarketCap,Change,Price,Volume)
             SELECT finviz.Ticker,
             CASE
@@ -263,7 +273,7 @@ class SymbolDb(object):
         #engine.close()
 
     def get_symbols(self):
-        engine = create_engine('sqlite:///symbols.db')
+        engine = create_engine('sqlite:///'+self.SYMBOLS_DB)
         read_sql_query = """ SELECT Ticker,Code,Exchange,[Index],Company,Sector,Industry,Country,MarketCap,Change,Price,Volume FROM final"""
         df_final = pd.read_sql(read_sql_query,engine)
         df_final = df_final.set_index('Ticker')
