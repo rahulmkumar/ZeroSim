@@ -6,6 +6,8 @@ import time
 import random
 from sqlalchemy import create_engine
 import sqlite3
+import datetime
+
 
 class SymbolDb(object):
 
@@ -76,7 +78,7 @@ class SymbolDb(object):
         sym_info_count = range(0,100,5)
         sym_data_count = range(0,115,6)
 
-        for page in pages[0:3]:
+        for page in pages:
             fetch_url = data_url + str(page)
             print fetch_url
 
@@ -269,6 +271,10 @@ class SymbolDb(object):
         #engine.close()
 
 if __name__ == '__main__':
+
+    current_time = datetime.datetime.now().time()
+    print 'Start time:' + str(current_time)
+
     sym = SymbolDb()
 
     # Refresh symbol files from Quandl link
@@ -282,5 +288,8 @@ if __name__ == '__main__':
 
     # Returns the final table from the database
     sym.get_symbols()
+
+    end_time = datetime.datetime.now().time()
+    print 'End time:'+str(end_time)
 
 
