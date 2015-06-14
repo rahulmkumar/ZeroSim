@@ -61,3 +61,4 @@ target/
 
 #Debug files
 .csv
+/data/.csv

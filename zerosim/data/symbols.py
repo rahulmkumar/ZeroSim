@@ -117,6 +117,8 @@ class SymbolDb:
         df_data.to_csv('df_data.csv')
 
 
+
+# The code files for this function were taken from: https://www.quandl.com/resources/useful-lists
     def get_quandl_codes_us(self,file_path):
         sp500 = 'https://s3.amazonaws.com/quandl-static-content/Ticker+CSV%27s/Indicies/SP500.csv'
         sp500_file = 'SP500.csv'
@@ -161,8 +163,50 @@ class SymbolDb:
 
 
 if __name__ == '__main__':
-    sym = SymbolDb()
+    #sym = SymbolDb()
     #sym.refresh_symbol_files('../symbols/')
     # change total pages to scrape in function above
-    sym.scrape_finviz_codes_overview(7141,20)
+    #sym.scrape_finviz_codes_overview(7141,20)
+    df_data = pd.read_csv('/home/rahul/PycharmProjects/ZeroSim/zerosim/data/df_data.csv', index_col=0)
+    df_info = pd.read_csv('/home/rahul/PycharmProjects/ZeroSim/zerosim/data/df_info.csv', index_col=0)
+    df_sp500 = pd.read_csv('/home/rahul/PycharmProjects/ZeroSim/symbols/SP500.csv', index_col=0)
+    df_djia = pd.read_csv('/home/rahul/PycharmProjects/ZeroSim/symbols/DJIA.csv', index_col=0)
+    df_nyse = pd.read_csv('/home/rahul/PycharmProjects/ZeroSim/symbols/NYSE.csv', index_col=0)
+    df_nasdaq = pd.read_csv('/home/rahul/PycharmProjects/ZeroSim/symbols/NASDAQ.csv', index_col=0)
+    df_nyse100 = pd.read_csv('/home/rahul/PycharmProjects/ZeroSim/symbols/NYSE100.csv', index_col=0)
+    df_nasdaq100 = pd.read_csv('/home/rahul/PycharmProjects/ZeroSim/symbols/NASD100.csv', index_col=0)
+
+
+    df_merged = pd.merge(df_info,df_data, left_index=True, right_index=True)
+
+    df_finviz = df_merged.set_index('Ticker')
+    #df_finviz.to_csv('df_finviz1.csv')
+
+    df_nyse['Exchange'] = 'NYSE'
+    df_nyse.sort_index(by="Code",inplace=True)
+
+
+    df_nasdaq['Exchange'] = 'NASDAQ'
+    df_nasdaq.sort_index(by='Code',inplace=True)
+
+    df_sp500['Index'] = 'SP500'
+    df_nyse100['Index'] = 'NYSE100'
+    df_nasdaq100['Index'] = 'NASD100'
+
+
+    df_combined = pd.merge(df_finviz, df_nyse, how='outer',left_index=True, right_index=True)
+    df_combined.to_csv('df_combined_nyse.csv')
+
+    df_combined1 = pd.merge(df_combined,df_nasdaq,how='outer',left_index=True, right_index=True)
+    df_combined1.to_csv('df_combined_nasd.csv')
+#    df_nasdaq.sort_index(by='Code',inplace=True)
+ #   df_nasdaq.to_csv('df_nasdaq.csv')
+  #  df_combined1 = pd.merge(df_combined, df_nasdaq, left_index=True, right_index=True)
+
+
+   # df_combined1.to_csv('df_combined.csv')
+
+    #print df_nasdaq
+    #df_sp500.to_csv('df_sp500.csv')
+
 
