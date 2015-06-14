@@ -1,3 +1,13 @@
+"""
+This is the symbols.py module.
+
+This module is responsible for:
+1) Scraping symbols from various web resources: quandl, finviz
+2) Creating/maintaining a database for all the symbols scraped
+3) Defining user access functions to return a single or a list of symbols.
+
+"""
+
 import urllib2
 import requests
 from bs4 import BeautifulSoup
@@ -10,34 +20,48 @@ import datetime
 
 
 class SymbolDb(object):
-
+    """
+    This SymbolDB\b class allows us to:
+    1) Scrape the web for symbols
+    2) Create.maintain a database of symbols
+    3) A user interface for returning a single or list of symbols matching a criteria
+    """
     SYMBOL_FILES_PATH = '../../symbols/'
     QUANDL_INDICES = 'https://s3.amazonaws.com/quandl-static-content/Ticker+CSV%27s/Indicies/'
     QUANDL_FUTURES = 'https://s3.amazonaws.com/quandl-static-content/Ticker+CSV%27s/Futures/'
     QUANDL_COMMODITIES = 'https://s3.amazonaws.com/quandl-static-content/Ticker+CSV%27s/'
 
     SYMBOLS_DB = 'symbols.db'
+    SYMBOLS_DB_PATH = '/'
 
 
 
     def __init__(self):
+        """
+        This constructor initializes a list of symbols
+        """
         self.l_symlist = []
 
-    def refresh_quandl_symbol_files(self,path):
-        self.get_quandl_codes_us(path)
-
-    def scrape_page(self,url):
+    def scrape_page(self, url):
+        """
+        :param url: URL to scrape using beautiful soup
+        :return: a list of JSON objects as a list
+        """
         r = requests.get(url)
         soup = BeautifulSoup(r.content)
         return soup
 
-    def scrape_finviz_codes_overview(self,url_end,sym_per_page):
+    def scrape_finviz_codes_overview(self, url_end=7141, sym_per_page=20, file_path=SYMBOL_FILES_PATH):
+        """
+        :param url_end: Total number of stocks + 20
+        :param sym_per_page: Total number of symbols per page on the finviz.com screener tab
+        :param file_path: Path to store the file of symbols
+        :return:
+        """
 
         data_url = "http://www.finviz.com/screener.ashx?v=111&r="
 
         header_url = data_url + "1"
-
-
         url_start = 1
         #url_end = 7141
         #sym_per_page = 20
@@ -87,7 +111,7 @@ class SymbolDb(object):
         sym_info_count = range(0,100,5)
         sym_data_count = range(0,115,6)
 
-        for page in pages:
+        for page in pages[0:3]:
             fetch_url = data_url + str(page)
             print fetch_url
 
@@ -129,13 +153,18 @@ class SymbolDb(object):
             time.sleep(wait_seconds)
             print 'waiting for:' + str(wait_seconds)
 
-        df_info.to_csv(self.SYMBOL_FILES_PATH +'df_info.csv')
-        df_data.to_csv(self.SYMBOL_FILES_PATH +'df_data.csv')
+        df_info.to_csv(file_path +'df_info.csv')
+        df_data.to_csv(file_path +'df_data.csv')
 
 
 
-# The code files for this function were taken from: https://www.quandl.com/resources/useful-lists
-    def get_quandl_codes_us(self):
+
+    def scrape_quandl_codes_us(self, file_path=SYMBOL_FILES_PATH):
+        """
+        The code files for this function were taken from: https://www.quandl.com/resources/useful-lists
+        :param file_path:Path to store the scraped files
+        :return:
+        """
 
         sp500 = self.QUANDL_INDICES + 'SP500.csv'
         sp500_file = 'SP500.csv'
@@ -162,61 +191,68 @@ class SymbolDb(object):
         commodities_file = 'COMMODITIES.csv'
 
         file_names = {}
-        file_names[1] = [sp500_file,sp500]
-        file_names[2] = [djia_file,djia]
-        file_names[3] = [nasd_file,nasd]
-        file_names[4] = [nasd100_file,nasd100]
-        file_names[5] = [nyse_file,nyse]
-        file_names[6] = [nyse100_file,nyse100]
-        file_names[7] = [futures_file,futures]
-        file_names[8] = [commodities_file,commodities]
+        file_names[1] = [sp500_file, sp500]
+        file_names[2] = [djia_file, djia]
+        file_names[3] = [nasd_file, nasd]
+        file_names[4] = [nasd100_file, nasd100]
+        file_names[5] = [nyse_file, nyse]
+        file_names[6] = [nyse100_file, nyse100]
+        file_names[7] = [futures_file, futures]
+        file_names[8] = [commodities_file, commodities]
 
 
         for key in file_names:
             symfile = urllib2.urlopen(file_names[key][1])
-            output = open(self.SYMBOL_FILES_PATH+file_names[key][0],'wb')
+            output = open(file_path+file_names[key][0], 'wb')
             output.write(symfile.read())
             output.close()
 
 
-    def merge_symbol_files(self):
-        df_data = pd.read_csv(self.SYMBOL_FILES_PATH + 'df_data.csv', index_col=0)
-        df_info = pd.read_csv(self.SYMBOL_FILES_PATH + 'df_info.csv', index_col=0)
-        df_sp500 = pd.read_csv(self.SYMBOL_FILES_PATH + 'SP500.csv', index_col=0)
-        df_djia = pd.read_csv(self.SYMBOL_FILES_PATH + 'DJIA.csv', index_col=0)
-        df_nyse = pd.read_csv(self.SYMBOL_FILES_PATH + 'NYSE.csv', index_col=0)
-        df_nasdaq = pd.read_csv(self.SYMBOL_FILES_PATH + 'NASDAQ.csv', index_col=0)
-        df_nyse100 = pd.read_csv(self.SYMBOL_FILES_PATH + 'NYSE100.csv', index_col=0)
-        df_nasdaq100 = pd.read_csv(self.SYMBOL_FILES_PATH + 'NASD100.csv', index_col=0)
+    def merge_symbol_files_to_db(self, file_path=SYMBOL_FILES_PATH, db_path=SYMBOLS_DB_PATH, db_name=SYMBOLS_DB):
+        """
+        This function merges all downloaded files into a SQlite database
+        :param file_path: Path of the scraped files
+        :param db_path: Directory to create the database in
+        :param db_name: Name of the SqLite database
+        :return:
+        """
+        df_data = pd.read_csv(file_path + 'df_data.csv', index_col=0)
+        df_info = pd.read_csv(file_path + 'df_info.csv', index_col=0)
+        df_sp500 = pd.read_csv(file_path + 'SP500.csv', index_col=0)
+        df_djia = pd.read_csv(file_path + 'DJIA.csv', index_col=0)
+        df_nyse = pd.read_csv(file_path + 'NYSE.csv', index_col=0)
+        df_nasdaq = pd.read_csv(file_path + 'NASDAQ.csv', index_col=0)
+        df_nyse100 = pd.read_csv(file_path + 'NYSE100.csv', index_col=0)
+        df_nasdaq100 = pd.read_csv(file_path + 'NASD100.csv', index_col=0)
 
 
         # SQlite database connection
-        engine = create_engine('sqlite:///'+self.SYMBOLS_DB)
+        engine = create_engine('sqlite://'+db_path+db_name)
 
         #Create finviz table in database
-        df_merged = pd.merge(df_info,df_data, left_index=True, right_index=True)
+        df_merged = pd.merge(df_info, df_data, left_index=True, right_index=True)
         df_finviz = df_merged.set_index('Ticker')
-        df_finviz.to_sql('finviz',engine,if_exists='replace')
+        df_finviz.to_sql('finviz', engine, if_exists='replace')
 
         #Create nyse table in database
         df_nyse['Exchange'] = 'NYSE'
-        df_nyse.to_sql('nyse',engine,if_exists='replace')
+        df_nyse.to_sql('nyse', engine, if_exists='replace')
 
         #Create nyse table in database
         df_nasdaq['Exchange'] = 'NASDAQ'
-        df_nasdaq.to_sql('nasdaq',engine,if_exists='replace')
+        df_nasdaq.to_sql('nasdaq', engine, if_exists='replace')
 
         #Create nyse table in database
         df_sp500['Index'] = 'SP500'
-        df_sp500.to_sql('sp500',engine,if_exists='replace')
+        df_sp500.to_sql('sp500', engine, if_exists='replace')
 
         #Create nyse table in database
         df_nyse100['Index'] = 'NYSE100'
-        df_nyse100.to_sql('nyse100',engine,if_exists='replace')
+        df_nyse100.to_sql('nyse100', engine, if_exists='replace')
 
         #Create nyse table in database
         df_nasdaq100['Index'] = 'NASD100'
-        df_nasdaq100.to_sql('nasdaq100',engine,if_exists='replace')
+        df_nasdaq100.to_sql('nasdaq100', engine, if_exists='replace')
 
         con = sqlite3.connect('symbols.db')
         drop_table_query = """ DROP TABLE US_STOCK_TBL;"""
@@ -272,12 +308,12 @@ class SymbolDb(object):
 
         #engine.close()
 
-    def get_symbols(self):
-        engine = create_engine('sqlite:///'+self.SYMBOLS_DB)
-        read_sql_query = """ SELECT Ticker,Code,Exchange,[Index],Company,Sector,Industry,Country,MarketCap,Change,Price,Volume FROM final"""
-        df_final = pd.read_sql(read_sql_query,engine)
+    def get_symbols(self, file_path = SYMBOL_FILES_PATH, db_path=SYMBOLS_DB_PATH, db_name=SYMBOLS_DB):
+        engine = create_engine('sqlite://'+db_path+db_name)
+        read_sql_query = """ SELECT Ticker,Code,Exchange,[Index],Company,Sector,Industry,Country,MarketCap,Change,Price,Volume FROM US_STOCK_TBL"""
+        df_final = pd.read_sql(read_sql_query, engine)
         df_final = df_final.set_index('Ticker')
-        df_final.to_csv(self.SYMBOL_FILES_PATH + 'df_final.csv')
+        df_final.to_csv(file_path + 'df_final.csv')
         #engine.close()
 
 if __name__ == '__main__':
@@ -288,13 +324,14 @@ if __name__ == '__main__':
     sym = SymbolDb()
 
     # Refresh symbol files from Quandl link
-    sym.get_quandl_codes_us()
+    sym.scrape_quandl_codes_us()
 
     #change total pages to scrape in function above
-    sym.scrape_finviz_codes_overview(7141,20)
+    #sym.scrape_finviz_codes_overview(7141,20)
+    sym.scrape_finviz_codes_overview()
 
     # Merge all the symbol files from finviz and quandl into SQLite database
-    sym.merge_symbol_files()
+    sym.merge_symbol_files_to_db()
 
     # Returns the final table from the database
     sym.get_symbols()
