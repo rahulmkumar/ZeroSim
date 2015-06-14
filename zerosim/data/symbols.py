@@ -247,9 +247,11 @@ class SymbolDb(object):
             LEFT OUTER JOIN nyse100 ON finviz.Ticker = nyse100.Ticker
             LEFT OUTER JOIN nasdaq100 ON finviz.Ticker = nasdaq100.Ticker;
             """
-
-        con.execute(drop_table_query)
-        con.commit()
+        try:
+            con.execute(drop_table_query)
+            con.commit()
+        except:
+            pass
         con.execute(create_table_query)
         con.commit()
         con.execute(populate_sql_query)
