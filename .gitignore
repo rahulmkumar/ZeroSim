@@ -61,4 +61,4 @@ target/
 
 #Debug files
 .csv
-/data/.csv
+/zerosim/data/.csv

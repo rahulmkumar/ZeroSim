@@ -4,8 +4,10 @@ from bs4 import BeautifulSoup
 import pandas as pd
 import time
 import random
+from sqlalchemy import create_engine
+import sqlite3
 
-class SymbolDb:
+class SymbolDb(object):
     def __init__(self):
         self.l_symlist = []
 
@@ -177,28 +179,96 @@ if __name__ == '__main__':
     df_nasdaq100 = pd.read_csv('/home/rahul/PycharmProjects/ZeroSim/symbols/NASD100.csv', index_col=0)
 
 
+    # SQlite database connection
+    engine = create_engine('sqlite:///symbols.db')
+
+    #Create finviz table in database
     df_merged = pd.merge(df_info,df_data, left_index=True, right_index=True)
-
     df_finviz = df_merged.set_index('Ticker')
-    #df_finviz.to_csv('df_finviz1.csv')
+    df_finviz.to_sql('finviz',engine,if_exists='replace')
 
+    #Create nyse table in database
     df_nyse['Exchange'] = 'NYSE'
-    df_nyse.sort_index(by="Code",inplace=True)
+    df_nyse.to_sql('nyse',engine,if_exists='replace')
 
-
+    #Create nyse table in database
     df_nasdaq['Exchange'] = 'NASDAQ'
-    df_nasdaq.sort_index(by='Code',inplace=True)
+    df_nasdaq.to_sql('nasdaq',engine,if_exists='replace')
 
+    #Create nyse table in database
     df_sp500['Index'] = 'SP500'
+    df_sp500.to_sql('sp500',engine,if_exists='replace')
+
+    #Create nyse table in database
     df_nyse100['Index'] = 'NYSE100'
+    df_nyse100.to_sql('nyse100',engine,if_exists='replace')
+
+    #Create nyse table in database
     df_nasdaq100['Index'] = 'NASD100'
+    df_nasdaq100.to_sql('nasdaq100',engine,if_exists='replace')
+
+    con = sqlite3.connect('symbols.db')
+    drop_table_query = """ DROP TABLE final;"""
+    create_table_query = """ CREATE TABLE final(
+                            "Ticker" TEXT,
+                            "Code" TEXT,
+                            "Exchange" TEXT,
+                            "Index" TEXT,
+                            "Company" TEXT,
+                            "Sector" TEXT,
+                            "Industry" TEXT,
+                            "Country" TEXT,
+                            "MarketCap" FLOAT,
+                            "Change" FLOAT,
+                            "Price" FLOAT,
+                            "Volume" FLOAT);"""
+
+    populate_sql_query = """
+        INSERT INTO final
+        (Ticker,Code,Exchange,[Index],Company,Sector,Industry,Country,MarketCap,Change,Price,Volume)
+        SELECT finviz.Ticker,
+        CASE
+        WHEN nyse.Code NOT NULL THEN nyse.Code
+        WHEN nasdaq.Code NOT NULL THEN nasdaq.Code
+        END as "Code",
+        CASE
+        WHEN nyse.Code NOT NULL THEN 'NYSE'
+        WHEN nasdaq.Code NOT NULL THEN 'NASDAQ'
+        END as "Exchange",
+        CASE
+        WHEN sp500.Code NOT NULL THEN 'SP500'
+        WHEN nyse100.Code NOT NULL THEN 'NYSE100'
+        WHEN nasdaq100.Code NOT NULL THEN 'NASDAQ100'
+        END
+        as "Index", finviz.Company, finviz.Sector, finviz.Industry, finviz.Country, finviz.[Market Cap] as "MarketCap", finviz.Change, finviz.Price, finviz.Volume
+        FROM finviz
+        LEFT OUTER JOIN nyse ON finviz.Ticker = nyse.Ticker
+        LEFT OUTER JOIN nasdaq ON finviz.Ticker = nasdaq.Ticker
+        LEFT OUTER JOIN sp500 ON finviz.Ticker = sp500.Ticker
+        LEFT OUTER JOIN nyse100 ON finviz.Ticker = nyse100.Ticker
+        LEFT OUTER JOIN nasdaq100 ON finviz.Ticker = nasdaq100.Ticker;
+        """
+
+    con.execute(drop_table_query)
+    con.commit()
+    con.execute(create_table_query)
+    con.commit()
+    con.execute(populate_sql_query)
+    con.commit()
+    con.close()
+
+    read_sql_query = """ SELECT Ticker,Code,Exchange,[Index],Company,Sector,Industry,Country,MarketCap,Change,Price,Volume FROM final"""
+
+    df_final = pd.read_sql(read_sql_query,engine)
+    df_final = df_final.set_index('Ticker')
+    df_final.to_csv('df_final.csv')
 
 
-    df_combined = pd.merge(df_finviz, df_nyse, how='outer',left_index=True, right_index=True)
-    df_combined.to_csv('df_combined_nyse.csv')
+    #df_combined = pd.merge(df_finviz, df_nyse, how='outer',left_index=True, right_index=True)
+    #df_combined.to_csv('df_combined_nyse.csv')
 
-    df_combined1 = pd.merge(df_combined,df_nasdaq,how='outer',left_index=True, right_index=True)
-    df_combined1.to_csv('df_combined_nasd.csv')
+    #df_combined1 = pd.merge(df_combined,df_nasdaq,how='outer',left_index=True, right_index=True)
+    #df_combined1.to_csv('df_combined_nasd.csv')
 #    df_nasdaq.sort_index(by='Code',inplace=True)
  #   df_nasdaq.to_csv('df_nasdaq.csv')
   #  df_combined1 = pd.merge(df_combined, df_nasdaq, left_index=True, right_index=True)
