@@ -157,6 +157,11 @@ class SymbolDb(object):
         df_data.to_csv(file_path +'df_data.csv')
 
 
+    def download_remote_file(self,file_url,local_file_path, local_file_name):
+        remote_file = urllib2.urlopen(file_url)
+        output = open(local_file_path+local_file_name, 'wb')
+        output.write(remote_file.read())
+        output.close()
 
 
     def scrape_quandl_codes_us(self, file_path=SYMBOL_FILES_PATH):
@@ -200,12 +205,8 @@ class SymbolDb(object):
         file_names[7] = [futures_file, futures]
         file_names[8] = [commodities_file, commodities]
 
-
         for key in file_names:
-            symfile = urllib2.urlopen(file_names[key][1])
-            output = open(file_path+file_names[key][0], 'wb')
-            output.write(symfile.read())
-            output.close()
+            self.download_remote_file(file_names[key][1],file_path,file_names[key][0])
 
 
     def merge_symbol_files_to_db(self, file_path=SYMBOL_FILES_PATH, db_path=SYMBOLS_DB_PATH, db_name=SYMBOLS_DB):
@@ -328,13 +329,13 @@ if __name__ == '__main__':
 
     #change total pages to scrape in function above
     #sym.scrape_finviz_codes_overview(7141,20)
-    sym.scrape_finviz_codes_overview()
+    #sym.scrape_finviz_codes_overview()
 
     # Merge all the symbol files from finviz and quandl into SQLite database
-    sym.merge_symbol_files_to_db()
+    #sym.merge_symbol_files_to_db()
 
     # Returns the final table from the database
-    sym.get_symbols()
+    #sym.get_symbols()
 
     end_time = datetime.datetime.now().time()
     print 'End time:'+str(end_time)
