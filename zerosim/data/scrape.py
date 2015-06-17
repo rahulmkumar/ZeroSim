@@ -10,6 +10,8 @@ class Scrape(object):
     QUANDL_INDICES = 'https://s3.amazonaws.com/quandl-static-content/Ticker+CSV%27s/Indicies/'
     QUANDL_FUTURES = 'https://s3.amazonaws.com/quandl-static-content/Ticker+CSV%27s/Futures/'
     QUANDL_COMMODITIES = 'https://s3.amazonaws.com/quandl-static-content/Ticker+CSV%27s/'
+    QUANDL_CBOE = 'http://www.cboe.com/publish/ScheduledTask/MktData/datahouse/'
+
 
     def scrape_page(self, url):
         """
@@ -131,6 +133,22 @@ class Scrape(object):
 
         df_info.to_csv(file_path +'df_info.csv')
         df_data.to_csv(file_path +'df_data.csv')
+
+    def scrape_quandl_cboe_data(self, file_path=SYMBOL_FILES_PATH):
+        pcratio = self.QUANDL_CBOE + 'totalpc.csv'
+        paratio_file = 'PCRATIO.csv'
+
+        skew = self.QUANDL_CBOE + 'Skewdailyprices.csv'
+        skew_file = 'SKEW.csv'
+
+        file_names = {}
+
+        file_names[1] = [paratio_file, pcratio]
+        file_names[2] = [skew_file, skew]
+
+        for key in file_names:
+            self.download_remote_file(file_names[key][1], file_path, file_names[key][0])
+
 
     def scrape_quandl_codes_us(self, file_path=SYMBOL_FILES_PATH):
         """

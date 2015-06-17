@@ -155,11 +155,12 @@ if __name__ == '__main__':
     sym = SymbolDb()
 
     # Refresh symbol files from Quandl link
-    scrape.scrape_quandl_codes_us()
+    #scrape.scrape_quandl_codes_us()
+    scrape.scrape_quandl_cboe_data()
 
     #change total pages to scrape in function above
     #scrape.scrape_finviz_codes_overview(7141,20)
-    scrape.scrape_finviz_codes_overview()
+    #scrape.scrape_finviz_codes_overview()
 
     # Merge all the symbol files from finviz and quandl into SQLite database
     #sym.merge_symbol_files_to_db()
