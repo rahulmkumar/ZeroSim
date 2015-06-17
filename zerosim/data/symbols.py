@@ -12,7 +12,8 @@ import pandas as pd
 from sqlalchemy import create_engine
 import sqlite3
 import datetime
-import scrape
+from scrape import Scrape
+
 
 class SymbolDb(object):
     """
@@ -150,15 +151,15 @@ if __name__ == '__main__':
     current_time = datetime.datetime.now().time()
     print 'Start time:' + str(current_time)
 
-    scrap = scrape.Scrape()
+    scrape = Scrape()
     sym = SymbolDb()
 
     # Refresh symbol files from Quandl link
-    scrap.scrape_quandl_codes_us()
+    scrape.scrape_quandl_codes_us()
 
     #change total pages to scrape in function above
     #scrape.scrape_finviz_codes_overview(7141,20)
-    scrap.scrape_finviz_codes_overview()
+    scrape.scrape_finviz_codes_overview()
 
     # Merge all the symbol files from finviz and quandl into SQLite database
     #sym.merge_symbol_files_to_db()
