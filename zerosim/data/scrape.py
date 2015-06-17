@@ -22,7 +22,7 @@ class Scrape(object):
         soup = BeautifulSoup(r.content)
         return soup
 
-    def download_remote_file(self, file_url, local_file_path, local_file_name):
+    def scrape_remote_file(self, file_url, local_file_path, local_file_name):
         remote_file = urllib2.urlopen(file_url)
         output = open(local_file_path+local_file_name, 'wb')
         output.write(remote_file.read())
@@ -147,7 +147,7 @@ class Scrape(object):
         file_names[2] = [skew_file, skew]
 
         for key in file_names:
-            self.download_remote_file(file_names[key][1], file_path, file_names[key][0])
+            self.scrape_remote_file(file_names[key][1], file_path, file_names[key][0])
 
 
     def scrape_quandl_codes_us(self, file_path=SYMBOL_FILES_PATH):
@@ -192,4 +192,4 @@ class Scrape(object):
         file_names[8] = [commodities_file, commodities]
 
         for key in file_names:
-            self.download_remote_file(file_names[key][1], file_path, file_names[key][0])
+            self.scrape_remote_file(file_names[key][1], file_path, file_names[key][0])
