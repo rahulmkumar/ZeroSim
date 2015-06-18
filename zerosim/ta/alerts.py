@@ -10,16 +10,18 @@ class Alerts(object):
 
     def skew_alert(self, level):
         skew_element = self.return_remote(self.QUANDL_CBOE_SKEW)
-        print 'Skew: ' + skew_element[-1].split()[-1]
+        if float(skew_element[-1].split()[-1]) >= level:
+            print 'Skew: ' + skew_element[-1].split()[-1]
 
     def pcratio_alert(self, level):
         pcratio_element = self.return_remote(self.QUANDL_CBOE_PCRATIO)
-        print 'PC Ratio: ' + pcratio_element[-1].split()[-1]
+        if float(pcratio_element[-1].split()[-1]) >= level:
+            print 'PC Ratio: ' + pcratio_element[-1].split()[-1]
 
 
 if __name__ == '__main__':
 
     alert = Alerts()
 
-    alert.pcratio_alert(1)
-    alert.skew_alert(1)
+    alert.pcratio_alert(0.8)
+    alert.skew_alert(110.0)

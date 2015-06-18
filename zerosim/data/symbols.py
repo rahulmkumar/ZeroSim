@@ -68,19 +68,19 @@ class SymbolDb(object):
         df_nyse['Exchange'] = 'NYSE'
         df_nyse.to_sql('nyse', engine, if_exists='replace')
 
-        #Create nyse table in database
+        #Create nasdaq table in database
         df_nasdaq['Exchange'] = 'NASDAQ'
         df_nasdaq.to_sql('nasdaq', engine, if_exists='replace')
 
-        #Create nyse table in database
+        #Create S&P500 table in database
         df_sp500['Index'] = 'SP500'
         df_sp500.to_sql('sp500', engine, if_exists='replace')
 
-        #Create nyse table in database
+        #Create nyse100 table in database
         df_nyse100['Index'] = 'NYSE100'
         df_nyse100.to_sql('nyse100', engine, if_exists='replace')
 
-        #Create nyse table in database
+        #Create nasdaq100 table in database
         df_nasdaq100['Index'] = 'NASD100'
         df_nasdaq100.to_sql('nasdaq100', engine, if_exists='replace')
 
@@ -136,7 +136,6 @@ class SymbolDb(object):
         con.commit()
         con.close()
 
-        #engine.close()
 
     def get_symbols(self, file_path = SYMBOL_FILES_PATH, db_path=SYMBOLS_DB_PATH, db_name=SYMBOLS_DB):
         engine = create_engine('sqlite://'+db_path+db_name)
@@ -144,7 +143,7 @@ class SymbolDb(object):
         df_final = pd.read_sql(read_sql_query, engine)
         df_final = df_final.set_index('Ticker')
         df_final.to_csv(file_path + 'df_final.csv')
-        #engine.close()
+
 
 if __name__ == '__main__':
 
@@ -156,7 +155,7 @@ if __name__ == '__main__':
 
     # Refresh symbol files from Quandl link
     #scrape.scrape_quandl_codes_us()
-    scrape.scrape_quandl_cboe_data()
+    #scrape.scrape_quandl_cboe_data()
 
     #change total pages to scrape in function above
     #scrape.scrape_finviz_codes_overview(7141,20)
@@ -167,6 +166,14 @@ if __name__ == '__main__':
 
     # Returns the final table from the database
     #sym.get_symbols()
+
+    #scrape Indian stock symbols
+    file_url_nse = 'https://www.quandl.com/api/v2/datasets.csv?query=*&source_code=NSE&per_page=300&page='
+    file_url_bse = 'https://www.quandl.com/api/v2/datasets.csv?query=*&source_code=BSE&per_page=300&page='
+    scrape.scrape_remote_file_by_page(file_url_nse, sym.SYMBOL_FILES_PATH, 'NSE.csv')
+    scrape.scrape_remote_file_by_page(file_url_bse, sym.SYMBOL_FILES_PATH, 'BSE.csv')
+
+    #scrape.scrape_remote_file(file_url+str(1), sym.SYMBOL_FILES_PATH, 'NSE.csv')
 
     end_time = datetime.datetime.now().time()
     print 'End time:'+str(end_time)

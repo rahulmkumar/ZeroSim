@@ -28,6 +28,19 @@ class Scrape(object):
         output.write(remote_file.read())
         output.close()
 
+    def scrape_remote_file_by_page(self, file_url, local_file_path, local_file_name):
+        page_num = 1
+        output = open(local_file_path+local_file_name, 'wb')
+        try:
+            while 1:
+                remote_file = urllib2.urlopen(file_url+str(page_num))
+                output.write(remote_file.read())
+                page_num += 1
+        except:
+            pass
+
+        output.close()
+
 
     def scrape_finviz_codes_overview(self, url_end=7141, sym_per_page=20, file_path=SYMBOL_FILES_PATH):
         """
