@@ -102,7 +102,7 @@ class Scrape(object):
         sym_info_count = range(0, 100, 5)
         sym_data_count = range(0, 115, 6)
 
-        for page in pages[0:3]:
+        for page in pages:
             fetch_url = data_url + str(page)
             print fetch_url
 
@@ -206,3 +206,8 @@ class Scrape(object):
 
         for key in file_names:
             self.scrape_remote_file(file_names[key][1], file_path, file_names[key][0])
+
+if __name__ == '__main__':
+
+    scrape = Scrape()
+    scrape.scrape_finviz_codes_overview()
