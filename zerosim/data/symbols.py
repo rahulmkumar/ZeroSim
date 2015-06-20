@@ -152,7 +152,7 @@ class SymbolDb(object):
 
         try:
             print 'Sector:' + kwargs['Sector']
-            sql_query = sql_query + """ WHERE Sector = '"""+kwargs['Sector']+"""'"""
+            sql_query = sql_query + """ WHERE Sector LIKE '%"""+kwargs['Sector']+"""%'"""
             print 'Sector:' + sql_query
         except:
             print 'Sector not defined'
@@ -161,9 +161,9 @@ class SymbolDb(object):
         try:
             print 'Industry:' + kwargs['Industry']
             if sql_query.find('WHERE') <> -1:
-                sql_query = sql_query + """ AND Industry = '"""+kwargs['Industry']+"""'"""
+                sql_query = sql_query + """ AND Industry LIKE '%"""+kwargs['Industry']+"""%'"""
             else:
-                sql_query = sql_query + """ WHERE Industry = '"""+kwargs['Industry']+"""'"""
+                sql_query = sql_query + """ WHERE Industry LIKE '%"""+kwargs['Industry']+"""%'"""
             print 'Industry:' + sql_query
         except:
             print 'Industry not defined'
@@ -235,14 +235,21 @@ class SymbolDb(object):
             print 'Volume not defined'
             pass
 
-        sql_query = sql_query + """;"""
-        print sql_query
+        if source == 'Quandl':
+            sql_query = sql_query + """ AND Code NOT NULL;"""
+        elif source == 'Yahoo':
+            sql_query = sql_query + """ AND Ticker NOT NULL;"""
 
         df_final = pd.read_sql(sql_query, engine)
 
-        #df_final.to_csv(file_path + 'SQL_generated.csv')
+        print sql_query
+        df_final.to_csv(file_path + 'SQL_generated.csv')
+        print list(df_final['Code'])
 
-
+        if source =='Quandl':
+            return list(df_final['Code'])
+        elif source == 'Yahoo':
+            return list(df_final['Ticker'])
 
 
 
@@ -261,7 +268,7 @@ if __name__ == '__main__':
     #change total pages to scrape in function above
     #scrape.scrape_finviz_codes_overview(7141,20)
 
-    scrape.scrape_finviz_codes_overview()
+    #scrape.scrape_finviz_codes_overview()
 
     # Merge all the symbol files from finviz and quandl into SQLite database
     #sym.merge_symbol_files_to_db()
@@ -277,7 +284,7 @@ if __name__ == '__main__':
 
     #scrape.scrape_remote_file(file_url+str(1), sym.SYMBOL_FILES_PATH, 'NSE.csv')
 
-    #sym.get_symbols(source='Quandl', Country='USA', Volume='1000000')
+    sym.get_symbols(source='Quandl', Country='USA', Volume='1000000', Industry='Biotech')
 
     end_time = datetime.datetime.now().time()
     print 'End time:'+str(end_time)

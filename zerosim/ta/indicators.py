@@ -2,6 +2,8 @@ import pandas as pd
 import numpy as np
 import copy
 
+
+
 '''
 Input: Price DataFrame, Moving average/lookback period and standard deviation multiplier
 
