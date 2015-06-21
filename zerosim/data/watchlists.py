@@ -15,42 +15,43 @@ class Watchlist(object):
 
 class WatchlistDb(object):
 
-    WATCHLIST_DB_PATH = '/'
-    WATCHLIST_DB = 'watchlistdb'
+    WATCHLIST_DB_PATH = ''
+    WATCHLIST_DB = 'watchlistdb.db'
 
     def open_watchlistdb(self, db_path = WATCHLIST_DB_PATH, db_name = WATCHLIST_DB):
-        db_con = shelve.open(db_path+db_name)
+        db_con = shelve.open(db_name)
         return db_con
 
     def insert_one_watchlist(self, connection, wlist):
         connection[wlist.get_watchlist_name()] = wlist
         connection.close()
 
-    def insert_multiple_watchlists(self, connection, l_wlist):
-        for w_list in l_wlist:
-            connection[w_list.get_watchlist_name()] = w_list
+    def insert_multiple_watchlists(self, connection, l_wlist_dict):
+        for w_list in l_wlist_dict:
+            connection[w_list] = l_wlist_dict[w_list]
         connection.close()
+
+    def get_watchlists(self, db):
+        connection = self.open_watchlistdb(db_name=db)
+        for w_list in connection:
+            return w_list, connection[w_list]
+            #print 'Watchlist Name:' + w_list
+            #print 'Watchlist Symbols:' + str(connection[w_list])
+
+    def get_watchlist_by_name(self, db, watchlist_name):
+        conn = self.open_watchlistdb(db_name=db)
+        return conn[watchlist_name]
 
 if __name__ == '__main__':
 
-    import pandas as pd
+    import symbols
 
-    wlist = pd.read_csv('../../symbols/watchlistdb.csv')
-    wlist = wlist.fillna('')
 
-    print wlist.columns
-
-    print list(wlist[wlist.columns[0]])
-
-    l_wlist = list(wlist[wlist.columns[0]])
-
-    nacount = list(wlist[wlist.columns[0]]).count('')
-
-    try:
-        while 1:
-            l_wlist.remove('')
-    except:
-        pass
-
-    print l_wlist
-
+    sym = symbols.SymbolDb()
+    wlist_dict = sym.get_watchlists()
+    wl = WatchlistDb()
+    conn = wl.open_watchlistdb()
+    wl.insert_multiple_watchlists(conn, wlist_dict)
+    wl.get_watchlists('watchlistdb.db')
+    ibd50 = wl.get_watchlist_by_name('watchlistdb.db', 'IBD50')
+    print ibd50
