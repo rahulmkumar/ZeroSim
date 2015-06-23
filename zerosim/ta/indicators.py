@@ -138,7 +138,7 @@ class Indicators(object):
         df_tr = copy.deepcopy(df_close)
         df_tr = df_tr.fillna(0.00)
 
-        df_tr = tr(df_close,df_high,df_low)
+        df_tr = self.tr(df_close,df_high,df_low)
 
         for sym in sym_list:
 
@@ -297,8 +297,8 @@ class Indicators(object):
         sym_list = df_close.columns
         timestamps = df_close.index
 
-        df_emafast = ema(df_close,fast)
-        df_emaslow = ema(df_close,slow)
+        df_emafast = self.ema(df_close,fast)
+        df_emaslow = self.ema(df_close,slow)
 
         df_macd = copy.deepcopy(df_close)
         df_macd = df_macd.fillna(0.00)
@@ -310,7 +310,7 @@ class Indicators(object):
                 else:
                     df_macd[sym].ix[t_stamp] = 0.00
 
-        df_signal = ema(df_macd,sig)
+        df_signal = self.ema(df_macd,sig)
 
         df_macd.to_csv('./debug/df_macd.csv')
         df_signal.to_csv('./debug/df_signal.csv')
@@ -354,8 +354,8 @@ class Indicators(object):
         sym_list = df_close.columns
         timestamps = df_close.index
 
-        df_kch_m = ema(df_close,e)
-        df_atr = atr(df_close,df_high,df_low,a,m)
+        df_kch_m = self.ema(df_close,e)
+        df_atr = self.atr(df_close,df_high,df_low,a,m)
 
         df_kch_u = copy.deepcopy(df_close)
         df_kch_u = df_kch_u * np.NAN
@@ -382,7 +382,7 @@ class Indicators(object):
         df_adx = copy.deepcopy(df_close)
         df_adx = df_adx.fillna(0.00)
 
-        df_tr = tr(df_close,df_high,df_low)
+        df_tr = self.tr(df_close,df_high,df_low)
 
         for sym in sym_list:
             df_symadx['high'] = df_high[sym]
@@ -445,7 +445,7 @@ class Indicators(object):
         df_adx = copy.deepcopy(df_close)
         df_adx = df_adx.fillna(0.00)
 
-        df_atr = atr(df_close,df_high,df_low,n,1)
+        df_atr = self.atr(df_close,df_high,df_low,n,1)
 
         for sym in sym_list:
             df_symadx['high'] = df_high[sym]
@@ -469,8 +469,8 @@ class Indicators(object):
                 else:
                     df_symadx['ndm1'].ix[t_stamp] = 0.00
 
-            df_ema_pdm1 = emas(df_symadx['pdm1'],n,1)
-            df_ema_ndm1 = emas(df_symadx['ndm1'],n,1)
+            df_ema_pdm1 = self.emas(df_symadx['pdm1'],n,1)
+            df_ema_ndm1 = self.emas(df_symadx['ndm1'],n,1)
 
             df_symadx['emap'] = df_ema_pdm1['ema']
             df_symadx['eman'] = df_ema_ndm1['ema']
@@ -481,7 +481,7 @@ class Indicators(object):
                     df_symadx['ndin'].ix[t_stamp] = (df_symadx['eman'].ix[t_stamp]/df_symadx['atr'].ix[t_stamp])*100
                     df_symadx['dx'].ix[t_stamp] = abs((df_symadx['pdin'].ix[t_stamp]-df_symadx['ndin'].ix[t_stamp])/(df_symadx['pdin'].ix[t_stamp]+df_symadx['ndin'].ix[t_stamp]))
 
-            df_adx_val = emas(df_symadx['dx'],n,100)
+            df_adx_val = self.emas(df_symadx['dx'],n,100)
             #df_symadx['adx'] = emas(df_symadx['dx'],n,100)
             df_symadx['adx'] = df_adx_val['ema']
             df_adx[sym] = df_adx_val['ema']
@@ -558,8 +558,8 @@ class Indicators(object):
         df_kch_l = copy.deepcopy(df_price)
         df_kch_l = df_kch_l * np.NAN
 
-        df_kch_m = ema(df_price,e)
-        df_atr = atr(df_price,df_high,df_low,a,m)
+        df_kch_m = self.ema(df_price,e)
+        df_atr = self.atr(df_price,df_high,df_low,a,m)
 
         for sym in sym_list:
             df_bb_ma[sym] = pd.rolling_mean(df_price[sym],window=N)
@@ -573,12 +573,3 @@ class Indicators(object):
 
 
         return df_bb_ma, df_bb_u, df_bb_l, df_kch_m, df_kch_u, df_kch_l
-
-
-
-    '''
-
-    def wema(df_close,n):
-    def trailstop(d_data,n):
-
-    '''
