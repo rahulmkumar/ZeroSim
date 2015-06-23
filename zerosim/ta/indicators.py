@@ -1,6 +1,11 @@
 import pandas as pd
 import numpy as np
+import numpy
 import copy
+import talib
+#from talib.abstract import *
+
+
 
 class Indicators(object):
     """
@@ -30,6 +35,23 @@ class Indicators(object):
         #df_bb[] = df_bb[''].fillna(0.00)
 
         return df_bb
+
+    def talib_BB(self, df_price, time_period, st_dev_u, st_dev_l):
+
+        df_bb_u = copy.deepcopy(df_price)
+        df_bb_m = copy.deepcopy(df_price)
+        df_bb_l = copy.deepcopy(df_price)
+
+        df_bb_u = df_bb_u * np.NAN
+        df_bb_m = df_bb_m * np.NAN
+        df_bb_l = df_bb_l * np.NAN
+
+        sym_list = df_price.columns
+
+        for sym in sym_list:
+            df_bb_u[sym], df_bb_m[sym], df_bb_l[sym] = talib.BBANDS(numpy.asarray(df_price[sym]), time_period, st_dev_u, st_dev_l)
+        return df_bb_u, df_bb_m, df_bb_l
+
     '''
     This BB function returns the upper, mid and lower as separate data frames
     '''
@@ -573,3 +595,7 @@ class Indicators(object):
 
 
         return df_bb_ma, df_bb_u, df_bb_l, df_kch_m, df_kch_u, df_kch_l
+
+
+
+
