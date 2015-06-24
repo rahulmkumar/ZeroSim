@@ -96,23 +96,15 @@ class Indicators(object):
     '''
     def ttm_squeeze(self, l_sym, df_price, bb_ma, stdev_multiplier, ema_period, atr_period, atr_multiplier):
 
-        df_bb_ma = pd.DataFrame(columns=l_sym, index=df_price[l_sym[0]].index)
-        df_bb_u = pd.DataFrame(columns=l_sym, index=df_price[l_sym[0]].index)
-        df_bb_l = pd.DataFrame(columns=l_sym, index=df_price[l_sym[0]].index)
         df_kch_u = pd.DataFrame(columns=l_sym, index=df_price[l_sym[0]].index)
         df_kch_l = pd.DataFrame(columns=l_sym, index=df_price[l_sym[0]].index)
 
         df_kch_m = self.ema(l_sym, df_price, ema_period)
         df_atr = self.atr(l_sym, df_price, atr_period)
+        df_bb_u, df_bb_m, df_bb_l = self.bb(l_sym, df_price, bb_ma, stdev_multiplier, stdev_multiplier)
 
         for sym in l_sym:
-            df_bb_ma[sym] = pd.rolling_mean(df_price[sym].ix[:, 'Close'], window=bb_ma)
-            df_bb_u[sym] = pd.rolling_std(df_price[sym].ix[:, 'Close'], window=bb_ma)
-            df_bb_l[sym] = pd.rolling_std(df_price[sym].ix[:, 'Close'], window=bb_ma)
-            df_bb_u[sym] = df_bb_ma[sym] + (stdev_multiplier * df_bb_u[sym])
-            df_bb_l[sym] = df_bb_ma[sym] - (stdev_multiplier * df_bb_l[sym])
-
             df_kch_u[sym] = df_kch_m[sym] + (atr_multiplier * df_atr[sym])
             df_kch_l[sym] = df_kch_m[sym] - (atr_multiplier * df_atr[sym])
 
-        return df_bb_ma, df_bb_u, df_bb_l, df_kch_m, df_kch_u, df_kch_l
+        return df_bb_m, df_bb_u, df_bb_l, df_kch_m, df_kch_u, df_kch_l

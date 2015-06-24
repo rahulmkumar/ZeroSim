@@ -19,7 +19,7 @@ def main():
     # Get data for watchlist
     dat = data.MarketData()
     #test_data = dat.get_yahoo_data(ibd50, '01/01/2015', '05/31/2015', 'Close')
-    test_data = dat.get_yahoo_data(wlist, '01/01/2015', '05/31/2015')
+    test_data = dat.get_yahoo_data(wlist, '05/01/2014', '05/31/2015')
     #close_data = dat.get_yahoo_data_type(wlist, '01/01/2015', '05/31/2015', 'Close')
 
     ind = ta.Indicators()
@@ -37,11 +37,11 @@ def main():
     df_ema55 = ind.ema(wlist, test_data, 55)
     df_ema89 = ind.ema(wlist, test_data, 89)
 
-    #df_ema8.to_csv('df_ema8.csv')
-    #df_ema21.to_csv('df_ema21.csv')
-    #df_ema34.to_csv('df_ema34.csv')
-    #df_ema55.to_csv('df_ema55.csv')
-    #df_ema89.to_csv('df_ema89.csv')
+    df_ema8.to_csv('df_ema8.csv')
+    df_ema21.to_csv('df_ema21.csv')
+    df_ema34.to_csv('df_ema34.csv')
+    df_ema55.to_csv('df_ema55.csv')
+    df_ema89.to_csv('df_ema89.csv')
 
     # Test EMA's
     #df_ema_old = ind.ema_old(close_data, 21)
@@ -66,17 +66,17 @@ def main():
 
     # TTM Squeeze Test
     df_bb_ma, df_bb_u, df_bb_l, df_kch_m, df_kch_u, df_kch_l = ind.ttm_squeeze(wlist, test_data, 21, 2, 21, 21, 1.5 )
-    #df_bb_ma.to_csv('df_bb_ma.csv')
-    #df_bb_u.to_csv('df_bb_u.csv')
-    #df_bb_l.to_csv('df_bb_l.csv')
-    #df_kch_m.to_csv('df_kch_m.csv')
-    #df_kch_u.to_csv('df_kch_u.csv')
-    #df_kch_l.to_csv('df_kch_l.csv')
+    df_bb_ma.to_csv('df_bb_ma.csv')
+    df_bb_u.to_csv('df_bb_u.csv')
+    df_bb_l.to_csv('df_bb_l.csv')
+    df_kch_m.to_csv('df_kch_m.csv')
+    df_kch_u.to_csv('df_kch_u.csv')
+    df_kch_l.to_csv('df_kch_l.csv')
 
     # Ichimoku Test
     df_ichi_tenkan, df_ichi_kijun = ind.ichimoku(wlist, test_data)
-    #df_ichi_tenkan.to_csv('df_ichi_tenkan.csv')
-    #df_ichi_kijun.to_csv('df_ichi_kijun.csv')
+    df_ichi_tenkan.to_csv('df_ichi_tenkan.csv')
+    df_ichi_kijun.to_csv('df_ichi_kijun.csv')
 
     # Event Scanner
     #event = ta.Events()
