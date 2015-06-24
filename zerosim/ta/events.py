@@ -8,7 +8,6 @@ import math
 
 class Events(object):
 
-
     def find_bb_events(self, ls_symbols, df_data, benchmark):
         print 'Inside find_bb_events'
         ''' Finding the event dataframe '''
@@ -46,7 +45,6 @@ class Events(object):
                         except:
                             writer.writerow([ldt_timestamps[-1].strftime('%Y'),ldt_timestamps[-1].strftime('%m'),ldt_timestamps[-1].strftime('%d'),s_sym,'Sell',100])
 
-
         return df_events
 
     '''
@@ -71,7 +69,6 @@ class Events(object):
                     if df_close[sym].ix[time_idx] >= lifetimehigh:
                         df_lt_high[sym].ix[0] = 1
         return df_lt_high
-
 
     def event_prices(self, df_criteria_sym, df_event):
 
@@ -104,7 +101,7 @@ class Events(object):
         for sym in df1.columns:
             for ts in range(0,len(timestamps)):
                 try:
-                    if float(df1[sym].ix[(ts)]) > float(df2[sym].ix[ts-1]):
+                    if df1[sym].ix[ts-1] < df2[sym].ix[ts-1] and df1[sym].ix[ts] > df2[sym].ix[ts]:
                         edf_crossabv[sym].ix[ts] = 1
                 except:
                     pass
@@ -274,7 +271,6 @@ class Events(object):
         df_stats = pd.DataFrame(index = timestamps, columns = stats_col)
         df_stats = df_stats.fillna(0)
 
-
         df_sma_fast = indicators.sma(df1,F)
         df_sma_slow = indicators.sma(df1,S)
 
@@ -322,7 +318,6 @@ class Events(object):
 
 
     '''
-
     # within p% of the highest high attained in the previous n days
     def highs(df, n, p):
 
