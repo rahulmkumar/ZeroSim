@@ -78,6 +78,15 @@ def main():
     df_ichi_tenkan.to_csv('df_ichi_tenkan.csv')
     df_ichi_kijun.to_csv('df_ichi_kijun.csv')
 
+    # Momentum
+    df_mom = ind.mom(wlist, test_data, 12)
+    df_mom.to_csv('df_mom.csv')
+
+    # ADX
+    df_adx = ind.adx(wlist, test_data, 14)
+    df_adx.to_csv('df_adx.csv')
+
+
     # Event Scanner
     #event = ta.Events()
     #df_ma_cross = event.crossabove_df(df_ema, df_sma)

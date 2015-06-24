@@ -46,6 +46,23 @@ class Indicators(object):
 
         return df_sma
 
+    def adx(self, l_sym, df_price, time_period):
+        df_adx = pd.DataFrame(columns=l_sym, index=df_price[l_sym[0]].index)
+
+        for sym in l_sym:
+            df_adx[sym] = talib.ADX(high=np.asarray(df_price[sym].ix[:, 'High']), low=np.asarray(df_price[sym].ix[:, 'Low']),
+                                    close=np.asarray(df_price[sym].ix[:, 'Close']), timeperiod = time_period)
+
+        return df_adx
+
+    def mom(self, l_sym, df_price, time_period):
+        df_mom = pd.DataFrame(columns=l_sym, index=df_price[l_sym[0]].index)
+
+        for sym in l_sym:
+            df_mom[sym] = talib.MOM(np.asarray(df_price[sym].ix[:, 'Close']), timeperiod = time_period)
+
+        return df_mom
+
     def atr(self, l_sym, df_price, time_period):
         df_atr = pd.DataFrame(columns=l_sym, index=df_price[l_sym[0]].index)
 
