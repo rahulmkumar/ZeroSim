@@ -88,9 +88,9 @@ def main():
 
 
     # Event Scanner
-    #event = ta.Events()
-    #df_ma_cross = event.crossabove_df(df_ema, df_sma)
-    #df_ma_cross.to_csv('df_ma_cross.csv')
+    event = ta.Events()
+    df_ma_cross = event.crossabove_scan(df_ema8, df_ema21)
+    df_ma_cross.to_csv('df_ema_cross.csv')
     #df_ema.to_csv('df_ema.csv')
 
     current_time = datetime.datetime.now().time()

@@ -81,11 +81,33 @@ class Events(object):
                 del df_criteria_sym[sym]
 
         return df_criteria_sym
+
+    def crossabove_scan(self, df1, df2):
+        symbols = df2.columns
+        timestamps = df2.index
+        df1 = df1.astype(float)
+        #print timestamps
+        #print df1
+        #print df2
+        edf_crossabv = pd.DataFrame(index = timestamps, columns = symbols)
+        edf_crossabv = edf_crossabv.fillna(0)
+        #print 'in crossabove'
+        #for symb in df1.columns:
+            #print symb
+
+        for sym in df1.columns:
+            try:
+                if df1[sym].ix[-2] < df2[sym].ix[-2] and df1[sym].ix[-1] > df2[sym].ix[-1]:
+                    edf_crossabv[sym].ix[-1] = 1
+            except:
+                pass
+        return edf_crossabv
+
     '''
     When df1 crosses above df2
     Current value of df1 is above previous value of df2
     '''
-    def crossabove_df(self, df1, df2):
+    def crossabove_historical(self, df1, df2):
         symbols = df2.columns
         timestamps = df2.index
         df1 = df1.astype(float)
