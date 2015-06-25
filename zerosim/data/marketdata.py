@@ -32,10 +32,6 @@ class MarketData(object):
         end = datetime.datetime(end_year, end_month, end_day)
 
         df_prices = web.DataReader(l_sym, 'yahoo', start, end)
-        df_prices = df_prices.swapaxes('items', 'minor')
-
-        #print df_prices['AAPL'].ix[:, 'Close']
-        #print df_prices['AAPL'].index
 
         return df_prices
 
