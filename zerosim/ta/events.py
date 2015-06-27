@@ -340,16 +340,16 @@ class Events(object):
     def highs(df, n, p):
 
     # When df is rising
-    def isrising(df):
+    def rising(df):
 
     # When df is falling
-    def isfalling(df):
+    def falling(df):
 
     # When df has changed direction to up
-    def isturningup(df):
+    def turningup(df):
 
     # When df has changed direction to down
-    def isturningdn(df):
+    def turningdn(df):
 
 
     def swing_high(df_open, df_high, df_low, df_close):

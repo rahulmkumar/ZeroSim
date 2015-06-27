@@ -12,6 +12,7 @@ class Indicators(object):
     """
 
     def bb(self, l_sym, df_price, time_period, st_dev_u, st_dev_l):
+
         df_bb_u = pd.DataFrame(columns=l_sym, index=df_price.index)
         df_bb_m = pd.DataFrame(columns=l_sym, index=df_price.index)
         df_bb_l = pd.DataFrame(columns=l_sym, index=df_price.index)
@@ -21,6 +22,7 @@ class Indicators(object):
         return df_bb_u, df_bb_m, df_bb_l
 
     def ema(self, l_sym, df_price, time_period):
+
         df_ema = pd.DataFrame(columns=l_sym, index=df_price.index)
 
         for sym in l_sym:
@@ -29,6 +31,7 @@ class Indicators(object):
         return df_ema
 
     def ma(self, l_sym, df_price, time_period):
+
         df_ma = pd.DataFrame(columns=l_sym, index=df_price.index)
 
         for sym in l_sym:
@@ -37,6 +40,7 @@ class Indicators(object):
         return df_ma
 
     def sma(self, l_sym, df_price, time_period):
+
         df_sma = pd.DataFrame(columns=l_sym, index=df_price.index)
 
         for sym in l_sym:
@@ -45,6 +49,7 @@ class Indicators(object):
         return df_sma
 
     def adx(self, l_sym, df_high, df_low, df_close, time_period):
+
         df_adx = pd.DataFrame(columns=l_sym, index=df_high.index)
 
         for sym in l_sym:
@@ -53,6 +58,7 @@ class Indicators(object):
         return df_adx
 
     def mom(self, l_sym, df_price, time_period):
+
         df_mom = pd.DataFrame(columns=l_sym, index=df_price.index)
 
         for sym in l_sym:
@@ -61,11 +67,23 @@ class Indicators(object):
         return df_mom
 
     def atr(self, l_sym, df_high, df_low, df_close, time_period):
+
         df_atr = pd.DataFrame(columns=l_sym, index=df_high.index)
 
         for sym in l_sym:
             df_atr[sym] = talib.ATR(high=np.asarray(df_high[sym]), low=np.asarray(df_low[sym]), close=np.asarray(df_close[sym]), timeperiod=time_period)
         return df_atr
+
+    def macd(self, l_sym, df_price, fast_period, slow_period, signal_period):
+
+        df_macd = pd.DataFrame(columns=l_sym, index=df_price.index)
+        df_macdsignal = pd.DataFrame(columns=l_sym, index=df_price.index)
+        df_macdhist = pd.DataFrame(columns=l_sym, index=df_price.index)
+
+        for sym in l_sym:
+            df_macd[sym], df_macdsignal[sym], df_macdhist[sym] = talib.MACD(df_price, fastperiod=fast_period, slowperiod=slow_period, signalperiod=signal_period)
+
+        return df_macd, df_macdsignal, df_macdhist
 
     def keltner(self, l_sym, df_high, df_low, df_close, ema_period, atr_period, multiplier):
 
