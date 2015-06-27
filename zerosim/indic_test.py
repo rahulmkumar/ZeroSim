@@ -101,6 +101,10 @@ def main():
     ttm_cross_u = event.crossabove_scan(df_bb_u, df_kch_u)
     print 'TTM Upper Cross: ' + str(ttm_cross_u)
 
+    # MACD Histogram Rising
+    macd_rising = event.rising_scan(test_data['Close'])
+    print 'MACD Histogram Rising:' + str(macd_rising)
+
     current_time = datetime.datetime.now().time()
     print 'End time:' + str(current_time)
 

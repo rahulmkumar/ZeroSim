@@ -82,6 +82,23 @@ class Events(object):
 
         return df_criteria_sym
 
+    def rising_scan(self, df_price):
+
+        trig_sym = []
+        symbols = df_price.columns
+        timestamps = df_price.index[-2:]
+
+        df_rising = pd.DataFrame(index=timestamps, columns=symbols)
+
+        for sym in df_price.columns:
+            try:
+                if df_price[sym].ix[-1] > df_price[sym].ix[-2]:
+                    df_rising[sym].ix[-1] = 1
+                    trig_sym.append(sym)
+            except:
+                pass
+        return trig_sym
+
     def crossabove_scan(self, df1, df2):
         symbols = df2.columns
         timestamps = df2.index[-2:]

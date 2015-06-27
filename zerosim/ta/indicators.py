@@ -81,7 +81,7 @@ class Indicators(object):
         df_macdhist = pd.DataFrame(columns=l_sym, index=df_price.index)
 
         for sym in l_sym:
-            df_macd[sym], df_macdsignal[sym], df_macdhist[sym] = talib.MACD(df_price, fastperiod=fast_period, slowperiod=slow_period, signalperiod=signal_period)
+            df_macd[sym], df_macdsignal[sym], df_macdhist[sym] = talib.MACD(df_price[sym], fastperiod=fast_period, slowperiod=slow_period, signalperiod=signal_period)
 
         return df_macd, df_macdsignal, df_macdhist
 
