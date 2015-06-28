@@ -82,10 +82,13 @@ class Events(object):
 
         return df_criteria_sym
 
-    def rising_scan(self, df_price):
+    def rising_scan(self, df_price, l_sym=[]):
 
         trig_sym = []
-        symbols = df_price.columns
+        if len(l_sym) == 0:
+            symbols = df_price.columns
+        else:
+            symbols = l_sym
         timestamps = df_price.index[-2:]
 
         df_rising = pd.DataFrame(index=timestamps, columns=symbols)
@@ -99,8 +102,12 @@ class Events(object):
                 pass
         return trig_sym
 
-    def crossabove_scan(self, df1, df2):
-        symbols = df2.columns
+    def crossabove_scan(self, df1, df2, l_sym=[]):
+
+        if len(l_sym) == 0:
+            symbols = df2.columns
+        else:
+            symbols = l_sym
         timestamps = df2.index[-2:]
         trig_sym = []
         df1 = df1.astype(float)
@@ -207,7 +214,30 @@ class Events(object):
     '''
     When df1 is above df2
     '''
-    def is_above_df(self, df1, df2):
+    def is_above_scan(self, df1, df2):
+
+        #if len(l_sym) == 0:
+        symbols = df1.columns
+        #else:
+        #    symbols = l_sym
+        timestamps = df1.index[-2:]
+
+        trig_sym = []
+
+        edf_isabove = pd.DataFrame(index = timestamps, columns = symbols)
+        edf_isabove = edf_isabove.fillna(0)
+
+        for sym in symbols:
+            if df1[sym].ix[-1] > df2[sym].ix[-1]:
+                edf_isabove[sym].ix[-1] = 1
+                trig_sym.append(sym)
+
+        return trig_sym
+
+    '''
+    When df1 is above df2
+    '''
+    def is_above_historical(self, df1, df2):
 
         symbols = df1.columns
         timestamps = df1.index
@@ -225,7 +255,30 @@ class Events(object):
     '''
     When df1 is below df2
     '''
-    def is_below_df(self, df1, df2):
+    def is_below_scan(self, df1, df2, l_sym=[]):
+
+        if len(l_sym) == 0:
+            symbols = df1.columns
+        else:
+            symbols = l_sym
+        timestamps = df1.index[-2:]
+
+        trig_sym = []
+
+        edf_isbelow = pd.DataFrame(index = timestamps, columns = symbols)
+        edf_isbelow = edf_isbelow.fillna(0)
+
+        for sym in symbols:
+            if df1[sym].ix[-1] < df2[sym].ix[-1]:
+                edf_isbelow[sym].ix[-1] = 1
+                trig_sym.append(sym)
+
+        return trig_sym
+
+    '''
+    When df1 is below df2
+    '''
+    def is_below_historical(self, df1, df2):
         symbols = df1.columns
         timestamps = df1.index
 

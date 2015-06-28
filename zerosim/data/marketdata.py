@@ -31,7 +31,10 @@ class MarketData(object):
         start = datetime.datetime(start_year, start_month, start_day)
         end = datetime.datetime(end_year, end_month, end_day)
 
-        df_prices = web.DataReader(l_sym, 'yahoo', start, end)
+        try:
+            df_prices = web.DataReader(l_sym, 'yahoo', start, end)
+        except:
+            pass
 
         return df_prices
 

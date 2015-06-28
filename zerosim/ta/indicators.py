@@ -18,7 +18,10 @@ class Indicators(object):
         df_bb_l = pd.DataFrame(columns=l_sym, index=df_price.index)
 
         for sym in l_sym:
-            df_bb_u[sym], df_bb_m[sym], df_bb_l[sym] = talib.BBANDS(np.asarray(df_price[sym]), timeperiod=time_period, nbdevup=st_dev_u, nbdevdn=st_dev_l)
+            try:
+                df_bb_u[sym], df_bb_m[sym], df_bb_l[sym] = talib.BBANDS(np.asarray(df_price[sym]), timeperiod=time_period, nbdevup=st_dev_u, nbdevdn=st_dev_l)
+            except:
+                pass
         return df_bb_u, df_bb_m, df_bb_l
 
     def ema(self, l_sym, df_price, time_period):
@@ -26,7 +29,10 @@ class Indicators(object):
         df_ema = pd.DataFrame(columns=l_sym, index=df_price.index)
 
         for sym in l_sym:
-            df_ema[sym] = talib.EMA(np.asarray(df_price[sym]), timeperiod=time_period)
+            try:
+                df_ema[sym] = talib.EMA(np.asarray(df_price[sym]), timeperiod=time_period)
+            except:
+                pass
 
         return df_ema
 
@@ -35,7 +41,10 @@ class Indicators(object):
         df_ma = pd.DataFrame(columns=l_sym, index=df_price.index)
 
         for sym in l_sym:
-            df_ma[sym] = talib.MA(np.asarray(df_price[sym]), timeperiod=time_period)
+            try:
+                df_ma[sym] = talib.MA(np.asarray(df_price[sym]), timeperiod=time_period)
+            except:
+                pass
 
         return df_ma
 
@@ -44,7 +53,10 @@ class Indicators(object):
         df_sma = pd.DataFrame(columns=l_sym, index=df_price.index)
 
         for sym in l_sym:
-            df_sma[sym] = talib.SMA(np.asarray(df_price[sym]), timeperiod=time_period)
+            try:
+                df_sma[sym] = talib.SMA(np.asarray(df_price[sym]), timeperiod=time_period)
+            except:
+                pass
 
         return df_sma
 
@@ -53,7 +65,10 @@ class Indicators(object):
         df_adx = pd.DataFrame(columns=l_sym, index=df_high.index)
 
         for sym in l_sym:
-            df_adx[sym] = talib.ADX(high=np.asarray(df_high[sym]), low=np.asarray(df_low[sym]), close=np.asarray(df_close[sym]), timeperiod = time_period)
+            try:
+                df_adx[sym] = talib.ADX(high=np.asarray(df_high[sym]), low=np.asarray(df_low[sym]), close=np.asarray(df_close[sym]), timeperiod = time_period)
+            except:
+                pass
 
         return df_adx
 
@@ -62,7 +77,10 @@ class Indicators(object):
         df_mom = pd.DataFrame(columns=l_sym, index=df_price.index)
 
         for sym in l_sym:
-            df_mom[sym] = talib.MOM(np.asarray(df_price[sym]), timeperiod = time_period)
+            try:
+                df_mom[sym] = talib.MOM(np.asarray(df_price[sym]), timeperiod = time_period)
+            except:
+                pass
 
         return df_mom
 
@@ -71,7 +89,10 @@ class Indicators(object):
         df_atr = pd.DataFrame(columns=l_sym, index=df_high.index)
 
         for sym in l_sym:
-            df_atr[sym] = talib.ATR(high=np.asarray(df_high[sym]), low=np.asarray(df_low[sym]), close=np.asarray(df_close[sym]), timeperiod=time_period)
+            try:
+                df_atr[sym] = talib.ATR(high=np.asarray(df_high[sym]), low=np.asarray(df_low[sym]), close=np.asarray(df_close[sym]), timeperiod=time_period)
+            except:
+                pass
         return df_atr
 
     def macd(self, l_sym, df_price, fast_period, slow_period, signal_period):
@@ -81,7 +102,10 @@ class Indicators(object):
         df_macdhist = pd.DataFrame(columns=l_sym, index=df_price.index)
 
         for sym in l_sym:
-            df_macd[sym], df_macdsignal[sym], df_macdhist[sym] = talib.MACD(df_price[sym], fastperiod=fast_period, slowperiod=slow_period, signalperiod=signal_period)
+            try:
+                df_macd[sym], df_macdsignal[sym], df_macdhist[sym] = talib.MACD(df_price[sym], fastperiod=fast_period, slowperiod=slow_period, signalperiod=signal_period)
+            except:
+                pass
 
         return df_macd, df_macdsignal, df_macdhist
 
