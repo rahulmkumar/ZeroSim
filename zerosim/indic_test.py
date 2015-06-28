@@ -60,26 +60,34 @@ def main():
     df_macdsig.to_csv('df_macdsig.csv')
     df_macdhist.to_csv('df_macdhist.csv')
 
+    # Open Text File
+    file_tmstmp = str(datetime.datetime.now().month) + str(datetime.datetime.now().day) + str(datetime.datetime.now().year)
+    file_name = 'scan_results_' + file_tmstmp + '.txt'
+    f = open(file_name, 'w+')
+
+
     # Event Scanner
     event = ta.Events()
     cross_sym = event.crossabove_scan(df_ema8, df_ema21)
-    print 'EMA8 X EMA21:'+ str(cross_sym)
+    f.write('EMA8 X EMA21:'+ str(cross_sym)+'\n')
+
 
     # Ichimoku Cross
     cross_ichimoku = event.crossabove_scan(df_ichi_tenkan, df_ichi_kijun)
-    print 'Tenkan X Kijun(ETF):' + str(cross_ichimoku)
+    f.write('Tenkan X Kijun(ETF):' + str(cross_ichimoku) + '\n')
+
 
     # Price crosses over Kijun Sen
     cross_kijun = event.crossabove_scan(test_data['Close'], df_ichi_kijun)
-    print 'Price X Kijun:(ETF)' + str(cross_kijun)
+    f.write('Price X Kijun:(ETF)' + str(cross_kijun) + '\n')
 
     # TTM squeeze firing
     ttm_cross_u = event.crossabove_scan(df_bb_u, df_kch_u)
-    print 'TTM Upper Cross: ' + str(ttm_cross_u)
+    f.write('TTM Upper Cross: ' + str(ttm_cross_u) + '\n')
 
     # MACD Histogram Rising
     macd_rising = event.rising_scan(df_macdhist)
-    print 'MACD Histogram Rising:' + str(macd_rising)
+    f.write('MACD Histogram Rising:' + str(macd_rising) + '\n')
 
     # Explosive EMA power
     # EMA 21 is below EMA 89
@@ -88,7 +96,9 @@ def main():
     ema21b89 = event.is_below_scan(df_ema21, df_ema89, ETFOptions)
     pricex8 = event.crossabove_scan(test_data['Close'], df_ema8, ema21b89)
 
-    print 'Explosive Power: ' + str(pricex8)
+    f.write('Explosive Power: ' + str(pricex8) + '\n')
+
+    f.close()
 
     current_time = datetime.datetime.now().time()
     print 'End time:' + str(current_time)
