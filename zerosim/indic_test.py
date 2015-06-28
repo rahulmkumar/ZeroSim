@@ -10,9 +10,14 @@ def main():
     current_time = datetime.datetime.now().time()
     print 'Start time:' + str(current_time)
 
-    # Return watchlist
+    # Refresh Watchlist
     watch_list = data.WatchlistDb()
-    watch_list.get_watchlists('data/watchlistdb.db')
+    #updated_dict = watch_list.get_watchlists_csv('../symbols/watchlistdb.csv')
+
+    #conn = watch_list.open_watchlistdb('data/watchlistdb.db')
+    #watch_list.insert_multiple_watchlists(conn, updated_dict)
+
+    # Return watchlist
     ibd50 = watch_list.get_watchlist_by_name('data/watchlistdb.db', 'IBD50')
     biotech = watch_list.get_watchlist_by_name('data/watchlistdb.db', 'Biotech')
     ETFOptions = watch_list.get_watchlist_by_name('data/watchlistdb.db', 'ETFOptions')
@@ -20,7 +25,7 @@ def main():
 
     # Get data for watchlist
     dat = data.MarketData()
-    test_data = dat.get_yahoo_data(wlist, '10/01/2014', '06/25/2015')
+    test_data = dat.get_yahoo_data(wlist, '02/01/2015', '06/26/2015')
 
     ind = ta.Indicators()
 
@@ -49,6 +54,12 @@ def main():
     # ADX
     df_adx = ind.adx(wlist, test_data['High'], test_data['Low'], test_data['Close'], 14)
 
+    #MACD
+    df_macd, df_macdsig, df_macdhist = ind.macd(wlist, test_data['Close'], 12, 26, 9)
+    df_macd.to_csv('df_macd.csv')
+    df_macdsig.to_csv('df_macdsig.csv')
+    df_macdhist.to_csv('df_macdhist.csv')
+
     # Event Scanner
     event = ta.Events()
     cross_sym = event.crossabove_scan(df_ema8, df_ema21)
@@ -67,14 +78,14 @@ def main():
     print 'TTM Upper Cross: ' + str(ttm_cross_u)
 
     # MACD Histogram Rising
-    macd_rising = event.rising_scan(test_data['Close'])
+    macd_rising = event.rising_scan(df_macdhist)
     print 'MACD Histogram Rising:' + str(macd_rising)
 
     # Explosive EMA power
     # EMA 21 is below EMA 89
     # Price crosses above EMA 8
 
-    ema21b89 = event.is_above_scan(df_ema21, df_ema8)
+    ema21b89 = event.is_below_scan(df_ema21, df_ema89, ETFOptions)
     pricex8 = event.crossabove_scan(test_data['Close'], df_ema8, ema21b89)
 
     print 'Explosive Power: ' + str(pricex8)

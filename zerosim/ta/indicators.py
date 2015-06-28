@@ -104,6 +104,7 @@ class Indicators(object):
         for sym in l_sym:
             try:
                 df_macd[sym], df_macdsignal[sym], df_macdhist[sym] = talib.MACD(df_price[sym], fastperiod=fast_period, slowperiod=slow_period, signalperiod=signal_period)
+                print df_macd[sym]
             except:
                 pass
 

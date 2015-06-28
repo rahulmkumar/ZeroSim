@@ -27,34 +27,14 @@ class SymbolDb(object):
     #QUANDL_FUTURES = 'https://s3.amazonaws.com/quandl-static-content/Ticker+CSV%27s/Futures/'
     #QUANDL_COMMODITIES = 'https://s3.amazonaws.com/quandl-static-content/Ticker+CSV%27s/'
 
-    WATCHLIST_FILE = 'watchlistdb.csv'
     SYMBOLS_DB = 'symbols.db'
     SYMBOLS_DB_PATH = '/'
-
-
 
     def __init__(self):
         """
         This constructor initializes a list of symbols
         """
         self.l_symlist = []
-
-    def get_watchlists(self, file_path=SYMBOL_FILES_PATH, file_name=WATCHLIST_FILE):
-        wlist = pd.read_csv(file_path+file_name)
-        wlist = wlist.fillna('')
-
-        watchlist_dict = {}
-
-        for wl_name in wlist.columns:
-            l_wlist = list(wlist[wl_name])
-            try:
-                while 1:
-                    l_wlist.remove('')
-            except:
-                pass
-            watchlist_dict[wl_name] = l_wlist
-
-        return watchlist_dict
 
     def merge_symbol_files_to_db(self, file_path=SYMBOL_FILES_PATH, db_path=SYMBOLS_DB_PATH, db_name=SYMBOLS_DB):
         """

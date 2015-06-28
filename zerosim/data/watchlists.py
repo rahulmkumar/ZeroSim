@@ -1,4 +1,5 @@
 import shelve
+import pandas as pd
 
 
 class Watchlist(object):
@@ -16,9 +17,28 @@ class Watchlist(object):
 class WatchlistDb(object):
 
     WATCHLIST_DB_PATH = ''
+    WATCHLIST_CSV_PATH = '../symbols/'
+    WATCHLIST_FILE = 'watchlistdb.csv'
     WATCHLIST_DB = 'watchlistdb.db'
 
-    def open_watchlistdb(self, db_path = WATCHLIST_DB_PATH, db_name = WATCHLIST_DB):
+    def get_watchlists_csv(self, file_name=WATCHLIST_CSV_PATH+WATCHLIST_FILE):
+        wlist = pd.read_csv(file_name)
+        wlist = wlist.fillna('')
+
+        watchlist_dict = {}
+
+        for wl_name in wlist.columns:
+            l_wlist = list(wlist[wl_name])
+            try:
+                while 1:
+                    l_wlist.remove('')
+            except:
+                pass
+            watchlist_dict[wl_name] = l_wlist
+
+        return watchlist_dict
+
+    def open_watchlistdb(self, db_name = WATCHLIST_DB_PATH+WATCHLIST_DB):
         db_con = shelve.open(db_name)
         return db_con
 
@@ -31,15 +51,15 @@ class WatchlistDb(object):
             connection[w_list] = l_wlist_dict[w_list]
         connection.close()
 
-    def get_watchlists(self, db):
-        connection = self.open_watchlistdb(db_name=db)
+    def get_watchlists(self, db_name):
+        connection = self.open_watchlistdb(db_name=db_name)
         for w_list in connection:
             return w_list, connection[w_list]
             #print 'Watchlist Name:' + w_list
             #print 'Watchlist Symbols:' + str(connection[w_list])
 
-    def get_watchlist_by_name(self, db, watchlist_name):
-        conn = self.open_watchlistdb(db_name=db)
+    def get_watchlist_by_name(self, db_name, watchlist_name):
+        conn = self.open_watchlistdb(db_name=db_name)
         return conn[watchlist_name]
 
 if __name__ == '__main__':

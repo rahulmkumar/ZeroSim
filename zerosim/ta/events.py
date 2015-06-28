@@ -221,14 +221,15 @@ class Events(object):
         #else:
         #    symbols = l_sym
         timestamps = df1.index[-2:]
-
+        df1 = df1.astype(float)
         trig_sym = []
 
         edf_isabove = pd.DataFrame(index = timestamps, columns = symbols)
         edf_isabove = edf_isabove.fillna(0)
 
         for sym in symbols:
-            if df1[sym].ix[-1] > df2[sym].ix[-1]:
+            diff = df1[sym].ix[-1] - df2[sym].ix[-1]
+            if diff > 0:
                 edf_isabove[sym].ix[-1] = 1
                 trig_sym.append(sym)
 
