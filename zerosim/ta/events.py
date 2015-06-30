@@ -292,6 +292,23 @@ class Events(object):
                     edf_isbelow[sym].ix[ts] = 1
 
         return edf_isbelow
+    # When df has changed direction to up
+    def turningup_scan(self, df1, l_sym=[]):
+
+        if len(l_sym) == 0:
+            symbols = df1.columns
+        else:
+            symbols = l_sym
+
+        trig_sym = []
+
+        timestamps = df1.index[-3:]
+        df_turningup = pd.DataFrame(index = timestamps, columns = symbols)
+
+        for sym in symbols:
+            if df1[sym].ix[-3] > df1[sym].ix[-2] and df1[sym].ix[-1] > df1[sym].ix[-2]:
+                df_turningup[sym].ix[-1] = 1
+                trig_sym.append(sym)
 
     '''
     When df1 is between df2 and df3
@@ -415,9 +432,6 @@ class Events(object):
 
     # When df is falling
     def falling(df):
-
-    # When df has changed direction to up
-    def turningup(df):
 
     # When df has changed direction to down
     def turningdn(df):

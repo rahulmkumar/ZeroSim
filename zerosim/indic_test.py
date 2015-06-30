@@ -25,7 +25,7 @@ def main():
 
     # Get data for watchlist
     dat = data.MarketData()
-    test_data = dat.get_yahoo_data(wlist, '02/01/2015', '06/26/2015')
+    test_data = dat.get_yahoo_data(wlist, '02/01/2015', '06/29/2015')
 
     ind = ta.Indicators()
 
@@ -65,17 +65,14 @@ def main():
     file_name = 'scan_results_' + file_tmstmp + '.txt'
     f = open(file_name, 'w+')
 
-
     # Event Scanner
     event = ta.Events()
     cross_sym = event.crossabove_scan(df_ema8, df_ema21)
     f.write('EMA8 X EMA21:'+ str(cross_sym)+'\n')
 
-
     # Ichimoku Cross
     cross_ichimoku = event.crossabove_scan(df_ichi_tenkan, df_ichi_kijun)
     f.write('Tenkan X Kijun(ETF):' + str(cross_ichimoku) + '\n')
-
 
     # Price crosses over Kijun Sen
     cross_kijun = event.crossabove_scan(test_data['Close'], df_ichi_kijun)
@@ -97,6 +94,10 @@ def main():
     pricex8 = event.crossabove_scan(test_data['Close'], df_ema8, ema21b89)
 
     f.write('Explosive Power: ' + str(pricex8) + '\n')
+
+    # Turning up scan
+    macd_turn_up = event.turningup_scan(df_macdhist)
+    f.write('MACD Histogram Turn Up:' + str(macd_turn_up) + '\n')
 
     f.close()
 
