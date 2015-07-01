@@ -25,7 +25,7 @@ def main():
 
     # Get data for watchlist
     dat = data.MarketData()
-    test_data = dat.get_yahoo_data(wlist, '02/01/2015', '06/30/2015')
+    test_data = dat.get_yahoo_data(wlist, '02/01/2014', '06/30/2015')
 
     ind = ta.Indicators()
 
@@ -38,6 +38,12 @@ def main():
     df_ema34 = ind.ema(wlist, test_data['Close'], 34)
     df_ema55 = ind.ema(wlist, test_data['Close'], 55)
     df_ema89 = ind.ema(wlist, test_data['Close'], 89)
+
+    df_ema40 = ind.ema(wlist, test_data['Close'], 40)
+    df_ema105 = ind.ema(wlist, test_data['Close'], 105)
+    df_ema170 = ind.ema(wlist, test_data['Close'], 170)
+    df_ema275 = ind.ema(wlist, test_data['Close'], 275)
+    df_ema445 = ind.ema(wlist, test_data['Close'], 445)
 
     # Keltner Channels
     df_kelt_u, df_kelt_m, df_kelt_l = ind.keltner(wlist, test_data['High'], test_data['Low'], test_data['Close'], 20, 20, 2)
@@ -95,6 +101,46 @@ def main():
     # Turning up scan
     macd_turn_up = event.turningup_scan(df_macdhist)
     f.write('MACD Histogram Turn Up:' + str(macd_turn_up) + '\n')
+
+    # Price crosses EMA 8
+    price_ema8 = event.crossabove_scan(test_data['Close'], df_ema8)
+    f.write('Price crosses EMA 8:' + str(price_ema8) + '\n')
+
+    # Price crosses EMA 21
+    price_ema21 = event.crossabove_scan(test_data['Close'], df_ema21)
+    f.write('Price crosses EMA 21:' + str(price_ema21) + '\n')
+
+    # Price crosses EMA 34
+    price_ema34 = event.crossabove_scan(test_data['Close'], df_ema34)
+    f.write('Price crosses EMA 34:' + str(price_ema34) + '\n')
+
+    # Price crosses EMA 55
+    price_ema55 = event.crossabove_scan(test_data['Close'], df_ema55)
+    f.write('Price crosses EMA 55:' + str(price_ema55) + '\n')
+
+    # Price crosses EMA 89
+    price_ema89 = event.crossabove_scan(test_data['Close'], df_ema89)
+    f.write('Price crosses EMA 89:' + str(price_ema89) + '\n')
+
+    # Price crosses EMA 40
+    price_ema40 = event.crossabove_scan(test_data['Close'], df_ema40)
+    f.write('Price crosses EMA 40:' + str(price_ema40) + '\n')
+
+    # Price crosses EMA 105
+    price_ema105 = event.crossabove_scan(test_data['Close'], df_ema105)
+    f.write('Price crosses EMA 105:' + str(price_ema105) + '\n')
+
+    # Price crosses EMA 170
+    price_ema170 = event.crossabove_scan(test_data['Close'], df_ema170)
+    f.write('Price crosses EMA 170:' + str(price_ema170) + '\n')
+
+    # Price crosses EMA 275
+    price_ema275 = event.crossabove_scan(test_data['Close'], df_ema275)
+    f.write('Price crosses EMA 275:' + str(price_ema275) + '\n')
+
+    # Price crosses EMA 445
+    price_ema445 = event.crossabove_scan(test_data['Close'], df_ema445)
+    f.write('Price crosses EMA 445:' + str(price_ema445) + '\n')
 
     f.close()
 
