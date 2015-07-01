@@ -292,6 +292,7 @@ class Events(object):
                     edf_isbelow[sym].ix[ts] = 1
 
         return edf_isbelow
+
     # When df has changed direction to up
     def turningup_scan(self, df1, l_sym=[]):
 
@@ -309,6 +310,8 @@ class Events(object):
             if df1[sym].ix[-3] > df1[sym].ix[-2] and df1[sym].ix[-1] > df1[sym].ix[-2]:
                 df_turningup[sym].ix[-1] = 1
                 trig_sym.append(sym)
+
+        return trig_sym
 
     '''
     When df1 is between df2 and df3
@@ -421,8 +424,6 @@ class Events(object):
 
     '''
 
-
-
     '''
     # within p% of the highest high attained in the previous n days
     def highs(df, n, p):
@@ -435,7 +436,6 @@ class Events(object):
 
     # When df has changed direction to down
     def turningdn(df):
-
 
     def swing_high(df_open, df_high, df_low, df_close):
     def swing_low(df_open, df_high, df_low, df_close):

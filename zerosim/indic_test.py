@@ -25,7 +25,7 @@ def main():
 
     # Get data for watchlist
     dat = data.MarketData()
-    test_data = dat.get_yahoo_data(wlist, '02/01/2015', '06/29/2015')
+    test_data = dat.get_yahoo_data(wlist, '02/01/2015', '06/30/2015')
 
     ind = ta.Indicators()
 
@@ -56,9 +56,6 @@ def main():
 
     #MACD
     df_macd, df_macdsig, df_macdhist = ind.macd(wlist, test_data['Close'], 12, 26, 9)
-    df_macd.to_csv('df_macd.csv')
-    df_macdsig.to_csv('df_macdsig.csv')
-    df_macdhist.to_csv('df_macdhist.csv')
 
     # Open Text File
     file_tmstmp = str(datetime.datetime.now().month) + str(datetime.datetime.now().day) + str(datetime.datetime.now().year)
