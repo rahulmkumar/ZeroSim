@@ -109,6 +109,39 @@ class Indicators(object):
 
         return df_macd, df_macdsignal, df_macdhist
 
+    def wavec(self, l_sym, df_three, df_four, df_five):
+
+        df_ca = pd.DataFrame(columns=l_sym, index=df_three.index)
+        df_cb = pd.DataFrame(columns=l_sym, index=df_three.index)
+
+        for sym in l_sym:
+            df_ca[sym] = df_four[sym] - df_five[sym]
+            df_cb[sym] = df_three[sym] - df_four[sym]
+
+        return df_ca, df_cb
+
+    def waveb(self, l_sym, df_two, df_three, df_four):
+
+        df_ba = pd.DataFrame(columns=l_sym, index=df_two.index)
+        df_bb = pd.DataFrame(columns=l_sym, index=df_two.index)
+
+        for sym in l_sym:
+            df_ba[sym] = df_three[sym] - df_four[sym]
+            df_bb[sym] = df_two[sym] - df_three[sym]
+
+        return df_ba, df_bb
+
+    def wavea(self, l_sym, df_one, df_two, df_three):
+
+        df_aa = pd.DataFrame(columns=l_sym, index=df_one.index)
+        df_ab = pd.DataFrame(columns=l_sym, index=df_one.index)
+
+        for sym in l_sym:
+            df_aa[sym] = df_two[sym] - df_three[sym]
+            df_ab[sym] = df_one[sym] - df_two[sym]
+
+        return df_aa, df_ab
+
     def keltner(self, l_sym, df_high, df_low, df_close, ema_period, atr_period, multiplier):
 
         df_kch_u = pd.DataFrame(columns=l_sym, index=df_high.index)

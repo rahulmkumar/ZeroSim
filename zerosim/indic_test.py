@@ -12,10 +12,10 @@ def main():
 
     # Refresh Watchlist
     watch_list = data.WatchlistDb()
-    #updated_dict = watch_list.get_watchlists_csv('../symbols/watchlistdb.csv')
+    updated_dict = watch_list.get_watchlists_csv('../symbols/watchlistdb.csv')
 
-    #conn = watch_list.open_watchlistdb('data/watchlistdb.db')
-    #watch_list.insert_multiple_watchlists(conn, updated_dict)
+    conn = watch_list.open_watchlistdb('data/watchlistdb.db')
+    watch_list.insert_multiple_watchlists(conn, updated_dict)
 
     # Return watchlist
     ibd50 = watch_list.get_watchlist_by_name('data/watchlistdb.db', 'IBD50')
@@ -32,12 +32,16 @@ def main():
     # Bollinger Bands
     df_bb_u, df_bb_m, df_bb_l = ind.bb(wlist, test_data['Close'], 20, 2, 2)
 
-    # Fibonacci EMA's
+    # Fibonacci EMA's and Waves
     df_ema8 = ind.ema(wlist, test_data['Close'], 8)
     df_ema21 = ind.ema(wlist, test_data['Close'], 21)
     df_ema34 = ind.ema(wlist, test_data['Close'], 34)
     df_ema55 = ind.ema(wlist, test_data['Close'], 55)
     df_ema89 = ind.ema(wlist, test_data['Close'], 89)
+
+    df_waveaa, df_waveab = ind.wavea(wlist, df_ema8, df_ema21, df_ema34)
+    df_waveba, df_wavebb = ind.wavea(wlist, df_ema21, df_ema34, df_ema55)
+    df_waveca, df_wavecb = ind.wavea(wlist, df_ema34, df_ema55, df_ema89)
 
     df_ema40 = ind.ema(wlist, test_data['Close'], 40)
     df_ema105 = ind.ema(wlist, test_data['Close'], 105)
@@ -141,6 +145,20 @@ def main():
     # Price crosses EMA 445
     price_ema445 = event.crossabove_scan(test_data['Close'], df_ema445)
     f.write('Price crosses EMA 445:' + str(price_ema445) + '\n')
+
+    # Wave A Rising
+    waveaa_rising = event.rising_scan(df_waveaa)
+    f.write(('Wave Aa Rising:') + str(waveaa_rising) + '\n')
+
+    waveab_rising = event.rising_scan(df_waveab)
+    f.write(('Wave Ab Rising:') + str(waveab_rising) + '\n')
+
+    # Wave A Turning Up
+    waveaa_turnup = event.turningup_scan(df_waveaa)
+    f.write(('Wave Aa Turn Up:') + str(waveaa_turnup) + '\n')
+
+    waveab_turnup = event.turningup_scan(df_waveab)
+    f.write(('Wave Ab Turn Up:') + str(waveab_turnup) + '\n')
 
     f.close()
 
