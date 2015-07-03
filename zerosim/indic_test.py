@@ -21,11 +21,16 @@ def main():
     ibd50 = watch_list.get_watchlist_by_name('data/watchlistdb.db', 'IBD50')
     biotech = watch_list.get_watchlist_by_name('data/watchlistdb.db', 'Biotech')
     ETFOptions = watch_list.get_watchlist_by_name('data/watchlistdb.db', 'ETFOptions')
-    wlist = ibd50 + biotech + ETFOptions
+
+    # Technology Stocks
+    yahoo_stocks = data.SymbolDb()
+    tech = yahoo_stocks.get_symbols(source='Yahoo', Country='USA', Volume='1000000', Sector='Technology')
+
+    wlist = ibd50 + biotech + ETFOptions + tech
 
     # Get data for watchlist
     dat = data.MarketData()
-    test_data = dat.get_yahoo_data(wlist, '02/01/2014', '06/30/2015')
+    test_data = dat.get_yahoo_data(wlist, '02/01/2014', '07/02/2015')
 
     ind = ta.Indicators()
 

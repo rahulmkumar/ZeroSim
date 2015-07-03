@@ -22,13 +22,13 @@ class SymbolDb(object):
     2) Create.maintain a database of symbols
     3) A user interface for returning a single or list of symbols matching a criteria
     """
-    SYMBOL_FILES_PATH = '../../symbols/'
+    SYMBOL_FILES_PATH = '../symbols/'
     #QUANDL_INDICES = 'https://s3.amazonaws.com/quandl-static-content/Ticker+CSV%27s/Indicies/'
     #QUANDL_FUTURES = 'https://s3.amazonaws.com/quandl-static-content/Ticker+CSV%27s/Futures/'
     #QUANDL_COMMODITIES = 'https://s3.amazonaws.com/quandl-static-content/Ticker+CSV%27s/'
 
     SYMBOLS_DB = 'symbols.db'
-    SYMBOLS_DB_PATH = '/'
+    SYMBOLS_DB_PATH = 'data/'
 
     def __init__(self):
         """
@@ -55,7 +55,7 @@ class SymbolDb(object):
 
 
         # SQlite database connection
-        engine = create_engine('sqlite://'+db_path+db_name)
+        engine = create_engine('sqlite:///'+db_path+db_name)
 
         #Create finviz table in database
         df_merged = pd.merge(df_info, df_data, left_index=True, right_index=True)

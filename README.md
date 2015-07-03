@@ -1,2 +1,2 @@
-# ZeroSim1
+# ZeroSim
 Python based market scanner and simulator
