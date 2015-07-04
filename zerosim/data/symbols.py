@@ -53,7 +53,6 @@ class SymbolDb(object):
         df_nyse100 = pd.read_csv(file_path + 'NYSE100.csv', index_col=0)
         df_nasdaq100 = pd.read_csv(file_path + 'NASD100.csv', index_col=0)
 
-
         # SQlite database connection
         engine = create_engine('sqlite:///'+db_path+db_name)
 
@@ -134,9 +133,8 @@ class SymbolDb(object):
         con.commit()
         con.close()
 
-
     def get_symbols(self, source, file_path = SYMBOL_FILES_PATH, db_path=SYMBOLS_DB_PATH, db_name=SYMBOLS_DB, **kwargs):
-        engine = create_engine('sqlite://'+db_path+db_name)
+        engine = create_engine('sqlite:///'+db_path+db_name)
         read_sql_query = """ SELECT Ticker,Code,Exchange,[Index],Company,Sector,Industry,Country,MarketCap,Change,Price,Volume FROM US_STOCK_TBL"""
         df_final = pd.read_sql(read_sql_query, engine)
         df_final = df_final.set_index('Ticker')
@@ -149,88 +147,64 @@ class SymbolDb(object):
             sql_query = """SELECT Ticker FROM US_STOCK_TBL"""
 
         try:
-            print 'Sector:' + kwargs['Sector']
             sql_query = sql_query + """ WHERE Sector LIKE '%"""+kwargs['Sector']+"""%'"""
-            print 'Sector:' + sql_query
         except:
-            print 'Sector not defined'
             pass
 
         try:
-            print 'Industry:' + kwargs['Industry']
             if sql_query.find('WHERE') <> -1:
                 sql_query = sql_query + """ AND Industry LIKE '%"""+kwargs['Industry']+"""%'"""
             else:
                 sql_query = sql_query + """ WHERE Industry LIKE '%"""+kwargs['Industry']+"""%'"""
-            print 'Industry:' + sql_query
         except:
-            print 'Industry not defined'
             pass
 
         try:
-            print 'Country:' + kwargs['Country']
             if sql_query.find('WHERE') <> -1:
                 sql_query = sql_query + """ AND Country = '"""+kwargs['Country']+"""'"""
             else:
                 sql_query = sql_query + """ WHERE Country = '"""+kwargs['Country']+"""'"""
-            print 'Country:' + sql_query
         except:
-            print 'Country not defined'
             pass
 
         try:
-            print 'Exchange:' + kwargs['Exchange']
             if sql_query.find('WHERE') <> -1:
                 sql_query = sql_query + """ AND Exchange = '"""+kwargs['Exchange']+"""'"""
             else:
                 sql_query = sql_query + """ WHERE Exchange = '"""+kwargs['Exchange']+"""'"""
-            print 'Exchange:' + sql_query
         except:
-            print 'Exchange not defined'
             pass
 
         try:
-            print 'Index:' + kwargs['Index']
             if sql_query.find('WHERE') <> -1:
                 sql_query = sql_query + """ AND Index = '"""+kwargs['Index']+"""'"""
             else:
                 sql_query = sql_query + """ WHERE Index = '"""+kwargs['Index']+"""'"""
-            print 'Index:' + sql_query
         except:
-            print 'Index not defined'
             pass
 
         try:
-            print 'Mcap:' + kwargs['Mcap']
             if sql_query.find('WHERE') <> -1:
                 sql_query = sql_query + """ AND Mcap > """+kwargs['Mcap']
             else:
                 sql_query = sql_query + """ WHERE Mcap > """+kwargs['Mcap']
-            print 'Mcap:' + sql_query
         except:
-            print 'Mcap not defined'
             pass
 
         try:
-            print 'Change:' + kwargs['Change']
             if sql_query.find('WHERE') <> -1:
                 sql_query = sql_query + """ AND Change > """+kwargs['Change']
             else:
                 sql_query = sql_query + """ WHERE Change > """+kwargs['Change']
-            print 'Change:' + sql_query
         except:
-            print 'Change not defined'
             pass
 
         try:
-            print 'Volume:' + kwargs['Volume']
             if sql_query.find('WHERE') <> -1:
                 sql_query = sql_query + """ AND Volume > """+kwargs['Volume']
             else:
                 sql_query = sql_query + """ WHERE Volume > """+kwargs['Volume']
-            print 'Volume:' + sql_query
         except:
-            print 'Volume not defined'
             pass
 
         if source == 'Quandl':
@@ -240,14 +214,12 @@ class SymbolDb(object):
 
         df_final = pd.read_sql(sql_query, engine)
 
-        print sql_query
         df_final.to_csv(file_path + 'SQL_generated.csv')
-        print list(df_final['Code'])
 
         if source =='Quandl':
-            return list(df_final['Code'])
+            return [str(item) for item in list(df_final['Code'])]
         elif source == 'Yahoo':
-            return list(df_final['Ticker'])
+            return [str(item) for item in list(df_final['Ticker'])]
 
 
 

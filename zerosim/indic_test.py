@@ -26,11 +26,11 @@ def main():
     yahoo_stocks = data.SymbolDb()
     tech = yahoo_stocks.get_symbols(source='Yahoo', Country='USA', Volume='1000000', Sector='Technology')
 
-    wlist = ibd50 + biotech + ETFOptions + tech
+    wlist = list(set(ibd50 + biotech + ETFOptions + tech))
 
     # Get data for watchlist
     dat = data.MarketData()
-    test_data = dat.get_yahoo_data(wlist, '02/01/2014', '07/02/2015')
+    test_data = dat.get_yahoo_data(wlist, '02/01/2014', '07/03/2015')
 
     ind = ta.Indicators()
 
