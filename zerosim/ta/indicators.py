@@ -196,3 +196,16 @@ class Indicators(object):
             df_kch_l[sym] = df_kch_m[sym] - (atr_multiplier * df_atr[sym])
 
         return df_bb_m, df_bb_u, df_bb_l, df_kch_m, df_kch_u, df_kch_l
+
+    def stochastic_rsi(self, l_sym, df_close, fastk_period=5, fastd_period=3):
+
+        df_fastk = pd.DataFrame(columns=l_sym, index=df_close.index)
+        df_fastd = pd.DataFrame(columns=l_sym, index=df_close.index)
+
+        for sym in l_sym:
+            try:
+                df_fastk[sym], df_fastd[sym] = talib.STOCHRSI(np.asarray(df_close[sym]), timeperiod=14, fastk_period=5, fastd_period=3, fastd_matype=0)
+            except:
+                pass
+
+        return df_fastk, df_fastd

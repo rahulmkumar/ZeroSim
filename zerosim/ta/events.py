@@ -149,10 +149,31 @@ class Events(object):
                     pass
         return edf_crossabv
 
+    def crossbelow_scan(self, df1, df2, l_sym=[]):
+
+        if len(l_sym) == 0:
+            symbols = df2.columns
+        else:
+            symbols = l_sym
+        timestamps = df2.index[-2:]
+        trig_sym = []
+        df1 = df1.astype(float)
+        edf_crossbel = pd.DataFrame(index = timestamps, columns = symbols)
+        edf_crossbel = edf_crossbel.fillna(0)
+
+        for sym in df1.columns:
+            try:
+                if df1[sym].ix[-2] > df2[sym].ix[-2] and df1[sym].ix[-1] < df2[sym].ix[-1]:
+                    edf_crossbel[sym].ix[-1] = 1
+                    trig_sym.append(sym)
+            except:
+                pass
+        return trig_sym
+
     '''
     When df1 crosses below df2
     '''
-    def crossbelow_df(self, df1, df2):
+    def crossbelow_historical(self, df1, df2):
 
         symbols = df1.columns
         timestamps = df1.index
@@ -169,6 +190,27 @@ class Events(object):
                     pass
 
         return edf_crossblw
+
+    def crossaboven_scan(self, df1, N, l_sym=[]):
+
+        if len(l_sym) == 0:
+            symbols = df1.columns
+        else:
+            symbols = l_sym
+        timestamps = df1.index[-2:]
+        trig_sym = []
+        df1 = df1.astype(float)
+        edf_crossabv = pd.DataFrame(index = timestamps, columns = symbols)
+        edf_crossabv = edf_crossabv.fillna(0)
+
+        for sym in df1.columns:
+            try:
+                if df1[sym].ix[-2] < N and df1[sym].ix[-1] > N:
+                    edf_crossabv[sym].ix[-1] = 1
+                    trig_sym.append(sym)
+            except:
+                pass
+        return trig_sym
 
     '''
     When df1 crosses above number
@@ -190,6 +232,27 @@ class Events(object):
                     pass
 
         return edf_crossabv
+
+    def crossbelown_scan(self, df1, N, l_sym=[]):
+
+        if len(l_sym) == 0:
+            symbols = df1.columns
+        else:
+            symbols = l_sym
+        timestamps = df1.index[-2:]
+        trig_sym = []
+        df1 = df1.astype(float)
+        edf_crossbel = pd.DataFrame(index = timestamps, columns = symbols)
+        edf_crossbel = edf_crossbel.fillna(0)
+
+        for sym in df1.columns:
+            try:
+                if df1[sym].ix[-2] > N and df1[sym].ix[-1] < N:
+                    edf_crossbel[sym].ix[-1] = 1
+                    trig_sym.append(sym)
+            except:
+                pass
+        return trig_sym
 
     '''
     When df1 crosses below number
@@ -228,8 +291,7 @@ class Events(object):
         edf_isabove = edf_isabove.fillna(0)
 
         for sym in symbols:
-            diff = df1[sym].ix[-1] - df2[sym].ix[-1]
-            if diff > 0:
+            if df1[sym].ix[-1] > df2[sym].ix[-1]:
                 edf_isabove[sym].ix[-1] = 1
                 trig_sym.append(sym)
 
@@ -330,10 +392,28 @@ class Events(object):
 
         return edf_isbetween
 
+    def is_above_N_scan(self, df1, N, l_sym=[]):
+        if len(l_sym) == 0:
+            symbols = df1.columns
+        else:
+            symbols = l_sym
+
+        trig_sym = []
+
+        timestamps = df1.index[-1:]
+        df_isaboven = pd.DataFrame(index = timestamps, columns = symbols)
+
+        for sym in symbols:
+            if df1[sym].ix[-1] > N:
+                df_isaboven[sym].ix[-1] = 1
+                trig_sym.append(sym)
+
+        return trig_sym
+
     '''
     When df1 is above a number
     '''
-    def is_above_N(self, df1, N):
+    def is_above_N_historical(self, df1, N):
         symbols = df1.columns
         timestamps = df1.index
 
@@ -347,10 +427,28 @@ class Events(object):
 
         return edf_isabove
 
+    def is_below_N_scan(self, df1, N, l_sym=[]):
+        if len(l_sym) == 0:
+            symbols = df1.columns
+        else:
+            symbols = l_sym
+
+        trig_sym = []
+
+        timestamps = df1.index[-1:]
+        df_isbelown = pd.DataFrame(index = timestamps, columns = symbols)
+
+        for sym in symbols:
+            if df1[sym].ix[-1] < N:
+                df_isbelown[sym].ix[-1] = 1
+                trig_sym.append(sym)
+
+        return trig_sym
+
     '''
     When df1 is below a number
     '''
-    def is_below_N(self, df1, N):
+    def is_below_N_historical(self, df1, N):
         symbols = df1.columns
         timestamps = df1.index
 

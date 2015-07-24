@@ -25,12 +25,30 @@ def main():
     # Technology Stocks
     yahoo_stocks = data.SymbolDb()
     tech = yahoo_stocks.get_symbols(source='Yahoo', Country='USA', Volume='1000000', Sector='Technology')
+    biotech1 = yahoo_stocks.get_symbols(source='Yahoo', Country='USA', Volume='1000000', Industry='Bio')
 
-    wlist = list(set(ibd50 + biotech + ETFOptions + tech))
+    wlist = list(set(ibd50 + biotech + ETFOptions + tech + biotech1))
+    #wlist = list(set(ibd50 + biotech + ETFOptions + tech))
 
     # Get data for watchlist
+
+    current_time = datetime.datetime.now().time()
+    print 'Data download start time:' + str(current_time)
+
     dat = data.MarketData()
-    test_data = dat.get_yahoo_data(wlist, '02/01/2014', '07/03/2015')
+    test_data = dat.get_yahoo_data(wlist, '02/01/2014', '07/23/2015')
+    test_data['Close'] = test_data['Close'].fillna(method='ffill')
+    test_data['Open'] = test_data['Open'].fillna(method='ffill')
+    test_data['High'] = test_data['High'].fillna(method='ffill')
+    test_data['Low'] = test_data['Low'].fillna(method='ffill')
+
+    #test_data['Close'].ffill()
+    #df_test = test_data['Close'].drop(test_data['Close'].index[79])
+    #test_data['Close'].to_csv('test_data.csv')
+    #df_test.to_csv('df_test.csv')
+
+    current_time = datetime.datetime.now().time()
+    print 'Data download end time:' + str(current_time)
 
     ind = ta.Indicators()
 
@@ -72,6 +90,11 @@ def main():
     #MACD
     df_macd, df_macdsig, df_macdhist = ind.macd(wlist, test_data['Close'], 12, 26, 9)
 
+    #Stochastic RSI
+
+    df_fastk, df_fastd = ind.stochastic_rsi(wlist, test_data['Close'], 5, 3)
+    df_fastd.to_csv('df_fastd.csv')
+
     # Open Text File
     file_tmstmp = str(datetime.datetime.now().month) + str(datetime.datetime.now().day) + str(datetime.datetime.now().year)
     file_name = 'scan_results_' + file_tmstmp + '.txt'
@@ -81,22 +104,27 @@ def main():
     event = ta.Events()
     cross_sym = event.crossabove_scan(df_ema8, df_ema21)
     f.write('EMA8 X EMA21:'+ str(cross_sym)+'\n')
+    f.write('----------------------------------------------\n')
 
     # Ichimoku Cross
     cross_ichimoku = event.crossabove_scan(df_ichi_tenkan, df_ichi_kijun)
     f.write('Tenkan X Kijun(ETF):' + str(cross_ichimoku) + '\n')
+    f.write('----------------------------------------------\n')
 
     # Price crosses over Kijun Sen
     cross_kijun = event.crossabove_scan(test_data['Close'], df_ichi_kijun)
     f.write('Price X Kijun:(ETF)' + str(cross_kijun) + '\n')
+    f.write('----------------------------------------------\n')
 
     # TTM squeeze firing
     ttm_cross_u = event.crossabove_scan(df_bb_u, df_kch_u)
     f.write('TTM Upper Cross: ' + str(ttm_cross_u) + '\n')
+    f.write('----------------------------------------------\n')
 
     # MACD Histogram Rising
     macd_rising = event.rising_scan(df_macdhist)
     f.write('MACD Histogram Rising:' + str(macd_rising) + '\n')
+    f.write('----------------------------------------------\n')
 
     # Explosive EMA power
     # EMA 21 is below EMA 89
@@ -106,10 +134,12 @@ def main():
     pricex8 = event.crossabove_scan(test_data['Close'], df_ema8, ema21b89)
 
     f.write('Explosive Power: ' + str(pricex8) + '\n')
+    f.write('----------------------------------------------\n')
 
     # Turning up scan
     macd_turn_up = event.turningup_scan(df_macdhist)
     f.write('MACD Histogram Turn Up:' + str(macd_turn_up) + '\n')
+    f.write('----------------------------------------------\n')
 
     # Price crosses EMA 8
     price_ema8 = event.crossabove_scan(test_data['Close'], df_ema8)
@@ -130,6 +160,7 @@ def main():
     # Price crosses EMA 89
     price_ema89 = event.crossabove_scan(test_data['Close'], df_ema89)
     f.write('Price crosses EMA 89:' + str(price_ema89) + '\n')
+    f.write('----------------------------------------------\n')
 
     # Price crosses EMA 40
     price_ema40 = event.crossabove_scan(test_data['Close'], df_ema40)
@@ -150,6 +181,7 @@ def main():
     # Price crosses EMA 445
     price_ema445 = event.crossabove_scan(test_data['Close'], df_ema445)
     f.write('Price crosses EMA 445:' + str(price_ema445) + '\n')
+    f.write('----------------------------------------------\n')
 
     # Wave A Rising
     waveaa_rising = event.rising_scan(df_waveaa)
@@ -164,6 +196,12 @@ def main():
 
     waveab_turnup = event.turningup_scan(df_waveab)
     f.write(('Wave Ab Turn Up:') + str(waveab_turnup) + '\n')
+    f.write('----------------------------------------------\n')
+
+    # Oversold Stochastic
+    stoch_sold = event.is_below_N_scan(df_fastk, 20)
+    f.write(('Stochastic below 20:') + str(stoch_sold) + '\n')
+    f.write('----------------------------------------------\n')
 
     f.close()
 
