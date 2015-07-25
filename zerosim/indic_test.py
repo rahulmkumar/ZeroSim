@@ -28,8 +28,9 @@ def main():
     biotech1 = yahoo_stocks.get_symbols(source='Yahoo', Country='USA', Volume='1000000', Industry='Bio')
     marketcap = yahoo_stocks.get_symbols(source='Yahoo', Country='USA', Mcap=[500,5000])
 
-    wlist = list(set(ibd50 + biotech + ETFOptions + tech + biotech1 + marketcap))
-    #wlist = list(set(ibd50 + biotech + ETFOptions + tech))
+    options = list(set(ibd50 + biotech + ETFOptions + tech + biotech1))
+
+    blueprint = marketcap
 
     # Get data for watchlist
 
@@ -37,7 +38,8 @@ def main():
     print 'Data download start time:' + str(current_time)
 
     dat = data.MarketData()
-    test_data = dat.get_yahoo_data(wlist, '02/01/2014', '07/24/2015')
+    test_data = dat.get_yahoo_data(options, '02/01/2014', '07/24/2015')
+    blueprint_data = dat.get_yahoo_data(blueprint, '02/01/2014', '07/24/2015')
     test_data['Close'] = test_data['Close'].fillna(method='ffill')
     test_data['Open'] = test_data['Open'].fillna(method='ffill')
     test_data['High'] = test_data['High'].fillna(method='ffill')
@@ -54,46 +56,46 @@ def main():
     ind = ta.Indicators()
 
     # Bollinger Bands
-    df_bb_u, df_bb_m, df_bb_l = ind.bb(wlist, test_data['Close'], 20, 2, 2)
+    df_bb_u, df_bb_m, df_bb_l = ind.bb(options, test_data['Close'], 20, 2, 2)
 
     # Fibonacci EMA's and Waves
-    df_ema8 = ind.ema(wlist, test_data['Close'], 8)
-    df_ema21 = ind.ema(wlist, test_data['Close'], 21)
-    df_ema34 = ind.ema(wlist, test_data['Close'], 34)
-    df_ema55 = ind.ema(wlist, test_data['Close'], 55)
-    df_ema89 = ind.ema(wlist, test_data['Close'], 89)
+    df_ema8 = ind.ema(options, test_data['Close'], 8)
+    df_ema21 = ind.ema(options, test_data['Close'], 21)
+    df_ema34 = ind.ema(options, test_data['Close'], 34)
+    df_ema55 = ind.ema(options, test_data['Close'], 55)
+    df_ema89 = ind.ema(options, test_data['Close'], 89)
 
-    df_waveaa, df_waveab = ind.wavea(wlist, df_ema8, df_ema21, df_ema34)
-    df_waveba, df_wavebb = ind.wavea(wlist, df_ema21, df_ema34, df_ema55)
-    df_waveca, df_wavecb = ind.wavea(wlist, df_ema34, df_ema55, df_ema89)
+    df_waveaa, df_waveab = ind.wavea(options, df_ema8, df_ema21, df_ema34)
+    df_waveba, df_wavebb = ind.wavea(options, df_ema21, df_ema34, df_ema55)
+    df_waveca, df_wavecb = ind.wavea(options, df_ema34, df_ema55, df_ema89)
 
-    df_ema40 = ind.ema(wlist, test_data['Close'], 40)
-    df_ema105 = ind.ema(wlist, test_data['Close'], 105)
-    df_ema170 = ind.ema(wlist, test_data['Close'], 170)
-    df_ema275 = ind.ema(wlist, test_data['Close'], 275)
-    df_ema445 = ind.ema(wlist, test_data['Close'], 445)
+    df_ema40 = ind.ema(options, test_data['Close'], 40)
+    df_ema105 = ind.ema(options, test_data['Close'], 105)
+    df_ema170 = ind.ema(options, test_data['Close'], 170)
+    df_ema275 = ind.ema(options, test_data['Close'], 275)
+    df_ema445 = ind.ema(options, test_data['Close'], 445)
 
     # Keltner Channels
-    df_kelt_u, df_kelt_m, df_kelt_l = ind.keltner(wlist, test_data['High'], test_data['Low'], test_data['Close'], 20, 20, 2)
+    df_kelt_u, df_kelt_m, df_kelt_l = ind.keltner(options, test_data['High'], test_data['Low'], test_data['Close'], 20, 20, 2)
 
     # TTM Squeeze Test
-    df_bb_ma, df_bb_u, df_bb_l, df_kch_m, df_kch_u, df_kch_l = ind.ttm_squeeze(wlist, test_data['High'], test_data['Low'], test_data['Close'], 21, 2, 21, 21, 1.5)
+    df_bb_ma, df_bb_u, df_bb_l, df_kch_m, df_kch_u, df_kch_l = ind.ttm_squeeze(options, test_data['High'], test_data['Low'], test_data['Close'], 21, 2, 21, 21, 1.5)
 
     # Ichimoku Test
-    df_ichi_tenkan, df_ichi_kijun = ind.ichimoku(wlist, test_data['High'], test_data['Low'])
+    df_ichi_tenkan, df_ichi_kijun = ind.ichimoku(options, test_data['High'], test_data['Low'])
 
     # Momentum
-    df_mom = ind.mom(wlist, test_data['Close'], 12)
+    df_mom = ind.mom(options, test_data['Close'], 12)
 
     # ADX
-    df_adx = ind.adx(wlist, test_data['High'], test_data['Low'], test_data['Close'], 14)
+    df_adx = ind.adx(options, test_data['High'], test_data['Low'], test_data['Close'], 14)
 
     #MACD
-    df_macd, df_macdsig, df_macdhist = ind.macd(wlist, test_data['Close'], 12, 26, 9)
+    df_macd, df_macdsig, df_macdhist = ind.macd(options, test_data['Close'], 12, 26, 9)
 
     #Stochastic RSI
 
-    df_fastk, df_fastd = ind.stochastic_rsi(wlist, test_data['Close'], 5, 3)
+    df_fastk, df_fastd = ind.stochastic_rsi(options, test_data['Close'], 5, 3)
     df_fastd.to_csv('df_fastd.csv')
 
     # Open Text File
@@ -212,8 +214,8 @@ def main():
     current_time = datetime.datetime.now().time()
     print 'Blueprint processing start time:' + str(current_time)
 
-    sma8 = ind.sma(marketcap, test_data['Close'], 8)
-    sma50 = ind.sma(marketcap, test_data['Close'], 50)
+    sma8 = ind.sma(blueprint, blueprint_data['Close'], 8)
+    sma50 = ind.sma(blueprint, blueprint_data['Close'], 50)
 
     sma_cross = event.crossabove_scan(sma8, sma50)
 
