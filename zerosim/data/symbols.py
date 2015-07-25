@@ -211,9 +211,17 @@ class SymbolDb(object):
 
         try:
             if sql_query.find('WHERE') <> -1:
-                sql_query = sql_query + """ AND Price < """+kwargs['Price']
+                sql_query = sql_query + """ AND Price < """+kwargs['Pricelt']
             else:
-                sql_query = sql_query + """ WHERE Price < """+kwargs['Price']
+                sql_query = sql_query + """ WHERE Price < """+kwargs['Pricelt']
+        except:
+            pass
+
+        try:
+            if sql_query.find('WHERE') <> -1:
+                sql_query = sql_query + """ AND Price > """+kwargs['Pricegt']
+            else:
+                sql_query = sql_query + """ WHERE Price > """+kwargs['Pricegt']
         except:
             pass
 

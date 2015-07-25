@@ -26,11 +26,12 @@ def main():
     yahoo_stocks = data.SymbolDb()
     tech = yahoo_stocks.get_symbols(source='Yahoo', Country='USA', Volume='1000000', Sector='Technology')
     biotech1 = yahoo_stocks.get_symbols(source='Yahoo', Country='USA', Volume='1000000', Industry='Bio')
-    marketcap = yahoo_stocks.get_symbols(source='Yahoo', Country='USA', Mcap=[500,5000])
+    marketcap = yahoo_stocks.get_symbols(source='Yahoo', Country='USA', Mcap=[500,5000], Pricegt=10)
+    priceten = yahoo_stocks.get_symbols(source='Yahoo', Country='USA', Mcap=[500,5000], Pricelt=10)
 
     options = list(set(ibd50 + biotech + ETFOptions + tech + biotech1))
 
-    blueprint = marketcap
+    blueprint = marketcap + priceten
 
     # Get data for watchlist
 
