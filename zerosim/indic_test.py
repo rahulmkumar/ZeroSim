@@ -26,8 +26,9 @@ def main():
     yahoo_stocks = data.SymbolDb()
     tech = yahoo_stocks.get_symbols(source='Yahoo', Country='USA', Volume='1000000', Sector='Technology')
     biotech1 = yahoo_stocks.get_symbols(source='Yahoo', Country='USA', Volume='1000000', Industry='Bio')
+    marketcap = yahoo_stocks.get_symbols(source='Yahoo', Country='USA', Mcap=[500,5000])
 
-    wlist = list(set(ibd50 + biotech + ETFOptions + tech + biotech1))
+    wlist = list(set(ibd50 + biotech + ETFOptions + tech + biotech1 + marketcap))
     #wlist = list(set(ibd50 + biotech + ETFOptions + tech))
 
     # Get data for watchlist
@@ -36,7 +37,7 @@ def main():
     print 'Data download start time:' + str(current_time)
 
     dat = data.MarketData()
-    test_data = dat.get_yahoo_data(wlist, '02/01/2014', '07/23/2015')
+    test_data = dat.get_yahoo_data(wlist, '02/01/2014', '07/24/2015')
     test_data['Close'] = test_data['Close'].fillna(method='ffill')
     test_data['Open'] = test_data['Open'].fillna(method='ffill')
     test_data['High'] = test_data['High'].fillna(method='ffill')
@@ -97,7 +98,7 @@ def main():
 
     # Open Text File
     file_tmstmp = str(datetime.datetime.now().month) + str(datetime.datetime.now().day) + str(datetime.datetime.now().year)
-    file_name = 'scan_results_' + file_tmstmp + '.txt'
+    file_name = 'options_scan_results_' + file_tmstmp + '.txt'
     f = open(file_name, 'w+')
 
     # Event Scanner
@@ -202,6 +203,25 @@ def main():
     stoch_sold = event.is_below_N_scan(df_fastk, 20)
     f.write(('Stochastic below 20:') + str(stoch_sold) + '\n')
     f.write('----------------------------------------------\n')
+
+    f.close()
+
+    '''
+    Blueprint Scanning
+    '''
+    current_time = datetime.datetime.now().time()
+    print 'Blueprint processing start time:' + str(current_time)
+
+    sma8 = ind.sma(marketcap, test_data['Close'], 8)
+    sma50 = ind.sma(marketcap, test_data['Close'], 50)
+
+    sma_cross = event.crossabove_scan(sma8, sma50)
+
+    bp_file_name = 'blueprint_scan_results_' + file_tmstmp + '.txt'
+    f = open(bp_file_name, 'w+')
+
+    f.write('SMA 8 X SMA 50:\n')
+    f.write(str(sma_cross))
 
     f.close()
 

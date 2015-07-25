@@ -185,9 +185,11 @@ class SymbolDb(object):
 
         try:
             if sql_query.find('WHERE') <> -1:
-                sql_query = sql_query + """ AND Mcap > """+kwargs['Mcap']
+                #sql_query = sql_query + """ AND Mcap > """+kwargs['Mcap']
+                sql_query = sql_query + """ AND MarketCap BETWEEN '"""+str(kwargs['Mcap'][0])+"""' AND '"""+str(kwargs['Mcap'][1])+"""'"""
             else:
-                sql_query = sql_query + """ WHERE Mcap > """+kwargs['Mcap']
+                #sql_query = sql_query + """ WHERE Mcap > """+kwargs['Mcap']
+                sql_query = sql_query + """ WHERE MarketCap BETWEEN '"""+str(kwargs['Mcap'][0])+"""' AND '""" + str(kwargs['Mcap'][1])+"""'"""
         except:
             pass
 
@@ -204,6 +206,14 @@ class SymbolDb(object):
                 sql_query = sql_query + """ AND Volume > """+kwargs['Volume']
             else:
                 sql_query = sql_query + """ WHERE Volume > """+kwargs['Volume']
+        except:
+            pass
+
+        try:
+            if sql_query.find('WHERE') <> -1:
+                sql_query = sql_query + """ AND Price < """+kwargs['Price']
+            else:
+                sql_query = sql_query + """ WHERE Price < """+kwargs['Price']
         except:
             pass
 
