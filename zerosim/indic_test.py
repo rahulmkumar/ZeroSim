@@ -21,6 +21,7 @@ def main():
     ibd50 = watch_list.get_watchlist_by_name('data/watchlistdb.db', 'IBD50')
     biotech = watch_list.get_watchlist_by_name('data/watchlistdb.db', 'Biotech')
     ETFOptions = watch_list.get_watchlist_by_name('data/watchlistdb.db', 'ETFOptions')
+    ibdlow = watch_list.get_watchlist_by_name('data/watchlistdb.db', 'IBDLOW')
 
     # Technology Stocks
     yahoo_stocks = data.SymbolDb()
@@ -31,7 +32,7 @@ def main():
 
     options = list(set(ibd50 + biotech + ETFOptions + tech + biotech1))
 
-    blueprint = marketcap + priceten
+    blueprint = list(set(marketcap + priceten + ibdlow))
 
     # Get data for watchlist
 
