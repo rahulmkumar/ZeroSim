@@ -27,12 +27,14 @@ def main():
     yahoo_stocks = data.SymbolDb()
     tech = yahoo_stocks.get_symbols(source='Yahoo', Country='USA', Volume='1000000', Sector='Technology')
     biotech1 = yahoo_stocks.get_symbols(source='Yahoo', Country='USA', Volume='1000000', Industry='Bio')
-    marketcap = yahoo_stocks.get_symbols(source='Yahoo', Country='USA', Mcap=[500,5000], Pricegt=10)
-    priceten = yahoo_stocks.get_symbols(source='Yahoo', Country='USA', Mcap=[500,5000], Pricelt=10)
+    pricegt_ten = yahoo_stocks.get_symbols(source='Yahoo', Country='USA', Mcap=[500,5000], Pricegt=10)
+    pricelt_ten = yahoo_stocks.get_symbols(source='Yahoo', Country='USA', Mcap=[500,5000], Pricelt=10)
 
     options = list(set(ibd50 + biotech + ETFOptions + tech + biotech1))
 
-    blueprint = list(set(marketcap + priceten + ibdlow))
+    blueprint = list(set(pricegt_ten + pricelt_ten + ibdlow))
+
+    #blueprint = ibdlow
 
     # Get data for watchlist
 
@@ -40,8 +42,8 @@ def main():
     print 'Data download start time:' + str(current_time)
 
     dat = data.MarketData()
-    test_data = dat.get_yahoo_data(options, '02/01/2014', '07/24/2015')
-    blueprint_data = dat.get_yahoo_data(blueprint, '02/01/2014', '07/24/2015')
+    test_data = dat.get_yahoo_data(options, '02/01/2014', '07/31/2015')
+    blueprint_data = dat.get_yahoo_data(blueprint, '02/01/2014', '07/31/2015')
     test_data['Close'] = test_data['Close'].fillna(method='ffill')
     test_data['Open'] = test_data['Open'].fillna(method='ffill')
     test_data['High'] = test_data['High'].fillna(method='ffill')
@@ -81,7 +83,7 @@ def main():
     df_kelt_u, df_kelt_m, df_kelt_l = ind.keltner(options, test_data['High'], test_data['Low'], test_data['Close'], 20, 20, 2)
 
     # TTM Squeeze Test
-    df_bb_ma, df_bb_u, df_bb_l, df_kch_m, df_kch_u, df_kch_l = ind.ttm_squeeze(options, test_data['High'], test_data['Low'], test_data['Close'], 21, 2, 21, 21, 1.5)
+    df_bb_ma, df_bb_u, df_bb_l, df_kch_m, df_kch_u, df_kch_l = ind.ttm_squeeze(blueprint, test_data['High'], test_data['Low'], test_data['Close'], 21, 2, 21, 21, 1.5)
 
     # Ichimoku Test
     df_ichi_tenkan, df_ichi_kijun = ind.ichimoku(options, test_data['High'], test_data['Low'])
@@ -105,6 +107,9 @@ def main():
     file_name = 'options_scan_results_' + file_tmstmp + '.txt'
     f = open(file_name, 'w+')
 
+    f.write('Total Stocks:' + str(len(options)) + '\n')
+    f.write('----------------------------------------------\n')
+
     # Event Scanner
     event = ta.Events()
     cross_sym = event.crossabove_scan(df_ema8, df_ema21)
@@ -122,7 +127,7 @@ def main():
     f.write('----------------------------------------------\n')
 
     # TTM squeeze firing
-    ttm_cross_u = event.crossabove_scan(df_bb_u, df_kch_u)
+    ttm_cross_u = event.crossabove_scan(df_bb_u, df_kch_u,options)
     f.write('TTM Upper Cross: ' + str(ttm_cross_u) + '\n')
     f.write('----------------------------------------------\n')
 
@@ -219,13 +224,20 @@ def main():
     sma8 = ind.sma(blueprint, blueprint_data['Close'], 8)
     sma50 = ind.sma(blueprint, blueprint_data['Close'], 50)
 
-    sma_cross = event.crossabove_scan(sma8, sma50)
-
     bp_file_name = 'blueprint_scan_results_' + file_tmstmp + '.txt'
     f = open(bp_file_name, 'w+')
 
-    f.write('SMA 8 X SMA 50:\n')
-    f.write(str(sma_cross))
+    f.write('Total Stocks:' + str(len(blueprint)) + '\n')
+    f.write('----------------------------------------------\n')
+
+    sma_cross = event.crossabove_scan(sma8, sma50, blueprint)
+    f.write('SMA 8 X SMA 50:' + str(sma_cross) + '\n')
+    f.write('----------------------------------------------\n')
+
+    # TTM squeeze firing
+    ttm_cross_u_bp = event.crossabove_scan(df_bb_u, df_kch_u, blueprint)
+    f.write('TTM Upper Cross: ' + str(ttm_cross_u_bp) + '\n')
+    f.write('----------------------------------------------\n')
 
     f.close()
 
