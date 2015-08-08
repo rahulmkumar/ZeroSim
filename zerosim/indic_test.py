@@ -42,8 +42,15 @@ def main():
     print 'Data download start time:' + str(current_time)
 
     dat = data.MarketData()
-    test_data = dat.get_yahoo_data(options, '02/01/2014', '07/31/2015')
-    blueprint_data = dat.get_yahoo_data(blueprint, '02/01/2014', '07/31/2015')
+    #test_data = dat.get_yahoo_data(options, '02/01/2014', '08/06/2015')
+    #blueprint_data = dat.get_yahoo_data(blueprint, '02/01/2014', '08/06/2015')
+
+    dat.store_hdf5(options, '02/01/2014', '08/08/2015')
+    dat.store_hdf5(blueprint, '02/01/2014', '08/08/2015')
+
+    test_data = dat.get_hdf5()
+    blueprint_data = test_data
+
     test_data['Close'] = test_data['Close'].fillna(method='ffill')
     test_data['Open'] = test_data['Open'].fillna(method='ffill')
     test_data['High'] = test_data['High'].fillna(method='ffill')

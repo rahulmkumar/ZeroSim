@@ -1,4 +1,5 @@
 import pandas.io.data as web
+import pandas.io.pytables as tab
 import datetime
 
 class MarketData(object):
@@ -38,12 +39,32 @@ class MarketData(object):
 
         return df_prices
 
+    def store_hdf5(self, l_sym, start_date, end_date):
+        df_prices = self.get_yahoo_data(l_sym, start_date, end_date)
+
+        store = tab.HDFStore('datastore.h5')
+        store['prices'] = df_prices
+        store.close()
+
+    def get_hdf5(self):
+
+        store = tab.HDFStore('datastore.h5')
+        return store['prices']
 
 if __name__ == '__main__':
 
     data = MarketData()
 
-    test_data = data.get_yahoo_data(['AAPL','GOOGL'], '01/01/2015', '05/31/2015')
+    #test_data = data.get_yahoo_data(['AAPL','GOOGL'], '01/01/2015', '05/31/2015')
+
+    #data.store_hdf5(['AAPL','GOOGL'],'01/01/2015','01/13/2015')
+
+    data = data.get_hdf5()
+
+    print data['Close']
+
+    #print data.select('prices', "columns=['AAPL', 'GOOGL']")
+
     #print test_data['AAPL'].ix['Close', :]
     #test_data.to_csv('../../symbols/AAPL_high.csv')
 

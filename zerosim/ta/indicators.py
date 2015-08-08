@@ -166,14 +166,17 @@ class Indicators(object):
         df_ichimoku_tenkan = pd.DataFrame(columns=l_sym, index=df_high.index)
 
         for sym in l_sym:
-            df_ichimoku_tenkan_u[sym] = pd.rolling_max(df_high[sym], min_periods=1, window=9)
-            df_ichimoku_tenkan_l[sym] = pd.rolling_min(df_low[sym], min_periods=1, window=9)
+            try:
+                df_ichimoku_tenkan_u[sym] = pd.rolling_max(df_high[sym], min_periods=1, window=9)
+                df_ichimoku_tenkan_l[sym] = pd.rolling_min(df_low[sym], min_periods=1, window=9)
 
-            df_ichimoku_kijun_u[sym] = pd.rolling_max(df_high[sym], min_periods=1, window=26)
-            df_ichimoku_kijun_l[sym] = pd.rolling_min(df_low[sym], min_periods=1, window=26)
+                df_ichimoku_kijun_u[sym] = pd.rolling_max(df_high[sym], min_periods=1, window=26)
+                df_ichimoku_kijun_l[sym] = pd.rolling_min(df_low[sym], min_periods=1, window=26)
 
-            df_ichimoku_tenkan[sym] = (df_ichimoku_tenkan_u[sym] + df_ichimoku_tenkan_l[sym])/2
-            df_ichimoku_kijun[sym] = (df_ichimoku_kijun_u[sym] + df_ichimoku_kijun_l[sym])/2
+                df_ichimoku_tenkan[sym] = (df_ichimoku_tenkan_u[sym] + df_ichimoku_tenkan_l[sym])/2
+                df_ichimoku_kijun[sym] = (df_ichimoku_kijun_u[sym] + df_ichimoku_kijun_l[sym])/2
+            except:
+                pass
 
         return df_ichimoku_tenkan, df_ichimoku_kijun
 
