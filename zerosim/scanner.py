@@ -45,9 +45,10 @@ def main():
     #test_data = dat.get_yahoo_data(options, '02/01/2014', '08/06/2015')
     #blueprint_data = dat.get_yahoo_data(blueprint, '02/01/2014', '08/06/2015')
 
-    dat.store_hdf5(options, '02/01/2014', '08/08/2015')
-    dat.store_hdf5(blueprint, '02/01/2014', '08/08/2015')
+    #dat.store_hdf5(options, '02/01/2014', '08/08/2015')
+    #dat.store_hdf5(blueprint, '02/01/2014', '08/08/2015')
 
+    dat = data.MarketData()
     test_data = dat.get_hdf5()
     blueprint_data = test_data
 

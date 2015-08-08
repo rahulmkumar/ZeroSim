@@ -34,10 +34,9 @@ class MarketData(object):
 
         try:
             df_prices = web.DataReader(l_sym, 'yahoo', start, end)
+            return df_prices
         except:
             pass
-
-        return df_prices
 
     def store_hdf5(self, l_sym, start_date, end_date):
         df_prices = self.get_yahoo_data(l_sym, start_date, end_date)
@@ -67,4 +66,3 @@ if __name__ == '__main__':
 
     #print test_data['AAPL'].ix['Close', :]
     #test_data.to_csv('../../symbols/AAPL_high.csv')
-
