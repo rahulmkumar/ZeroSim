@@ -8,7 +8,7 @@ import datetime
 def main():
 
     current_time = datetime.datetime.now().time()
-    print 'Start time:' + str(current_time)
+    print 'Symbol load start time:' + str(current_time)
 
     # Refresh Watchlist
     watch_list = data.WatchlistDb()
@@ -39,7 +39,7 @@ def main():
     # Get data for watchlist
 
     current_time = datetime.datetime.now().time()
-    print 'Data download start time:' + str(current_time)
+    print 'HDF5 data load start time:' + str(current_time)
 
     dat = data.MarketData()
     #test_data = dat.get_yahoo_data(options, '02/01/2014', '08/06/2015')
@@ -63,7 +63,7 @@ def main():
     #df_test.to_csv('df_test.csv')
 
     current_time = datetime.datetime.now().time()
-    print 'Data download end time:' + str(current_time)
+    print 'Indicator Calculation Start time:' + str(current_time)
 
     ind = ta.Indicators()
 
@@ -106,9 +106,10 @@ def main():
     df_macd, df_macdsig, df_macdhist = ind.macd(options, test_data['Close'], 12, 26, 9)
 
     #Stochastic RSI
-
     df_fastk, df_fastd = ind.stochastic_rsi(options, test_data['Close'], 5, 3)
-    df_fastd.to_csv('df_fastd.csv')
+
+    current_time = datetime.datetime.now().time()
+    print 'Event Scan start time:' + str(current_time)
 
     # Open Text File
     file_tmstmp = str(datetime.datetime.now().month) + str(datetime.datetime.now().day) + str(datetime.datetime.now().year)
@@ -226,8 +227,6 @@ def main():
     '''
     Blueprint Scanning
     '''
-    current_time = datetime.datetime.now().time()
-    print 'Blueprint processing start time:' + str(current_time)
 
     sma8 = ind.sma(blueprint, blueprint_data['Close'], 8)
     sma50 = ind.sma(blueprint, blueprint_data['Close'], 50)
@@ -250,7 +249,7 @@ def main():
     f.close()
 
     current_time = datetime.datetime.now().time()
-    print 'End time:' + str(current_time)
+    print 'Event Scan End time:' + str(current_time)
 
 if __name__ == '__main__':
     main()
