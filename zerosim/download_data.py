@@ -36,7 +36,7 @@ if __name__ == '__main__':
 
     dat = data.MarketData()
     #dat.store_hdf5(download_sym, '08/01/2015', '08/08/2015')
-    dat.store_hdf5(options, '02/01/2014', '08/08/2015')
+    dat.store_hdf5(download_sym, '02/01/2014', '08/13/2015')
 
     current_time = datetime.datetime.now().time()
     print 'Data download end time:' + str(current_time)
