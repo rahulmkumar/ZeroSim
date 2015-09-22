@@ -36,6 +36,52 @@ class SymbolDb(object):
         """
         self.l_symlist = []
 
+        #http://help.quandl.com/category/183-using-quandl-from-python
+        #https://www.quandl.com/tools/python
+        self.future_specs = {
+            # Corn
+            'C': {'MTH': ['H', 'K', 'N', 'U', 'Z']},
+
+            #Wheat
+            'W': {'MTH': ['H', 'K', 'N', 'U', 'Z']},
+
+            #Soybean
+            'S': {'MTH': ['F', 'H', 'K', 'N', 'Q', 'X']},
+
+            #Soymeal
+            'SM': {'MTH': ['F', 'H', 'K', 'N', 'Q', 'U', 'V', 'Z']},
+
+            #Soyoil
+            'BO': {'MTH': ['F', 'H', 'K', 'N', 'Q', 'X']},
+
+            #Crude Oil
+            # Usage CME/CLJ1991
+            # Quandl.get("CME/CLJ1991")
+            'CL': {'MTH': ['F', 'G', 'H', 'J', 'K', 'M', 'N', 'Q', 'U', 'V', 'X', 'Z']},
+
+            #RBOB Gasoline
+            'RB': {'MTH': ['F', 'G', 'H', 'J', 'K', 'M', 'N', 'Q', 'U', 'V', 'X', 'Z']},
+
+            #Heating Oil
+            'HO': {'MTH': ['F', 'G', 'H', 'J', 'K', 'M', 'N', 'Q', 'U', 'V', 'X', 'Z']},
+
+            #Natural Gas
+            'NG': {'MTH': ['F', 'G', 'H', 'J', 'K', 'M', 'N', 'Q', 'U', 'V', 'X', 'Z']},
+
+            #Cocoa
+            'CC': {'MTH': ['H', 'K', 'N', 'U', 'Z']},
+
+            #Coffee
+            'KC': {'MTH': ['H', 'K', 'N', 'U', 'Z']},
+
+            #Cotton
+            'CT': {'MTH': ['H', 'K', 'N', 'U', 'Z']},
+
+            #Sugar
+            'SB': {'MTH': ['H', 'K', 'N', 'V']}
+
+        }
+
     def merge_symbol_files_to_db(self, file_path=SYMBOL_FILES_PATH, db_path=SYMBOLS_DB_PATH, db_name=SYMBOLS_DB):
         """
         This function merges all downloaded files into a SQlite database
