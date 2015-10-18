@@ -38,6 +38,7 @@ class SymbolDb(object):
 
         #http://help.quandl.com/category/183-using-quandl-from-python
         #https://www.quandl.com/tools/python
+
         self.future_specs = {
             # Corn
             'C': {'MTH': ['H', 'K', 'N', 'U', 'Z'],
@@ -201,23 +202,21 @@ class SymbolDb(object):
         start_year = int(start_date.split('/')[2])
         end_year = int(end_date.split('/')[2])
 
-        years = range(int(start_year), int(end_year), 1)
+        years = range(int(start_year), int(end_year)+1, 1)
 
-        for sym in sym:
-            contract_months = self.future_specs[sym]['MTH']
-            sym_prefix = self.future_specs[sym]['EXCHCD'][0]
-            earliest_year = self.future_specs[sym]['EXCHFY'][0]
+        contract_months = self.future_specs[sym]['MTH']
+        sym_prefix = self.future_specs[sym]['EXCHCD'][0]
+        earliest_year = self.future_specs[sym]['EXCHFY'][0]
 
-            if int(start_year) < int(earliest_year):
-                print 'Incorrect start year for symbol:' + sym
-                pass
+        if int(start_year) < int(earliest_year):
+            print 'Incorrect start year for symbol:' + sym
+            pass
 
         return [sym_prefix+mth+str(year) for mth in contract_months for year in years]
 
     def generate_futures_symbols_continuous(self, sym):
 
         return [self.future_specs[sym]['CONTCD'][0] for sym in sym]
-
 
     def merge_symbol_files_to_db(self, file_path=SYMBOL_FILES_PATH, db_path=SYMBOLS_DB_PATH, db_name=SYMBOLS_DB):
         """
