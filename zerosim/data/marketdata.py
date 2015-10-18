@@ -4,6 +4,14 @@ import datetime
 
 class MarketData(object):
 
+    def get_quandl_api_key(self):
+        quandl_key = open('../../../../quandl.key', 'r')
+        return quandl_key.read()
+
+    #def get_quandl_data_futures_exch(self, sym, start_date, end_date):
+
+    #def get_quandl_data_futures_continuous(self, sym):
+
     def get_yahoo_data_type(self, l_sym, start_date, end_date, data_type):
         start_month = int(start_date.split('/')[0])
         start_day = int(start_date.split('/')[1])
@@ -58,9 +66,11 @@ if __name__ == '__main__':
 
     #data.store_hdf5(['AAPL','GOOGL'],'01/01/2015','01/13/2015')
 
-    data = data.get_hdf5()
+    #data = data.get_hdf5()
 
-    print data['Close']
+    #print data['Close']
+
+    print data.get_quandl_api_key()
 
     #print data.select('prices', "columns=['AAPL', 'GOOGL']")
 

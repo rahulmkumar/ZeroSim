@@ -40,47 +40,184 @@ class SymbolDb(object):
         #https://www.quandl.com/tools/python
         self.future_specs = {
             # Corn
-            'C': {'MTH': ['H', 'K', 'N', 'U', 'Z']},
+            'C': {'MTH': ['H', 'K', 'N', 'U', 'Z'],
+                  'EXCH': ['CME'],
+                  'EXCHCD': ['CME/C'],
+                  'CONTCD': ['CHRIS/CME_C1'],
+                  'EXCHFY': ['1959']},
 
             #Wheat
-            'W': {'MTH': ['H', 'K', 'N', 'U', 'Z']},
+            'W': {'MTH': ['H', 'K', 'N', 'U', 'Z'],
+                  'EXCH': ['CME'],
+                  'EXCHCD': ['CME/W'],
+                  'CONTCD': ['CHRIS/CME_W1'],
+                  'EXCHFY': ['1959']},
 
             #Soybean
-            'S': {'MTH': ['F', 'H', 'K', 'N', 'Q', 'X']},
+            'S': {'MTH': ['F', 'H', 'K', 'N', 'Q', 'X'],
+                  'EXCH': ['CME'],
+                  'EXCHCD': ['CME/S'],
+                  'CONTCD': ['CHRIS/CME_S1'],
+                  'EXCHFY': ['1959']},
 
             #Soymeal
-            'SM': {'MTH': ['F', 'H', 'K', 'N', 'Q', 'U', 'V', 'Z']},
+            'SM': {'MTH': ['F', 'H', 'K', 'N', 'Q', 'U', 'V', 'Z'],
+                   'EXCH': ['CME'],
+                   'EXCHCD': ['CME/SM'],
+                   'CONTCD': ['CHRIS/CME_SM1'],
+                   'EXCHFY': ['1959']},
 
             #Soyoil
-            'BO': {'MTH': ['F', 'H', 'K', 'N', 'Q', 'X']},
+            'BO': {'MTH': ['F', 'H', 'K', 'N', 'Q', 'X'],
+                   'EXCH': ['CME'],
+                   'EXCHCD': ['CME/BO'],
+                   'CONTCD': ['CHRIS/CME_BO1'],
+                   'EXCHFY': ['1959']},
 
             #Crude Oil
             # Usage CME/CLJ1991
             # Quandl.get("CME/CLJ1991")
-            'CL': {'MTH': ['F', 'G', 'H', 'J', 'K', 'M', 'N', 'Q', 'U', 'V', 'X', 'Z']},
+            'CL': {'MTH': ['F', 'G', 'H', 'J', 'K', 'M', 'N', 'Q', 'U', 'V', 'X', 'Z'],
+                   'EXCH': ['CME'],
+                   'EXCHCD': ['CME/CL'],
+                   'CONTCD': ['CHRIS/CME_CL1'],
+                   'EXCHFY': ['1983']},
 
             #RBOB Gasoline
-            'RB': {'MTH': ['F', 'G', 'H', 'J', 'K', 'M', 'N', 'Q', 'U', 'V', 'X', 'Z']},
+            'RB': {'MTH': ['F', 'G', 'H', 'J', 'K', 'M', 'N', 'Q', 'U', 'V', 'X', 'Z'],
+                   'EXCH': ['CME'],
+                   'EXCHCD': ['CME/RB'],
+                   'CONTCD': ['CHRIS/CME_RB1'],
+                   'EXCHFY': ['2006']},
 
             #Heating Oil
-            'HO': {'MTH': ['F', 'G', 'H', 'J', 'K', 'M', 'N', 'Q', 'U', 'V', 'X', 'Z']},
+            'HO': {'MTH': ['F', 'G', 'H', 'J', 'K', 'M', 'N', 'Q', 'U', 'V', 'X', 'Z'],
+                   'EXCH': ['CME'],
+                   'EXCHCD': ['CME/HO'],
+                   'CONTCD': ['CHRIS/CME_HO1'],
+                   'EXCHFY': ['1980']},
 
             #Natural Gas
-            'NG': {'MTH': ['F', 'G', 'H', 'J', 'K', 'M', 'N', 'Q', 'U', 'V', 'X', 'Z']},
+            'NG': {'MTH': ['F', 'G', 'H', 'J', 'K', 'M', 'N', 'Q', 'U', 'V', 'X', 'Z'],
+                   'EXCH': ['CME'],
+                   'EXCHCD': ['CME/NG'],
+                   'CONTCD': ['CHRIS/CME_NG1'],
+                   'EXCHFY': ['1990']},
 
             #Cocoa
-            'CC': {'MTH': ['H', 'K', 'N', 'U', 'Z']},
+            'CC': {'MTH': ['H', 'K', 'N', 'U', 'Z'],
+                   'EXCH': ['ICE'],
+                   'EXCHCD': ['ICE/CC'],
+                   'CONTCD': ['CHRIS/ICE_CC1'],
+                   'EXCHFY': ['1990']},
 
             #Coffee
-            'KC': {'MTH': ['H', 'K', 'N', 'U', 'Z']},
+            'KC': {'MTH': ['H', 'K', 'N', 'U', 'Z'],
+                   'EXCH': ['ICE'],
+                   'EXCHCD': ['ICE/KC'],
+                   'CONTCD': ['CHRIS/ICE_KC1'],
+                   'EXCHFY': ['1973']},
 
             #Cotton
-            'CT': {'MTH': ['H', 'K', 'N', 'U', 'Z']},
+            'CT': {'MTH': ['H', 'K', 'N', 'U', 'Z'],
+                   'EXCH': ['ICE'],
+                   'EXCHCD': ['ICE/CT'],
+                   'CONTCD': ['CHRIS/ICE_CT1'],
+                   'EXCHFY': ['1960']},
 
             #Sugar
-            'SB': {'MTH': ['H', 'K', 'N', 'V']}
+            'SB': {'MTH': ['H', 'K', 'N', 'V'],
+                   'EXCH': ['ICE'],
+                   'EXCHCD': ['ICE/SB'],
+                   'CONTCD': ['CHRIS/ICE_SB1'],
+                   'EXCHFY': ['1961']},
 
+            #S&P500
+            'SP': {'MTH': ['H', 'M', 'U', 'Z'],
+                   'EXCH': ['CME'],
+                   'EXCHCD': ['CME/SP'],
+                   'CONTCD': ['CHRIS/CME_SP1'],
+                   'EXCHFY': ['1982']},
+
+            #Gold
+            'GC': {'MTH': ['F', 'G', 'H', 'J', 'K', 'M', 'N', 'Q', 'U', 'V', 'X', 'Z'],
+                   'EXCH': ['CME'],
+                   'EXCHCD': ['CME/GC'],
+                   'CONTCD': ['CHRIS/CME_GC1'],
+                   'EXCHFY': ['1975']},
+
+            #Silver
+            'SI': {'MTH': ['F', 'G', 'H', 'J', 'K', 'M', 'N', 'Q', 'U', 'V', 'X', 'Z'],
+                   'EXCH': ['CME'],
+                   'EXCHCD': ['CME/SI'],
+                   'CONTCD': ['CHRIS/CME_SI1'],
+                   'EXCHFY': ['1964']},
+
+            #Copper
+            'HG': {'MTH': ['F', 'G', 'H', 'J', 'K', 'M', 'N', 'Q', 'U', 'V', 'X', 'Z'],
+                   'EXCH': ['CME'],
+                   'EXCHCD': ['CME/HG'],
+                   'CONTCD': ['CHRIS/CME_HG1'],
+                   'EXCHFY': ['1959']},
+
+            #Australian Dollar
+            'AD': {'MTH': ['H', 'M', 'U', 'Z'],
+                   'EXCH': ['CME'],
+                   'EXCHCD': ['CME/AD'],
+                   'CONTCD': ['CHRIS/CME_AD1'],
+                   'EXCHFY': ['1987']},
+
+            #British Pound
+            'BP': {'MTH': ['H', 'M', 'U', 'Z'],
+                   'EXCH': ['CME'],
+                   'EXCHCD': ['CME/BP'],
+                   'CONTCD': ['CHRIS/CME_BP1'],
+                   'EXCHFY': ['1975']},
+
+            #Euro
+            'EC': {'MTH': ['H', 'M', 'U', 'Z'],
+                   'EXCH': ['CME'],
+                   'EXCHCD': ['CME/EC'],
+                   'CONTCD': ['CHRIS/CME_EC1'],
+                   'EXCHFY': ['1999']},
+
+            #Japanese Yen
+            'JY': {'MTH': ['H', 'M', 'U', 'Z'],
+                   'EXCH': ['CME'],
+                   'EXCHCD': ['CME/JY'],
+                   'CONTCD': ['CHRIS/CME_JY1'],
+                   'EXCHFY': ['1977']},
+
+            #Dollar Index
+            'DX': {'MTH': ['H', 'M', 'U', 'Z'],
+                   'EXCH': ['ICE'],
+                   'EXCHCD': ['ICE/DX'],
+                   'CONTCD': ['CHRIS/ICE_DX1'],
+                   'EXCHFY': ['1986']}
         }
+
+    def generate_futures_symbols_exchange(self, sym, start_date, end_date):
+
+        start_year = int(start_date.split('/')[2])
+        end_year = int(end_date.split('/')[2])
+
+        years = range(int(start_year), int(end_year), 1)
+
+        for sym in sym:
+            contract_months = self.future_specs[sym]['MTH']
+            sym_prefix = self.future_specs[sym]['EXCHCD'][0]
+            earliest_year = self.future_specs[sym]['EXCHFY'][0]
+
+            if int(start_year) < int(earliest_year):
+                print 'Incorrect start year for symbol:' + sym
+                pass
+
+        return [sym_prefix+mth+str(year) for mth in contract_months for year in years]
+
+    def generate_futures_symbols_continuous(self, sym):
+
+        return [self.future_specs[sym]['CONTCD'][0] for sym in sym]
+
 
     def merge_symbol_files_to_db(self, file_path=SYMBOL_FILES_PATH, db_path=SYMBOLS_DB_PATH, db_name=SYMBOLS_DB):
         """
@@ -318,8 +455,10 @@ if __name__ == '__main__':
 
     #scrape.scrape_remote_file(file_url+str(1), sym.SYMBOL_FILES_PATH, 'NSE.csv')
 
-    sym.get_symbols(source='Quandl', Country='USA', Volume='1000000', Industry='Biotech')
+    #sym.get_symbols(source='Quandl', Country='USA', Volume='1000000', Industry='Biotech')
 
+    print sym.generate_futures_symbols_exchange('C', '01/01/1960', '12/31/2015')
+    print sym.generate_futures_symbols_continuous(['C', 'S'])
     end_time = datetime.datetime.now().time()
     print 'End time:'+str(end_time)
 
